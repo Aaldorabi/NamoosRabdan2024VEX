@@ -124,22 +124,7 @@ void pre_auton(void) {
 }
 
 void autonomous(void) {
-  //auton start here
-  //  chassis.drive_distance(distance);
-  //  chassis.turn_to_angle(angle);
-  //  chassis.left_swing_to_angle(angle);
-  //  chassis.right_swing_to_angle(angle);
-  //chassis.drive_distance(2);
-  //wait(10, msec);
-  //intake.spinFor(forward,10,msec);
-  //wait(10, msec);
-  //chassis.drive_distance(43);
-  //wait(5,msec);
-  //chassis.left_swing_to_angle(90);
-  //chassis.drive_distance(20);
-  //wait(5,msec);
-  
-  //intakeout.set(true);
+
     intakeout.set(true);
     L1.setVelocity(100, percent);
     L2.setVelocity(100, percent);
