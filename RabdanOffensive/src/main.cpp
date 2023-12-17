@@ -141,8 +141,7 @@ void autonomous(void) {
     intake.setBrake(hold);
     intake.setVelocity(100, percent);
 
-    //chassis.drive_distance(5.0);
-    //chassis.turn_to_angle(55);
+
     Wings.set(true);
     wait(0.2, seconds);
     chassis.drive_distance(15);
@@ -151,21 +150,12 @@ void autonomous(void) {
     chassis.turn_to_angle(-35, 12);
 
 
-    //chassis.turn_to_angle(-45);
-    L1.spin(forward);
-    L2.spin(forward);
-    L3.spin(forward);
-    R1.spin(forward);
-    R2.spin(forward);
-    R3.spin(forward);
+    chassis.DriveR.spin(fwd,12,volt);
+    chassis.DriveL.spin(fwd,12,volt);
     intake.spin(reverse);
     wait(.7, seconds);
-    L1.stop();
-    L2.stop();                                                                                                                                                                            
-    L3.stop();
-    R1.stop();
-    R2.stop();
-    R3.stop();
+    chassis.DriveR.spin(fwd,0,volt);
+    chassis.DriveL.spin(fwd,0,volt);
     intake.stop();
     
 
@@ -185,25 +175,15 @@ void autonomous(void) {
     
 
     intake.spin(reverse);
-    L1.spin(forward);
-    L2.spin(forward);
-    L3.spin(forward);
-    R1.spin(forward);
-    R2.spin(forward);
-    R3.spin(forward);
-    //intake.spin(reverse);
+    chassis.DriveR.spin(fwd,12,volt);
+    chassis.DriveL.spin(fwd,12,volt);
     wait(1, seconds);
     intake.stop();
-    L1.stop();
-    L2.stop();
-    L3.stop();
-    R1.stop();
-    R2.stop();
-    R3.stop();
-    //intake.stop();
+    chassis.DriveR.spin(fwd,0,volt);
+    chassis.DriveL.spin(fwd,0,volt);
+
     chassis.drive_distance(-10);
     chassis.turn_to_angle(-130, 8);
-    //chassis.turn_to_angle(-125);
     intake.spin(forward);
     chassis.drive_distance(27);
     chassis.turn_to_angle(45);
@@ -212,20 +192,11 @@ void autonomous(void) {
     intake.spin(reverse);
     Wings.set(true);
 
-    L1.spin(forward);
-    L2.spin(forward);
-    L3.spin(forward);
-    R1.spin(forward);
-    R2.spin(forward);
-    R3.spin(forward);
-    //intake.spin(reverse);
+    chassis.DriveR.spin(fwd,12,volt);
+    chassis.DriveL.spin(fwd,12,volt);
     wait(1.5, seconds);
-    L1.stop();
-    L2.stop();
-    L3.stop();
-    R1.stop();
-    R2.stop();
-    R3.stop();
+    chassis.DriveR.spin(fwd,0,volt);
+    chassis.DriveL.spin(fwd,0,volt);
     intake.stop();
 
     Wings.set(false);
