@@ -126,6 +126,7 @@ void pre_auton(void) {
 void autonomous(void) {
 
     intakeout.set(true);
+    
     L1.setVelocity(100, percent);
     L2.setVelocity(100, percent);
     L3.setVelocity(100, percent);
@@ -143,38 +144,58 @@ void autonomous(void) {
 
 
     Wings.set(true);
-    wait(0.2, seconds);
+    wait(0.1, seconds);
+    //chassis.drive_distance(10);
+    //wait(5, seconds);
     chassis.drive_distance(15);
     
-    chassis.turn_to_angle(-65, 12);
-    chassis.turn_to_angle(-35, 12);
+    //independent motor control
+    chassis.DriveR.spin(fwd,12,volt);
+    wait(.6, seconds);
+    chassis.DriveR.stop();
+
+    //chassis.turn_to_angle(-65, 12);
+    chassis.turn_to_angle(-25, 12); //old -35
 
 
     chassis.DriveR.spin(fwd,12,volt);
     chassis.DriveL.spin(fwd,12,volt);
     intake.spin(reverse);
-    wait(.7, seconds);
+    wait(.9, seconds);
     chassis.DriveR.spin(fwd,0,volt);
     chassis.DriveL.spin(fwd,0,volt);
     intake.stop();
-    
+    Wings.set(false);
 
     chassis.drive_distance(-15);
     chassis.turn_to_angle(-110);
 
     //drive to ball to B3
     intake.spin(forward);
-    chassis.drive_distance(50);
+    chassis.drive_distance(52);
+
+    
 
     //go back
     chassis.drive_distance(-5);
+    
+    //throw ball B3
+    chassis.DriveL.spin(fwd);
+    wait(0.25, seconds);
+    intake.spin(reverse);
+    wait(0.5, seconds);
+    chassis.DriveL.stop();
+
     chassis.turn_to_angle(-45);
-    intake.stop();
+    //intake.stop();
+
+    intake.spin(forward);
     chassis.drive_distance(19); //old 15
+    intake.spin(reverse);
     chassis.left_swing_to_angle(40);
     
 
-    intake.spin(reverse);
+    //intake.spin(reverse);
     chassis.DriveR.spin(fwd,12,volt);
     chassis.DriveL.spin(fwd,12,volt);
     wait(1, seconds);
@@ -182,11 +203,11 @@ void autonomous(void) {
     chassis.DriveR.spin(fwd,0,volt);
     chassis.DriveL.spin(fwd,0,volt);
 
-    chassis.drive_distance(-10);
-    chassis.turn_to_angle(-130, 8);
-    intake.spin(forward);
-    chassis.drive_distance(27);
-    chassis.turn_to_angle(45);
+    //chassis.drive_distance(-10);
+    //chassis.turn_to_angle(-130, 8);
+    //intake.spin(forward);
+    //chassis.drive_distance(27);
+    //chassis.turn_to_angle(45);
     intake.stop();
 
     intake.spin(reverse);

@@ -15,7 +15,7 @@ void default_constants(){
 
 void odom_constants(){
   default_constants();
-  chassis.drive_max_voltage = 11;
+  chassis.drive_max_voltage = 12;
   chassis.drive_settle_error = 3;
 }
 
