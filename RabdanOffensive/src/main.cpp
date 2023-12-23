@@ -144,18 +144,20 @@ void autonomous(void) {
 
 
     Wings.set(true);
-    wait(0.1, seconds);
+    wait(0.5, seconds);
     //chassis.drive_distance(10);
     //wait(5, seconds);
-    chassis.drive_distance(15);
-    
+    //chassis.drive_distance(15);
     //independent motor control
+
+
     chassis.DriveR.spin(fwd,12,volt);
-    wait(.6, seconds);
+    wait(1.2, seconds);
     chassis.DriveR.stop();
+    Wings.set(false);
 
     //chassis.turn_to_angle(-65, 12);
-    chassis.turn_to_angle(-25, 12); //old -35
+    chassis.turn_to_angle(-55, 12); //old -35
 
 
     chassis.DriveR.spin(fwd,12,volt);
@@ -165,10 +167,10 @@ void autonomous(void) {
     chassis.DriveR.spin(fwd,0,volt);
     chassis.DriveL.spin(fwd,0,volt);
     intake.stop();
-    Wings.set(false);
+    //Wings.set(false);
 
     chassis.drive_distance(-15);
-    chassis.turn_to_angle(-110);
+    chassis.turn_to_angle(-160); //old -115
 
     //drive to ball to B3
     intake.spin(forward);
@@ -180,19 +182,20 @@ void autonomous(void) {
     chassis.drive_distance(-5);
     
     //throw ball B3
-    chassis.DriveL.spin(fwd);
-    wait(0.25, seconds);
+    chassis.DriveL.spin(fwd,12,volt);
+    //wait(0.25, seconds);
     intake.spin(reverse);
-    wait(0.5, seconds);
+    wait(1, seconds);
     chassis.DriveL.stop();
 
-    chassis.turn_to_angle(-45);
+    chassis.turn_to_angle(-105); //old -60
     //intake.stop();
 
     intake.spin(forward);
     chassis.drive_distance(19); //old 15
     intake.spin(reverse);
-    chassis.left_swing_to_angle(40);
+    chassis.left_swing_to_angle(-5); //old 40
+    Wings.set(true);
     
 
     //intake.spin(reverse);
