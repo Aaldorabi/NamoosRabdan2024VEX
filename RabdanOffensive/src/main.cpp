@@ -275,9 +275,10 @@ void usercontrol(void) {
     else if(Controller1.ButtonL1.pressing()){
       catapult.spin(forward);
     }
-    //else if(Controller1.ButtonL1.pressing() && cataswich.pressing()){
-      //catapult.spin(forward);
-    //}
+    else if(Controller1.ButtonL1.pressing() && cataswich.pressing()){
+      catapult.spinFor(forward, 90, degrees);
+      catapult.spin(forward);
+    }
     else if(!Controller1.ButtonL1.pressing() && cataswich.pressing()){
       catapult.stop(vex::brakeType(coast));
     }
