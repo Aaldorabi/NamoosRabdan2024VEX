@@ -270,12 +270,21 @@ void usercontrol(void) {
      else if (Controller1.ButtonDown.pressing()) {
     intakeout.set(false);
     }
+
+    //catapult
     else if(Controller1.ButtonL1.pressing()){
       catapult.spin(forward);
     }
+    //else if(Controller1.ButtonL1.pressing() && cataswich.pressing()){
+      //catapult.spin(forward);
+    //}
     else if(!Controller1.ButtonL1.pressing() && cataswich.pressing()){
-      catapult.stop();
+      catapult.stop(vex::brakeType(coast));
     }
+    
+
+
+
     else if(Controller1.ButtonA.pressing()){
         EndGame.set(true);
     }
