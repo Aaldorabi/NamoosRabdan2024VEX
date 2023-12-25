@@ -125,6 +125,7 @@ void pre_auton(void) {
 
 void autonomous(void) {
 
+
     intakeout.set(true);
     
     L1.setVelocity(100, percent);
@@ -144,7 +145,7 @@ void autonomous(void) {
 
 
     Wings.set(true);
-    wait(0.5, seconds);
+    wait(0.2, seconds);
     //chassis.drive_distance(10);
     //wait(5, seconds);
     //chassis.drive_distance(15);
@@ -152,20 +153,19 @@ void autonomous(void) {
 
 
     chassis.DriveR.spin(fwd,12,volt);
-    wait(1.2, seconds);
+    wait(.7, seconds);
+    intake.spin(reverse);
     chassis.DriveR.stop();
+    chassis.DriveL.stop();
     Wings.set(false);
 
     //chassis.turn_to_angle(-65, 12);
-    chassis.turn_to_angle(-55, 12); //old -35
-
-
+    chassis.turn_to_angle(-65, 11); //old -35
     chassis.DriveR.spin(fwd,12,volt);
     chassis.DriveL.spin(fwd,12,volt);
-    intake.spin(reverse);
     wait(.9, seconds);
-    chassis.DriveR.spin(fwd,0,volt);
-    chassis.DriveL.spin(fwd,0,volt);
+    chassis.DriveR.stop();
+    chassis.DriveL.stop();
     intake.stop();
     //Wings.set(false);
 
@@ -185,16 +185,17 @@ void autonomous(void) {
     chassis.DriveL.spin(fwd,12,volt);
     //wait(0.25, seconds);
     intake.spin(reverse);
-    wait(1, seconds);
+    wait(.6, seconds);
     chassis.DriveL.stop();
+    chassis.DriveR.stop();
 
-    chassis.turn_to_angle(-105); //old -60
+    chassis.turn_to_angle(-135); //old -105
     //intake.stop();
 
     intake.spin(forward);
     chassis.drive_distance(19); //old 15
     intake.spin(reverse);
-    chassis.left_swing_to_angle(-5); //old 40
+    chassis.left_swing_to_angle(0); //old -5
     Wings.set(true);
     
 
