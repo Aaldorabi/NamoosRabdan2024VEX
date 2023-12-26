@@ -11,7 +11,7 @@
 // L3                   motor         10              
 // intake               motor         4               
 // intakeout            digital_out   A               
-// INERT                inertial      11              
+// INERT                inertial      12              
 // Controller1          controller                    
 // Wings                digital_out   D               
 // catapult             motor         7               
@@ -57,7 +57,7 @@ motor_group(L1,L2,L3),
 motor_group(R1,R2,R3),
 
 //Specify the PORT NUMBER of your inertial sensor, in PORT format (i.e. "PORT1", not simply "1"):
-PORT11,
+PORT12,
 
 //Input your wheel diameter. (4" omnis are actually closer to 4.125"):
 3.25,
@@ -125,9 +125,9 @@ void pre_auton(void) {
 
 void autonomous(void) {
 
-
     intakeout.set(true);
-    
+
+
     L1.setVelocity(100, percent);
     L2.setVelocity(100, percent);
     L3.setVelocity(100, percent);
@@ -142,25 +142,22 @@ void autonomous(void) {
     R3.setMaxTorque(100, percent);
     intake.setBrake(hold);
     intake.setVelocity(100, percent);
-
-
     Wings.set(true);
-    wait(0.2, seconds);
+    wait(1, seconds);
     //chassis.drive_distance(10);
     //wait(5, seconds);
     //chassis.drive_distance(15);
     //independent motor control
 
-
     chassis.DriveR.spin(fwd,12,volt);
     wait(.7, seconds);
-    intake.spin(reverse);
     chassis.DriveR.stop();
     chassis.DriveL.stop();
     Wings.set(false);
-
+    //wait(.1, seconds);
     //chassis.turn_to_angle(-65, 12);
-    chassis.turn_to_angle(-65, 11); //old -35
+    chassis.turn_to_angle(-60, 11); //old -60
+    intake.spin(reverse);
     chassis.DriveR.spin(fwd,12,volt);
     chassis.DriveL.spin(fwd,12,volt);
     wait(.9, seconds);
@@ -170,24 +167,20 @@ void autonomous(void) {
     //Wings.set(false);
 
     chassis.drive_distance(-15);
-    chassis.turn_to_angle(-160); //old -115
 
     //drive to ball to B3
+    chassis.turn_to_angle(-150); //old -115
     intake.spin(forward);
     chassis.drive_distance(52);
-
-    
 
     //go back
     chassis.drive_distance(-5);
     
     //throw ball B3
-    chassis.DriveL.spin(fwd,12,volt);
+    chassis.turn_to_angle(-45);
     //wait(0.25, seconds);
     intake.spin(reverse);
-    wait(.6, seconds);
-    chassis.DriveL.stop();
-    chassis.DriveR.stop();
+    wait(.1, seconds);
 
     chassis.turn_to_angle(-135); //old -105
     //intake.stop();
@@ -227,7 +220,6 @@ void autonomous(void) {
     Wings.set(false);
 
 }
-
 /*---------------------------------------------------------------------------*/
 /*                                                                           */
 /*                              User Control Task                            */
