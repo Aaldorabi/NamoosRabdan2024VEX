@@ -142,34 +142,31 @@ void autonomous(void) {
     R3.setMaxTorque(100, percent);
     intake.setBrake(hold);
     intake.setVelocity(100, percent);
-    Wings.set(true);
-    wait(1, seconds);
-    //chassis.drive_distance(10);
-    //wait(5, seconds);
-    //chassis.drive_distance(15);
-    //independent motor control
 
-    chassis.DriveR.spin(fwd,12,volt);
-    wait(.7, seconds);
-    chassis.DriveR.stop();
-    chassis.DriveL.stop();
+    //start
+    Wings.set(true);
+    wait(.1, seconds);
+
+
+    //flick ball
+    chassis.DriveR.spin(forward);
+    wait(1, seconds); //1
     Wings.set(false);
-    //wait(.1, seconds);
-    //chassis.turn_to_angle(-65, 12);
-    chassis.turn_to_angle(-60, 11); //old -60
+    chassis.turn_to_angle(-75); //old -60
     intake.spin(reverse);
+    //wait(1, seconds);//.25
     chassis.DriveR.spin(fwd,12,volt);
     chassis.DriveL.spin(fwd,12,volt);
-    wait(.9, seconds);
-    chassis.DriveR.stop();
-    chassis.DriveL.stop();
+    wait(1.35, seconds);
+    chassis.DriveR.stop(vex::brakeType::coast);
+    chassis.DriveL.stop(vex::brakeType::coast);
     intake.stop();
     //Wings.set(false);
 
     chassis.drive_distance(-15);
 
     //drive to ball to B3
-    chassis.turn_to_angle(-150); //old -115
+    chassis.turn_to_angle(-155); //old -115
     intake.spin(forward);
     chassis.drive_distance(52);
 
@@ -180,15 +177,14 @@ void autonomous(void) {
     chassis.turn_to_angle(-45);
     //wait(0.25, seconds);
     intake.spin(reverse);
-    wait(.1, seconds);
+    wait(0.25, seconds);
 
     chassis.turn_to_angle(-135); //old -105
-    //intake.stop();
 
     intake.spin(forward);
-    chassis.drive_distance(19); //old 15
-    intake.spin(reverse);
+    chassis.drive_distance(15); //old 15
     chassis.left_swing_to_angle(0); //old -5
+    intake.spin(reverse);
     Wings.set(true);
     
 
@@ -200,25 +196,12 @@ void autonomous(void) {
     chassis.DriveR.spin(fwd,0,volt);
     chassis.DriveL.spin(fwd,0,volt);
 
-    //chassis.drive_distance(-10);
-    //chassis.turn_to_angle(-130, 8);
-    //intake.spin(forward);
-    //chassis.drive_distance(27);
-    //chassis.turn_to_angle(45);
-    intake.stop();
-
-    intake.spin(reverse);
-    Wings.set(true);
-
-    chassis.DriveR.spin(fwd,12,volt);
-    chassis.DriveL.spin(fwd,12,volt);
-    wait(1.5, seconds);
-    chassis.DriveR.spin(fwd,0,volt);
-    chassis.DriveL.spin(fwd,0,volt);
-    intake.stop();
-
-    Wings.set(false);
-
+    chassis.turn_to_angle(135);
+    chassis.DriveR.spin(fwd);
+    chassis.DriveL.spin(fwd);
+    wait(1, seconds);
+    chassis.DriveR.stop(brakeType::coast);
+    chassis.DriveR.stop(brakeType::coast);
 }
 /*---------------------------------------------------------------------------*/
 /*                                                                           */
@@ -232,7 +215,7 @@ void autonomous(void) {
 
 void usercontrol(void) {
   intake.setVelocity(100.0, percent);
-  catapult.setVelocity(70.0, percent);
+  catapult.setVelocity(60.0, percent);
   L1.setBrake(hold);
   L2.setBrake(hold);
   L3.setBrake(hold);
@@ -257,7 +240,7 @@ void usercontrol(void) {
     else if(Controller1.ButtonB.pressing()){
       Wings.set(false);
     }
-    if (Controller1.ButtonUp.pressing()) {
+    else if (Controller1.ButtonUp.pressing()) {
     intakeout.set(true);
     }
      else if (Controller1.ButtonDown.pressing()) {
