@@ -169,6 +169,7 @@ void autonomous(void) {
     chassis.turn_to_angle(-155); //old -115
     intake.spin(forward);
     chassis.drive_distance(52);
+    
 
     //go back
     chassis.drive_distance(-5);
@@ -179,9 +180,9 @@ void autonomous(void) {
     intake.spin(reverse);
     wait(0.25, seconds);
 
-    chassis.turn_to_angle(-135); //old -105
-
     intake.spin(forward);
+    chassis.turn_to_angle(-115); //old -105
+
     chassis.drive_distance(15); //old 15
     chassis.left_swing_to_angle(0); //old -5
     intake.spin(reverse);
@@ -216,12 +217,14 @@ void autonomous(void) {
 void usercontrol(void) {
   intake.setVelocity(100.0, percent);
   catapult.setVelocity(60.0, percent);
-  L1.setBrake(hold);
-  L2.setBrake(hold);
-  L3.setBrake(hold);
-  R1.setBrake(hold);
-  R2.setBrake(hold);
-  R3.setBrake(hold);
+  chassis.DriveL.setVelocity(100, percent);
+  chassis.DriveR.setVelocity(100, percent);
+  L1.setBrake(coast);
+  L2.setBrake(coast);
+  L3.setBrake(coast);
+  R1.setBrake(coast);
+  R2.setBrake(coast);
+  R3.setBrake(coast);
   Wings.set(false);
 
   
