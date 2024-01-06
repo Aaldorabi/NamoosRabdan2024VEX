@@ -1,4 +1,4 @@
-#include "vex.h"
+      #include "vex.h"
 
 // ---- START VEXCODE CONFIGURED DEVICES ----
 // Robot Configuration:
@@ -157,7 +157,7 @@ void autonomous(void) {
     //wait(1, seconds);//.25
     chassis.DriveR.spin(fwd,12,volt);
     chassis.DriveL.spin(fwd,12,volt);
-    wait(1.35, seconds);
+    wait(.75, seconds);
     chassis.DriveR.stop(vex::brakeType::coast);
     chassis.DriveL.stop(vex::brakeType::coast);
     intake.stop();
@@ -166,7 +166,7 @@ void autonomous(void) {
     chassis.drive_distance(-15);
 
     //drive to ball to B3
-    chassis.turn_to_angle(-155); //old -115
+    chassis.turn_to_angle(-157); //old -115
     intake.spin(forward);
     chassis.drive_distance(52);
     
@@ -178,13 +178,20 @@ void autonomous(void) {
     chassis.turn_to_angle(-45);
     //wait(0.25, seconds);
     intake.spin(reverse);
-    wait(0.25, seconds);
+    wait(0.5, seconds);
 
     intake.spin(forward);
-    chassis.turn_to_angle(-115); //old -105
+    chassis.turn_to_angle(-110); //old -115
 
     chassis.drive_distance(15); //old 15
     chassis.left_swing_to_angle(0); //old -5
+
+    //(float angle, float swing_max_voltage, float swing_settle_error, float swing_settle_time, float swing_timeout, float swing_kp, float swing_ki, float swing_kd, float swing_starti);
+    chassis.left_swing_to_angle(0, 11, 5, 250, 1500, .3, 0, 2, 15);
+    chassis.left_swing_to_angle(90, 8, 2, 0, 1000, 2, 0, 7, 0);
+
+
+
     intake.spin(reverse);
     Wings.set(true);
     
@@ -201,6 +208,8 @@ void autonomous(void) {
     chassis.DriveR.spin(fwd);
     chassis.DriveL.spin(fwd);
     wait(1, seconds);
+    chassis.DriveR.stop();
+    chassis.DriveL.stop();
     chassis.DriveR.stop(brakeType::coast);
     chassis.DriveR.stop(brakeType::coast);
 }
@@ -251,6 +260,9 @@ void usercontrol(void) {
     }
 
     //catapult
+    else if(Controller1.ButtonL2.pressing()){
+      catapult.stop();
+    }
     else if(Controller1.ButtonL1.pressing()){
       catapult.spin(forward);
     }
