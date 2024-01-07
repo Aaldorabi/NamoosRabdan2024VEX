@@ -150,11 +150,11 @@ void autonomous(void) {
 
     //flick ball
     chassis.DriveR.spin(forward);
-    wait(1.25, seconds); //1
+    wait(1, seconds); //1
     Wings.set(false);
     chassis.DriveR.stop(vex::brakeType::brake);
     chassis.DriveL.stop(vex::brakeType::brake);
-    chassis.turn_to_angle(-65); //old -60
+    chassis.turn_to_angle(-60); //old -65
     intake.spin(reverse);
     //wait(1, seconds);//.25
     chassis.DriveR.spin(fwd,12,volt);
@@ -168,9 +168,9 @@ void autonomous(void) {
     chassis.drive_distance(-15);
 
     //drive to ball to B3
-    chassis.turn_to_angle(-157); //old -115
+    chassis.turn_to_angle(-159); //old -157
     intake.spin(forward);
-    chassis.drive_distance(46); //old 49
+    chassis.drive_distance(49); //old 46
     
 
     //go back
@@ -192,7 +192,7 @@ void autonomous(void) {
 
     //(float angle, float swing_max_voltage, float swing_settle_error, float swing_settle_time, float swing_timeout, float swing_kp, float swing_ki, float swing_kd, float swing_starti);
     //chassis.left_swing_to_angle(10, 12, 10, 300, 1500, .3, 0, 2, 15);
-    chassis.turn_to_angle(0, 12, 5, 200, 1500);
+    chassis.turn_to_angle(0, 12, 2.5, 300, 2000);
     //chassis.left_swing_to_angle(90, 8, 2, 0, 1000, 2, 0, 7, 0);
 
 
@@ -215,9 +215,9 @@ void autonomous(void) {
     Wings.set(false);
     chassis.DriveR.spin(fwd, 12,volt);
     chassis.DriveL.spin(fwd,12,volt);
-    wait(1, seconds);
-    chassis.DriveR.stop(brakeType::coast);
-    chassis.DriveR.stop(brakeType::coast);
+    wait(1.5, seconds);
+    chassis.DriveR.stop(vex::brakeType::hold);
+    chassis.DriveR.stop(vex::brakeType::hold);
     chassis.DriveR.stop();
     chassis.DriveL.stop();
     
@@ -237,13 +237,13 @@ void usercontrol(void) {
   catapult.setVelocity(70.0, percent);
   chassis.DriveL.setVelocity(100, percent);
   chassis.DriveR.setVelocity(100, percent);
-  L1.setBrake(coast);
+  /*L1.setBrake(coast);
   L2.setBrake(coast);
   L3.setBrake(coast);
   R1.setBrake(coast);
   R2.setBrake(coast);
   R3.setBrake(coast);
-  Wings.set(false);
+  Wings.set(false);*/
 
   //wings Switch Case for 1 button control
   bool WingsSwitch = 1; 
