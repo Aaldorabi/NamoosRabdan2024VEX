@@ -150,9 +150,11 @@ void autonomous(void) {
 
     //flick ball
     chassis.DriveR.spin(forward);
-    wait(1, seconds); //1
+    wait(1.25, seconds); //1
     Wings.set(false);
-    chassis.turn_to_angle(-75); //old -60
+    chassis.DriveR.stop(vex::brakeType::brake);
+    chassis.DriveL.stop(vex::brakeType::brake);
+    chassis.turn_to_angle(-65); //old -60
     intake.spin(reverse);
     //wait(1, seconds);//.25
     chassis.DriveR.spin(fwd,12,volt);
@@ -168,27 +170,30 @@ void autonomous(void) {
     //drive to ball to B3
     chassis.turn_to_angle(-157); //old -115
     intake.spin(forward);
-    chassis.drive_distance(52);
+    chassis.drive_distance(46); //old 49
     
 
     //go back
     chassis.drive_distance(-5);
+    intake.stop();
     
     //throw ball B3
-    chassis.turn_to_angle(-45);
+    //chassis.turn_to_angle(float angle, float turn_max_voltage, float turn_settle_error, float turn_settle_time, float turn_timeout)
+    chassis.turn_to_angle(-48, 12, 10, 200, 1350); //1500 last constant //53 degrees
     //wait(0.25, seconds);
     intake.spin(reverse);
-    wait(0.5, seconds);
+    wait(0.3, seconds);
 
     intake.spin(forward);
-    chassis.turn_to_angle(-110); //old -115
+    chassis.turn_to_angle(-110); //old -115 /-105
 
-    chassis.drive_distance(15); //old 15
-    chassis.left_swing_to_angle(0); //old -5
+    chassis.drive_distance(23); //old 21
+    //chassis.left_swing_to_angle(0); //old -5
 
     //(float angle, float swing_max_voltage, float swing_settle_error, float swing_settle_time, float swing_timeout, float swing_kp, float swing_ki, float swing_kd, float swing_starti);
-    chassis.left_swing_to_angle(0, 11, 5, 250, 1500, .3, 0, 2, 15);
-    chassis.left_swing_to_angle(90, 8, 2, 0, 1000, 2, 0, 7, 0);
+    //chassis.left_swing_to_angle(10, 12, 10, 300, 1500, .3, 0, 2, 15);
+    chassis.turn_to_angle(0, 12, 5, 200, 1500);
+    //chassis.left_swing_to_angle(90, 8, 2, 0, 1000, 2, 0, 7, 0);
 
 
 
@@ -204,14 +209,18 @@ void autonomous(void) {
     chassis.DriveR.spin(fwd,0,volt);
     chassis.DriveL.spin(fwd,0,volt);
 
-    chassis.turn_to_angle(135);
-    chassis.DriveR.spin(fwd);
-    chassis.DriveL.spin(fwd);
+    //go to the auton win point bar
+    //chassis.turn_to_angle(float angle, float turn_max_voltage, float turn_settle_error, float turn_settle_time, float turn_timeout)
+    chassis.turn_to_angle(135,12,5,300, 3000);
+    Wings.set(false);
+    chassis.DriveR.spin(fwd, 12,volt);
+    chassis.DriveL.spin(fwd,12,volt);
     wait(1, seconds);
+    chassis.DriveR.stop(brakeType::coast);
+    chassis.DriveR.stop(brakeType::coast);
     chassis.DriveR.stop();
     chassis.DriveL.stop();
-    chassis.DriveR.stop(brakeType::coast);
-    chassis.DriveR.stop(brakeType::coast);
+    
 }
 /*---------------------------------------------------------------------------*/
 /*                                                                           */
@@ -225,7 +234,7 @@ void autonomous(void) {
 
 void usercontrol(void) {
   intake.setVelocity(100.0, percent);
-  catapult.setVelocity(60.0, percent);
+  catapult.setVelocity(70.0, percent);
   chassis.DriveL.setVelocity(100, percent);
   chassis.DriveR.setVelocity(100, percent);
   L1.setBrake(coast);
@@ -236,7 +245,9 @@ void usercontrol(void) {
   R3.setBrake(coast);
   Wings.set(false);
 
-  
+  //wings Switch Case for 1 button control
+  bool WingsSwitch = 1; 
+
   
   // User control code here, inside the loop
   while (1) {
@@ -246,21 +257,35 @@ void usercontrol(void) {
 
     // ........................................................................
 
-    if(Controller1.ButtonX.pressing()){
+    //wings
+    if(Controller1.ButtonL2.pressing() && WingsSwitch == 1){
       Wings.set(true);
+      WingsSwitch = 0;
+      wait(0.15, seconds);
     }
-    else if(Controller1.ButtonB.pressing()){
+    else if(Controller1.ButtonL2.pressing() && WingsSwitch == 0){
       Wings.set(false);
+      WingsSwitch = 1;
+      wait(0.15, seconds);
     }
+    
     else if (Controller1.ButtonUp.pressing()) {
     intakeout.set(true);
     }
      else if (Controller1.ButtonDown.pressing()) {
     intakeout.set(false);
     }
-
+    
+    //end game
+    else if(Controller1.ButtonA.pressing()){
+        EndGame.set(true);
+    }
+    else if(Controller1.ButtonY.pressing()){
+        EndGame.set(false);
+    }
+    
     //catapult
-    else if(Controller1.ButtonL2.pressing()){
+    else if(Controller1.ButtonB.pressing()){
       catapult.stop();
     }
     else if(Controller1.ButtonL1.pressing()){
@@ -277,12 +302,7 @@ void usercontrol(void) {
 
 
 
-    else if(Controller1.ButtonA.pressing()){
-        EndGame.set(true);
-    }
-    else if(Controller1.ButtonY.pressing()){
-        EndGame.set(false);
-    }
+    
   
     chassis.control_tank();
     //or chassis.control_holonomic(); for holo drive.
