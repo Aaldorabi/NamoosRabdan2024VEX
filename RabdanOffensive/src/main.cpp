@@ -10,14 +10,12 @@
 // L2                   motor         9               
 // L3                   motor         10              
 // intake               motor         4               
-// RGB                  digital_out   A               
 // INERT                inertial      12              
 // Controller1          controller                    
 // Wings                digital_out   D               
 // catapult             motor         7               
 // cataswich            limit         C               
 // EndGame              digital_out   E               
-// RainbowRGB           digital_out   F               
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
 using namespace vex;
@@ -125,8 +123,6 @@ void pre_auton(void) {
 }
 
 void autonomous(void) {
-    
-    RGB.set(true);
 
 
     L1.setVelocity(100, percent);
@@ -212,7 +208,6 @@ void autonomous(void) {
 
     //go to the auton win point bar
     //chassis.turn_to_angle(float angle, float turn_max_voltage, float turn_settle_error, float turn_settle_time, float turn_timeout)
-    RainbowRGB.set(true);
     chassis.turn_to_angle(135,12,5,300, 3000);
     Wings.set(false);
     chassis.DriveR.spin(fwd, 12,volt);
@@ -235,8 +230,6 @@ void autonomous(void) {
 /*---------------------------------------------------------------------------*/
 
 void usercontrol(void) {
-  RainbowRGB.set(false);
-  RGB.set(true);
   intake.setVelocity(100.0, percent);
   catapult.setVelocity(70.0, percent);
   chassis.DriveL.setVelocity(100, percent);
@@ -251,7 +244,6 @@ void usercontrol(void) {
 
   //wings Switch Case for 1 button control
   bool WingsSwitch = 1; 
-
   
   // User control code here, inside the loop
   while (1) {
@@ -278,11 +270,9 @@ void usercontrol(void) {
     //end game
     else if(Controller1.ButtonA.pressing()){
         EndGame.set(true);
-        RainbowRGB.set(true);
     }
     else if(Controller1.ButtonY.pressing()){
         EndGame.set(false);
-        RainbowRGB.set(false);
     }
     
     //catapult
