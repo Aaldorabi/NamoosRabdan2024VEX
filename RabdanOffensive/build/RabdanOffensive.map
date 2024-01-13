@@ -85,7 +85,7 @@ Discarded input sections
                 0x00000000        0x4 build/src/main.o
  .bss.auto_started
                 0x00000000        0x1 build/src/main.o
- .llvm_addrsig  0x00000000       0x13 build/src/main.o
+ .llvm_addrsig  0x00000000       0x14 build/src/main.o
  .text          0x00000000        0x0 build/src/autons.o
  .text._Z14odom_constantsv
                 0x00000000       0x30 build/src/autons.o
@@ -123,7 +123,7 @@ Discarded input sections
                 0x00000000       0x3f build/src/autons.o
  .llvm_addrsig  0x00000000        0x2 build/src/autons.o
  .text          0x00000000        0x0 build/src/robot-config.o
- .llvm_addrsig  0x00000000       0x12 build/src/robot-config.o
+ .llvm_addrsig  0x00000000       0x13 build/src/robot-config.o
  .text          0x00000000        0x0 build/src/JAR-Template/util.o
  .text._Z24reduce_negative_90_to_90f
                 0x00000000       0x90 build/src/JAR-Template/util.o
@@ -2902,39 +2902,38 @@ Linker script and memory map
                 0x03800144       0x7c build/src/main.o
                 0x03800144                Drive::~Drive()
  .text._Z10autonomousv
-                0x038001c0      0x5b0 build/src/main.o
+                0x038001c0      0x5a0 build/src/main.o
                 0x038001c0                autonomous()
  .text._Z11usercontrolv
-                0x03800770      0x328 build/src/main.o
-                0x03800770                usercontrol()
- .text.main     0x03800a98       0x68 build/src/main.o
-                0x03800a98                main
+                0x03800760      0x318 build/src/main.o
+                0x03800760                usercontrol()
+ .text.main     0x03800a78       0x68 build/src/main.o
+                0x03800a78                main
  .text._GLOBAL__sub_I_main.cpp
-                0x03800b00      0x178 build/src/main.o
+                0x03800ae0      0x178 build/src/main.o
  .text._Z17default_constantsv
-                0x03800c78      0x10c build/src/autons.o
-                0x03800c78                default_constants()
+                0x03800c58      0x10c build/src/autons.o
+                0x03800c58                default_constants()
  .text._Z33rc_auto_loop_function_Controller1v
-                0x03800d84       0xe4 build/src/robot-config.o
-                0x03800d84                rc_auto_loop_function_Controller1()
+                0x03800d64       0xe4 build/src/robot-config.o
+                0x03800d64                rc_auto_loop_function_Controller1()
  .text._Z11vexcodeInitv
-                0x03800e68       0x28 build/src/robot-config.o
-                0x03800e68                vexcodeInit()
+                0x03800e48       0x28 build/src/robot-config.o
+                0x03800e48                vexcodeInit()
  .text._GLOBAL__sub_I_robot_config.cpp
-                0x03800e90      0x2f4 build/src/robot-config.o
+                0x03800e70      0x318 build/src/robot-config.o
  .text._Z15reduce_0_to_360f
-                0x03801184       0x7c build/src/JAR-Template/util.o
-                0x03801184                reduce_0_to_360(float)
+                0x03801188       0x7c build/src/JAR-Template/util.o
+                0x03801188                reduce_0_to_360(float)
  .text._Z26reduce_negative_180_to_180f
-                0x03801200       0x90 build/src/JAR-Template/util.o
-                0x03801200                reduce_negative_180_to_180(float)
+                0x03801204       0x90 build/src/JAR-Template/util.o
+                0x03801204                reduce_negative_180_to_180(float)
  .text._Z5clampfff
-                0x03801290       0x2c build/src/JAR-Template/util.o
-                0x03801290                clamp(float, float, float)
+                0x03801294       0x2c build/src/JAR-Template/util.o
+                0x03801294                clamp(float, float, float)
  .text._Z11is_reversedd
-                0x038012bc       0x18 build/src/JAR-Template/util.o
-                0x038012bc                is_reversed(double)
- *fill*         0x038012d4        0x4 
+                0x038012c0       0x18 build/src/JAR-Template/util.o
+                0x038012c0                is_reversed(double)
  .text._Z7to_voltf
                 0x038012d8       0x30 build/src/JAR-Template/util.o
                 0x038012d8                to_volt(float)
@@ -4213,7 +4212,7 @@ Linker script and memory map
  *(.gnu.linkonce.tb.*)
                 0x03805038                __tbss_end = .
 
-.bss            0x03805038      0xac0
+.bss            0x03805038      0xad8
                 0x03805038                __bss_start = .
  *(.bss)
  *(.bss.*)
@@ -4238,9 +4237,8 @@ Linker script and memory map
                 0x038057c0                L3
  .bss.intake    0x038057e4       0x24 build/src/robot-config.o
                 0x038057e4                intake
- .bss.intakeout
-                0x03805808       0x18 build/src/robot-config.o
-                0x03805808                intakeout
+ .bss.RGB       0x03805808       0x18 build/src/robot-config.o
+                0x03805808                RGB
  .bss.INERT     0x03805820       0x38 build/src/robot-config.o
                 0x03805820                INERT
  .bss.Controller1
@@ -4255,116 +4253,119 @@ Linker script and memory map
                 0x03805a40                cataswich
  .bss.EndGame   0x03805a60       0x18 build/src/robot-config.o
                 0x03805a60                EndGame
+ .bss.RainbowRGB
+                0x03805a78       0x18 build/src/robot-config.o
+                0x03805a78                RainbowRGB
  .bss.__dso_handle
-                0x03805a78        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03805a78                __dso_handle
+                0x03805a90        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03805a90                __dso_handle
  .bss._ZN3vex4task8_labelIdE
-                0x03805a7c        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03805a7c                vex::task::_labelId
+                0x03805a94        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03805a94                vex::task::_labelId
  .bss._ZN3vex11competition22bStopTasksBetweenModesE
-                0x03805a80        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03805a80                vex::competition::bStopTasksBetweenModes
+                0x03805a98        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03805a98                vex::competition::bStopTasksBetweenModes
  .bss._ZN3vex11competition25bStopAllTasksBetweenModesE
-                0x03805a81        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03805a81                vex::competition::bStopAllTasksBetweenModes
+                0x03805a99        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03805a99                vex::competition::bStopAllTasksBetweenModes
  .bss._ZN3vex11competition14_auton_pendingE
-                0x03805a82        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03805a82                vex::competition::_auton_pending
- *fill*         0x03805a83        0x1 
+                0x03805a9a        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03805a9a                vex::competition::_auton_pending
+ *fill*         0x03805a9b        0x1 
  .bss._ZN3vex11competition20_autonomous_callbackE
-                0x03805a84        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03805a84                vex::competition::_autonomous_callback
+                0x03805a9c        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03805a9c                vex::competition::_autonomous_callback
  .bss._ZN3vex11competition23_drivercontrol_callbackE
-                0x03805a88        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03805a88                vex::competition::_drivercontrol_callback
+                0x03805aa0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03805aa0                vex::competition::_drivercontrol_callback
  .bss._ZN3vex11competition15_driver_pendingE
-                0x03805a8c        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03805a8c                vex::competition::_driver_pending
- *fill*         0x03805a8d        0x3 
+                0x03805aa4        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03805aa4                vex::competition::_driver_pending
+ *fill*         0x03805aa5        0x3 
  .bss._ZN3vex5color6orangeE
-                0x03805a90        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03805a90                vex::color::orange
- .bss._ZN3vex5color5blackE
-                0x03805a98        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03805a98                vex::color::black
- .bss._ZN3vex5color6yellowE
-                0x03805aa0        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03805aa0                vex::color::yellow
- .bss._ZN3vex5color5greenE
                 0x03805aa8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03805aa8                vex::color::green
- .bss._ZN3vex5color6purpleE
+                0x03805aa8                vex::color::orange
+ .bss._ZN3vex5color5blackE
                 0x03805ab0        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03805ab0                vex::color::purple
- .bss._ZN3vex5color4cyanE
+                0x03805ab0                vex::color::black
+ .bss._ZN3vex5color6yellowE
                 0x03805ab8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03805ab8                vex::color::cyan
- .bss._ZN3vex5color4blueE
+                0x03805ab8                vex::color::yellow
+ .bss._ZN3vex5color5greenE
                 0x03805ac0        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03805ac0                vex::color::blue
- .bss._ZN3vex5color3redE
+                0x03805ac0                vex::color::green
+ .bss._ZN3vex5color6purpleE
                 0x03805ac8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03805ac8                vex::color::red
- .bss._ZN3vex5color11transparentE
+                0x03805ac8                vex::color::purple
+ .bss._ZN3vex5color4cyanE
                 0x03805ad0        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03805ad0                vex::color::transparent
- .bss._ZN3vex5color5whiteE
+                0x03805ad0                vex::color::cyan
+ .bss._ZN3vex5color4blueE
                 0x03805ad8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03805ad8                vex::color::white
+                0x03805ad8                vex::color::blue
+ .bss._ZN3vex5color3redE
+                0x03805ae0        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03805ae0                vex::color::red
+ .bss._ZN3vex5color11transparentE
+                0x03805ae8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03805ae8                vex::color::transparent
+ .bss._ZN3vex5color5whiteE
+                0x03805af0        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03805af0                vex::color::white
  *(.gnu.linkonce.b.*)
  *(COMMON)
- COMMON         0x03805ae0       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03805ae4                __vex_critical_section
-                0x03805af8                __bss_end = .
+ COMMON         0x03805af8       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03805afc                __vex_critical_section
+                0x03805b10                __bss_end = .
                 0x03805038                _SDA_BASE_ = (__sdata_start + ((__sbss_end - __sdata_start) / 0x2))
                 0x03804be4                _SDA2_BASE_ = (__sdata2_start + ((__sbss2_end - __sdata2_start) / 0x2))
 
-.heap           0x03805af8   0x100008
-                0x03805b00                . = ALIGN (0x10)
- *fill*         0x03805af8        0x8 
-                0x03805b00                _heap = .
-                0x03805b00                HeapBase = .
-                0x03805b00                _heap_start = .
-                0x03905b00                . = (. + _HEAP_SIZE)
- *fill*         0x03805b00   0x100000 
-                0x03905b00                _heap_end = .
-                0x03905b00                HeapLimit = .
+.heap           0x03805b10   0x100000
+                0x03805b10                . = ALIGN (0x10)
+ *fill*         0x03805b10        0x0 
+                0x03805b10                _heap = .
+                0x03805b10                HeapBase = .
+                0x03805b10                _heap_start = .
+                0x03905b10                . = (. + _HEAP_SIZE)
+ *fill*         0x03805b10   0x100000 
+                0x03905b10                _heap_end = .
+                0x03905b10                HeapLimit = .
 
-.stack          0x03905b00     0x3800
-                0x03905b00                . = ALIGN (0x10)
-                0x03905b00                _stack_end = .
-                0x03907b00                . = (. + _STACK_SIZE)
- *fill*         0x03905b00     0x2000 
-                0x03907b00                . = ALIGN (0x10)
-                0x03907b00                _stack = .
-                0x03907b00                __stack = _stack
-                0x03907b00                . = ALIGN (0x10)
-                0x03907b00                _irq_stack_end = .
-                0x03907f00                . = (. + _IRQ_STACK_SIZE)
- *fill*         0x03907b00      0x400 
-                0x03907f00                . = ALIGN (0x10)
-                0x03907f00                __irq_stack = .
-                0x03907f00                _supervisor_stack_end = .
-                0x03908700                . = (. + _SUPERVISOR_STACK_SIZE)
- *fill*         0x03907f00      0x800 
-                0x03908700                . = ALIGN (0x10)
-                0x03908700                __supervisor_stack = .
-                0x03908700                _abort_stack_end = .
-                0x03908b00                . = (. + _ABORT_STACK_SIZE)
- *fill*         0x03908700      0x400 
-                0x03908b00                . = ALIGN (0x10)
-                0x03908b00                __abort_stack = .
-                0x03908b00                _fiq_stack_end = .
-                0x03908f00                . = (. + _FIQ_STACK_SIZE)
- *fill*         0x03908b00      0x400 
-                0x03908f00                . = ALIGN (0x10)
-                0x03908f00                __fiq_stack = .
-                0x03908f00                _undef_stack_end = .
-                0x03909300                . = (. + _UNDEF_STACK_SIZE)
- *fill*         0x03908f00      0x400 
-                0x03909300                . = ALIGN (0x10)
-                0x03909300                __undef_stack = .
-                0x03909300                _end = .
+.stack          0x03905b10     0x3800
+                0x03905b10                . = ALIGN (0x10)
+                0x03905b10                _stack_end = .
+                0x03907b10                . = (. + _STACK_SIZE)
+ *fill*         0x03905b10     0x2000 
+                0x03907b10                . = ALIGN (0x10)
+                0x03907b10                _stack = .
+                0x03907b10                __stack = _stack
+                0x03907b10                . = ALIGN (0x10)
+                0x03907b10                _irq_stack_end = .
+                0x03907f10                . = (. + _IRQ_STACK_SIZE)
+ *fill*         0x03907b10      0x400 
+                0x03907f10                . = ALIGN (0x10)
+                0x03907f10                __irq_stack = .
+                0x03907f10                _supervisor_stack_end = .
+                0x03908710                . = (. + _SUPERVISOR_STACK_SIZE)
+ *fill*         0x03907f10      0x800 
+                0x03908710                . = ALIGN (0x10)
+                0x03908710                __supervisor_stack = .
+                0x03908710                _abort_stack_end = .
+                0x03908b10                . = (. + _ABORT_STACK_SIZE)
+ *fill*         0x03908710      0x400 
+                0x03908b10                . = ALIGN (0x10)
+                0x03908b10                __abort_stack = .
+                0x03908b10                _fiq_stack_end = .
+                0x03908f10                . = (. + _FIQ_STACK_SIZE)
+ *fill*         0x03908b10      0x400 
+                0x03908f10                . = ALIGN (0x10)
+                0x03908f10                __fiq_stack = .
+                0x03908f10                _undef_stack_end = .
+                0x03909310                . = (. + _UNDEF_STACK_SIZE)
+ *fill*         0x03908f10      0x400 
+                0x03909310                . = ALIGN (0x10)
+                0x03909310                __undef_stack = .
+                0x03909310                _end = .
 LOAD C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/stdlib_0.lib
 LOAD build/src/main.o
 LOAD build/src/autons.o

@@ -10,13 +10,14 @@ extern motor L1;
 extern motor L2;
 extern motor L3;
 extern motor intake;
-extern digital_out intakeout;
+extern digital_out RGB;
 extern inertial INERT;
 extern controller Controller1;
 extern digital_out Wings;
 extern motor catapult;
 extern limit cataswich;
 extern digital_out EndGame;
+extern digital_out RainbowRGB;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Pro.

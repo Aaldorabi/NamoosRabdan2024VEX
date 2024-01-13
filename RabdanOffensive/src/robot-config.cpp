@@ -15,13 +15,14 @@ motor L1 = motor(PORT8, ratio6_1, true);
 motor L2 = motor(PORT9, ratio6_1, true);
 motor L3 = motor(PORT10, ratio6_1, true);
 motor intake = motor(PORT4, ratio6_1, true);
-digital_out intakeout = digital_out(Brain.ThreeWirePort.A);
+digital_out RGB = digital_out(Brain.ThreeWirePort.A);
 inertial INERT = inertial(PORT12);
 controller Controller1 = controller(primary);
 digital_out Wings = digital_out(Brain.ThreeWirePort.D);
 motor catapult = motor(PORT7, ratio36_1, true);
 limit cataswich = limit(Brain.ThreeWirePort.C);
 digital_out EndGame = digital_out(Brain.ThreeWirePort.E);
+digital_out RainbowRGB = digital_out(Brain.ThreeWirePort.F);
 
 // VEXcode generated functions
 // define variable for remote controller enable/disable
