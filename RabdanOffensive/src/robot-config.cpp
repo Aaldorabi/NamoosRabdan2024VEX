@@ -21,6 +21,7 @@ digital_out Wings = digital_out(Brain.ThreeWirePort.D);
 motor catapult = motor(PORT7, ratio36_1, true);
 limit cataswich = limit(Brain.ThreeWirePort.C);
 digital_out EndGame = digital_out(Brain.ThreeWirePort.E);
+digital_out BackWings = digital_out(Brain.ThreeWirePort.A);
 
 // VEXcode generated functions
 // define variable for remote controller enable/disable

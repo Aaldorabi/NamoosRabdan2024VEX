@@ -16,6 +16,7 @@
 // catapult             motor         7               
 // cataswich            limit         C               
 // EndGame              digital_out   E               
+// BackWings            digital_out   A               
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
 using namespace vex;
@@ -231,7 +232,7 @@ void autonomous(void) {
 
 void usercontrol(void) {
   intake.setVelocity(100.0, percent);
-  catapult.setVelocity(70.0, percent);
+  catapult.setVelocity(76.1, percent);
   chassis.DriveL.setVelocity(100, percent);
   chassis.DriveR.setVelocity(100, percent);
   /*L1.setBrake(coast);
@@ -244,7 +245,8 @@ void usercontrol(void) {
 
   //wings Switch Case for 1 button control
   bool WingsSwitch = 1; 
-  
+  bool EndGameSwitch = 1;
+  bool BackWingsSwitch = 1;
   // User control code here, inside the loop
   while (1) {
     // This is the main execution loop for the user control program.
@@ -253,6 +255,16 @@ void usercontrol(void) {
 
     // ........................................................................
 
+
+    /*buttons being used
+
+      L2 Wings
+      A EndGame
+      Y Catapult Stop
+      L1 Catapult Spin
+      X BackWings
+
+    */
 
     
     //wings
@@ -267,16 +279,32 @@ void usercontrol(void) {
       wait(0.15, seconds);
     }
 
-    //end game
-    else if(Controller1.ButtonA.pressing()){
-        EndGame.set(true);
+    //back wings
+    else if(Controller1.ButtonX.pressing() && BackWingsSwitch == 1){
+      BackWings.set(true);
+      BackWingsSwitch = 0;
+      wait(0.15, seconds);
     }
-    else if(Controller1.ButtonY.pressing()){
+    else if(Controller1.ButtonX.pressing() && BackWingsSwitch == 0){
+      BackWings.set(false);
+      BackWingsSwitch = 1;
+      wait(0.15, seconds);
+    }
+
+    //end game
+    else if(Controller1.ButtonA.pressing() && EndGameSwitch == 1){
+        EndGame.set(true);
+        EndGameSwitch = 0;
+        wait(0.15,seconds);
+    }
+    else if(Controller1.ButtonA.pressing() && EndGameSwitch == 0){
         EndGame.set(false);
+        EndGameSwitch = 1;
+        wait(0.15, seconds);
     }
     
     //catapult
-    else if(Controller1.ButtonB.pressing()){
+    else if(Controller1.ButtonY.pressing()){
       catapult.stop();
     }
     else if(Controller1.ButtonL1.pressing()){
@@ -291,7 +319,7 @@ void usercontrol(void) {
     }
 
     
-  
+    //chassis.control_arcade();
     chassis.control_tank();
     //or chassis.control_holonomic(); for holo drive.
 
