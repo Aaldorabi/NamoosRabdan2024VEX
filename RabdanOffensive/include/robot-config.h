@@ -17,6 +17,7 @@ extern motor catapult;
 extern limit cataswich;
 extern digital_out EndGame;
 extern digital_out BackWings;
+extern motor Catapult5W;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Pro.

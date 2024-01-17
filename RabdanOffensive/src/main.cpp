@@ -17,6 +17,7 @@
 // cataswich            limit         C               
 // EndGame              digital_out   E               
 // BackWings            digital_out   A               
+// Catapult5W           motor         5               
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
 using namespace vex;
@@ -232,7 +233,12 @@ void autonomous(void) {
 
 void usercontrol(void) {
   intake.setVelocity(100.0, percent);
-  catapult.setVelocity(76.1, percent);
+  catapult.setVelocity(75, percent);
+  Catapult5W.setVelocity(75, percent);
+  catapult.setBrake(coast);
+  Catapult5W.setBrake(coast);
+  catapult.setMaxTorque(100, percent);
+  Catapult5W.setMaxTorque(100, percent);
   chassis.DriveL.setVelocity(100, percent);
   chassis.DriveR.setVelocity(100, percent);
   /*L1.setBrake(coast);
@@ -306,15 +312,20 @@ void usercontrol(void) {
     //catapult
     else if(Controller1.ButtonY.pressing()){
       catapult.stop();
+      Catapult5W.stop();
     }
     else if(Controller1.ButtonL1.pressing()){
       catapult.spin(forward);
+      Catapult5W.spin(forward);
     }
     else if(Controller1.ButtonL1.pressing() && cataswich.pressing()){
       catapult.spinFor(forward, 90, degrees);
+      catapult.spinFor(forward, 90, degrees);
+      catapult.spin(forward);
       catapult.spin(forward);
     }
     else if(!Controller1.ButtonL1.pressing() && cataswich.pressing()){
+      catapult.stop(vex::brakeType(coast));
       catapult.stop(vex::brakeType(coast));
     }
 
