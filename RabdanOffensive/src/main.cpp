@@ -125,7 +125,7 @@ void pre_auton(void) {
 }
 
 void autonomous(void) {
-
+    int AngleOffset = 180;
 
     L1.setVelocity(100, percent);
     L2.setVelocity(100, percent);
@@ -143,31 +143,33 @@ void autonomous(void) {
     intake.setVelocity(100, percent);
 
     //start
-    Wings.set(true);
+    BackWings.set(true);
     wait(.1, seconds);
 
 
     //flick ball
-    chassis.DriveR.spin(forward);
-    wait(1, seconds); //1
-    Wings.set(false);
+    chassis.DriveL.setVelocity(60, percent);
+    chassis.DriveL.spin(reverse); //old forward
+    wait(.5, seconds); //1
+    chassis.DriveL.setVelocity(100, percent);
+    BackWings.set(false);
     chassis.DriveR.stop(vex::brakeType::brake);
     chassis.DriveL.stop(vex::brakeType::brake);
-    chassis.turn_to_angle(-60); //old -65
+    chassis.turn_to_angle(-70); //old -60
     intake.spin(reverse);
     //wait(1, seconds);//.25
-    chassis.DriveR.spin(fwd,12,volt);
-    chassis.DriveL.spin(fwd,12,volt);
+    chassis.DriveR.spin(reverse,12,volt);
+    chassis.DriveL.spin(reverse,12,volt);
     wait(.75, seconds);
     chassis.DriveR.stop(vex::brakeType::coast);
     chassis.DriveL.stop(vex::brakeType::coast);
     intake.stop();
     //Wings.set(false);
 
-    chassis.drive_distance(-15);
+    chassis.drive_distance(15); //old -15
 
     //drive to ball to B3
-    chassis.turn_to_angle(-159); //old -157
+    chassis.turn_to_angle(-159 + AngleOffset); //old -157
     intake.spin(forward);
     chassis.drive_distance(49); //old 46
     
@@ -178,20 +180,23 @@ void autonomous(void) {
     
     //throw ball B3
     //chassis.turn_to_angle(float angle, float turn_max_voltage, float turn_settle_error, float turn_settle_time, float turn_timeout)
-    chassis.turn_to_angle(-48, 12, 10, 200, 1350); //1500 last constant //53 degrees
+    chassis.turn_to_angle(-48 + AngleOffset, 12, 10, 200, 1350); //1500 last constant //53 degrees
     //wait(0.25, seconds);
+
+    intake.setVelocity(60,percent);
     intake.spin(reverse);
-    wait(0.3, seconds);
+    wait(0.6, seconds);
+        intake.setVelocity(100,percent);
 
     intake.spin(forward);
-    chassis.turn_to_angle(-110); //old -115 /-105
+    chassis.turn_to_angle(-110 + AngleOffset); //old -115 /-105
 
     chassis.drive_distance(23); //old 21
     //chassis.left_swing_to_angle(0); //old -5
 
     //(float angle, float swing_max_voltage, float swing_settle_error, float swing_settle_time, float swing_timeout, float swing_kp, float swing_ki, float swing_kd, float swing_starti);
     //chassis.left_swing_to_angle(10, 12, 10, 300, 1500, .3, 0, 2, 15);
-    chassis.turn_to_angle(0, 12, 2.5, 300, 2000);
+    chassis.turn_to_angle(175, 12, 2.5, 300, 2000);
     //chassis.left_swing_to_angle(90, 8, 2, 0, 1000, 2, 0, 7, 0);
 
 
@@ -210,7 +215,7 @@ void autonomous(void) {
 
     //go to the auton win point bar
     //chassis.turn_to_angle(float angle, float turn_max_voltage, float turn_settle_error, float turn_settle_time, float turn_timeout)
-    chassis.turn_to_angle(135,12,5,300, 3000);
+    chassis.turn_to_angle(135 - AngleOffset,12,5,300, 3000);
     Wings.set(false);
     chassis.DriveR.spin(fwd, 12,volt);
     chassis.DriveL.spin(fwd,12,volt);
@@ -286,16 +291,17 @@ void usercontrol(void) {
     }
 
     //back wings
-    else if(Controller1.ButtonX.pressing() && BackWingsSwitch == 1){
+    else if(Controller1.ButtonRight.pressing() && BackWingsSwitch == 1){
       BackWings.set(true);
       BackWingsSwitch = 0;
       wait(0.15, seconds);
     }
-    else if(Controller1.ButtonX.pressing() && BackWingsSwitch == 0){
+    else if(Controller1.ButtonRight.pressing() && BackWingsSwitch == 0){
       BackWings.set(false);
       BackWingsSwitch = 1;
       wait(0.15, seconds);
     }
+
 
     //end game
     else if(Controller1.ButtonA.pressing() && EndGameSwitch == 1){
@@ -320,13 +326,14 @@ void usercontrol(void) {
     }
     else if(Controller1.ButtonL1.pressing() && cataswich.pressing()){
       catapult.spinFor(forward, 90, degrees);
-      catapult.spinFor(forward, 90, degrees);
+      Catapult5W.spinFor(forward, 90, degrees);
       catapult.spin(forward);
-      catapult.spin(forward);
+      Catapult5W.spin(forward);
     }
     else if(!Controller1.ButtonL1.pressing() && cataswich.pressing()){
       catapult.stop(vex::brakeType(coast));
-      catapult.stop(vex::brakeType(coast));
+      Catapult5W.stop(vex::brakeType(coast));
+      
     }
 
     
