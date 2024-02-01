@@ -1,3 +1,144 @@
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// Odomm                encoder       G, H            
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// Odom                 encoder       G, H            
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// Odom                 encoder       G, H            
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// Odom                 encoder       G, H            
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// Odom                 encoder       G, H            
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// cataswich            limit         C               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// Odom                 encoder       G, H            
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// cataswich            limit         C               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// Odom                 encoder       G, H            
+// ---- END VEXCODE CONFIGURED DEVICES ----
       #include "vex.h"
 
 // ---- START VEXCODE CONFIGURED DEVICES ----
@@ -46,8 +187,8 @@ Drive chassis(
 //Specify your drive setup below. There are eight options:
 //ZERO_TRACKER_NO_ODOM, ZERO_TRACKER_ODOM, TANK_ONE_ENCODER, TANK_ONE_ROTATION, TANK_TWO_ENCODER, TANK_TWO_ROTATION, HOLONOMIC_TWO_ENCODER, and HOLONOMIC_TWO_ROTATION
 //For example, if you are not using odometry, put ZERO_TRACKER_NO_ODOM below:
-ZERO_TRACKER_NO_ODOM,
-
+//ZERO_TRACKER_NO_ODOM,
+TANK_ONE_ENCODER,
 //Add the names of your Drive motors into the motor groups below, separated by commas, i.e. motor_group(Motor1,Motor2,Motor3).
 //You will input whatever motor names you chose when you configured your robot using the sidebar configurer, they don't have to be "Motor1" and "Motor2".
 
@@ -92,7 +233,7 @@ PORT3,     -PORT4,
 //If you are using position tracking, this is the Forward Tracker port (the tracker which runs parallel to the direction of the chassis).
 //If this is a rotation sensor, enter it in "PORT1" format, inputting the port below.
 //If this is an encoder, enter the port as an integer. Triport A will be a "1", Triport B will be a "2", etc.
-3,
+7,
 
 //Input the Forward Tracker diameter (reverse it to make the direction switch):
 2.75,
@@ -100,7 +241,7 @@ PORT3,     -PORT4,
 //Input Forward Tracker center distance (a positive distance corresponds to a tracker on the right side of the robot, negative is left.)
 //For a zero tracker tank drive with odom, put the positive distance from the center of the robot to the right side of the drive.
 //This distance is in inches:
--2,
+-0.5, //old -2
 
 //Input the Sideways Tracker Port, following the same steps as the Forward Tracker Port:
 1,
@@ -277,6 +418,11 @@ void usercontrol(void) {
 
     */
 
+    //Print stuff
+    //CataSensor.
+    CataSensor.value(deg);
+    Brain.Screen.print(CataSensor.value(deg));
+    Brain.Screen.newLine();
     
     //wings
     if(Controller1.ButtonL2.pressing() && WingsSwitch == 1){
@@ -316,25 +462,24 @@ void usercontrol(void) {
     }
     
     //catapult
-    else if(Controller1.ButtonY.pressing()){
-      catapult.stop();
-      Catapult5W.stop();
-    }
-    else if(Controller1.ButtonL1.pressing()){
+    else if(Controller1.ButtonL1.pressing() or CataSensor.value(deg) < 80){
       catapult.spin(forward);
       Catapult5W.spin(forward);
     }
-    else if(Controller1.ButtonL1.pressing() && cataswich.pressing()){
-      catapult.spinFor(forward, 90, degrees);
+    else if(Controller1.ButtonL1.pressing() && CataSensor.value(deg) >= 80){
+      catapult.spinFor(forward, 90,deg);
       Catapult5W.spinFor(forward, 90, degrees);
-      catapult.spin(forward);
-      Catapult5W.spin(forward);
     }
-    else if(!Controller1.ButtonL1.pressing() && cataswich.pressing()){
+    /*else if(!Controller1.ButtonL1.pressing()){
       catapult.stop(vex::brakeType(coast));
       Catapult5W.stop(vex::brakeType(coast));
-      
+    
+    }*/
+    else if(CataSensor.value(deg) >= 80 && !Controller1.ButtonL1.pressing()){
+      catapult.stop(vex::brakeType(coast));
+      Catapult5W.stop(vex::brakeType(coast));
     }
+
 
     
     //chassis.control_arcade();

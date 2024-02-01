@@ -19,10 +19,11 @@ inertial INERT = inertial(PORT12);
 controller Controller1 = controller(primary);
 digital_out Wings = digital_out(Brain.ThreeWirePort.D);
 motor catapult = motor(PORT7, ratio36_1, true);
-limit cataswich = limit(Brain.ThreeWirePort.C);
 digital_out EndGame = digital_out(Brain.ThreeWirePort.E);
 digital_out BackWings = digital_out(Brain.ThreeWirePort.A);
 motor Catapult5W = motor(PORT5, ratio18_1, false);
+encoder Odomm = encoder(Brain.ThreeWirePort.G);
+pot CataSensor = pot(Brain.ThreeWirePort.B);
 
 // VEXcode generated functions
 // define variable for remote controller enable/disable

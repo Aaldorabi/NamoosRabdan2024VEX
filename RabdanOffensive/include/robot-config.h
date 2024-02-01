@@ -14,10 +14,11 @@ extern inertial INERT;
 extern controller Controller1;
 extern digital_out Wings;
 extern motor catapult;
-extern limit cataswich;
 extern digital_out EndGame;
 extern digital_out BackWings;
 extern motor Catapult5W;
+extern encoder Odomm;
+extern pot CataSensor;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Pro.
