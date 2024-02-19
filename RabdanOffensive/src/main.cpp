@@ -15,6 +15,82 @@
 // EndGame              digital_out   E               
 // BackWings            digital_out   A               
 // Catapult5W           motor         5               
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
 // Odomm                encoder       G, H            
 // CataSensor           pot           B               
 // ---- END VEXCODE CONFIGURED DEVICES ----
@@ -188,7 +264,7 @@ Drive chassis(
 //ZERO_TRACKER_NO_ODOM, ZERO_TRACKER_ODOM, TANK_ONE_ENCODER, TANK_ONE_ROTATION, TANK_TWO_ENCODER, TANK_TWO_ROTATION, HOLONOMIC_TWO_ENCODER, and HOLONOMIC_TWO_ROTATION
 //For example, if you are not using odometry, put ZERO_TRACKER_NO_ODOM below:
 //ZERO_TRACKER_NO_ODOM,
-TANK_ONE_ENCODER,
+ZERO_TRACKER_NO_ODOM,
 //Add the names of your Drive motors into the motor groups below, separated by commas, i.e. motor_group(Motor1,Motor2,Motor3).
 //You will input whatever motor names you chose when you configured your robot using the sidebar configurer, they don't have to be "Motor1" and "Motor2".
 
@@ -284,6 +360,7 @@ void autonomous(void) {
     intake.setVelocity(100, percent);
 
     //start
+    intake.spin(reverse);
     BackWings.set(true);
     wait(.1, seconds);
 
@@ -291,7 +368,7 @@ void autonomous(void) {
     //flick ball
     chassis.DriveL.setVelocity(60, percent);
     chassis.DriveL.spin(reverse); //old forward
-    wait(.5, seconds); //1
+    wait(.5, seconds); //.6
     chassis.DriveL.setVelocity(100, percent);
     BackWings.set(false);
     chassis.DriveR.stop(vex::brakeType::brake);
@@ -310,9 +387,9 @@ void autonomous(void) {
     chassis.drive_distance(15); //old -15
 
     //drive to ball to B3
-    chassis.turn_to_angle(-159 + AngleOffset); //old -157
+    chassis.turn_to_angle(-160 + AngleOffset); //old -157
     intake.spin(forward);
-    chassis.drive_distance(49); //old 46
+    chassis.drive_distance(51); //old 49
     
 
     //go back
@@ -321,10 +398,10 @@ void autonomous(void) {
     
     //throw ball B3
     //chassis.turn_to_angle(float angle, float turn_max_voltage, float turn_settle_error, float turn_settle_time, float turn_timeout)
-    chassis.turn_to_angle(-48 + AngleOffset, 12, 10, 200, 1350); //1500 last constant //53 degrees
+    chassis.turn_to_angle(-45 + AngleOffset, 12, 10, 200, 1350); //1500 last constant //48 degrees
     //wait(0.25, seconds);
 
-    intake.setVelocity(60,percent);
+    intake.setVelocity(100,percent);
     intake.spin(reverse);
     wait(0.6, seconds);
         intake.setVelocity(100,percent);
@@ -356,7 +433,7 @@ void autonomous(void) {
 
     //go to the auton win point bar
     //chassis.turn_to_angle(float angle, float turn_max_voltage, float turn_settle_error, float turn_settle_time, float turn_timeout)
-    chassis.turn_to_angle(135 - AngleOffset,12,5,300, 3000);
+    chassis.turn_to_angle(130 - AngleOffset,12,5,300, 3000);//old 135
     Wings.set(false);
     chassis.DriveR.spin(fwd, 12,volt);
     chassis.DriveL.spin(fwd,12,volt);
@@ -399,6 +476,9 @@ void usercontrol(void) {
   bool WingsSwitch = 1; 
   bool EndGameSwitch = 1;
   bool BackWingsSwitch = 1;
+
+  //catasensor
+  int FirstValue = CataSensor.value(deg);
   // User control code here, inside the loop
   while (1) {
     // This is the main execution loop for the user control program.
@@ -440,12 +520,12 @@ void usercontrol(void) {
     else if(Controller1.ButtonRight.pressing() && BackWingsSwitch == 1){
       BackWings.set(true);
       BackWingsSwitch = 0;
-      wait(0.15, seconds);
+      wait(0.3, seconds);
     }
     else if(Controller1.ButtonRight.pressing() && BackWingsSwitch == 0){
       BackWings.set(false);
       BackWingsSwitch = 1;
-      wait(0.15, seconds);
+      wait(0.3, seconds);
     }
 
 
@@ -470,11 +550,6 @@ void usercontrol(void) {
       catapult.spinFor(forward, 90,deg);
       Catapult5W.spinFor(forward, 90, degrees);
     }
-    /*else if(!Controller1.ButtonL1.pressing()){
-      catapult.stop(vex::brakeType(coast));
-      Catapult5W.stop(vex::brakeType(coast));
-    
-    }*/
     else if(CataSensor.value(deg) >= 80 && !Controller1.ButtonL1.pressing()){
       catapult.stop(vex::brakeType(coast));
       Catapult5W.stop(vex::brakeType(coast));

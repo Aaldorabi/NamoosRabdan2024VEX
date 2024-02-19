@@ -17,7 +17,6 @@ extern motor catapult;
 extern digital_out EndGame;
 extern digital_out BackWings;
 extern motor Catapult5W;
-extern encoder Odomm;
 extern pot CataSensor;
 
 /**
