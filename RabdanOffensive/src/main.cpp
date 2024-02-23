@@ -10,6 +10,63 @@
 // intake               motor         4               
 // INERT                inertial      12              
 // Controller1          controller                    
+// rightwing            digital_out   D               
+// catapult             motor         7               
+// leftwing             digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// leftwing             digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
+// Wings                digital_out   D               
+// catapult             motor         7               
+// EndGame              digital_out   E               
+// BackWings            digital_out   A               
+// Catapult5W           motor         5               
+// CataSensor           pot           B               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// R1                   motor         1               
+// R2                   motor         2               
+// R3                   motor         3               
+// L1                   motor         8               
+// L2                   motor         9               
+// L3                   motor         10              
+// intake               motor         4               
+// INERT                inertial      12              
+// Controller1          controller                    
 // Wings                digital_out   D               
 // catapult             motor         7               
 // EndGame              digital_out   E               
@@ -332,16 +389,54 @@ PORT3,     -PORT4,
 
 int current_auton_selection = 0;
 bool auto_started = false;
-
 void pre_auton(void) {
   // Initializing Robot Configuration. DO NOT REMOVE!
   vexcodeInit();
   default_constants();
 
-  
+
+  while(auto_started == false){            //Changing the names below will only change their names on the
+    Brain.Screen.clearScreen();            //brain screen for auton selection.
+    switch(current_auton_selection){       //Tap the brain screen to cycle through autons.
+      case 0:
+        Brain.Screen.printAt(50, 50, "Offensive 5 Point");
+        break;
+      case 1:
+        Brain.Screen.printAt(50, 50, "Offensive 5 Point");
+        break;
+      case 2:
+        Brain.Screen.printAt(50, 50, "Offensive 6 Point");
+        break;
+      case 3:
+        Brain.Screen.printAt(50, 50, "Defensive Rush");
+        break;
+      case 4:
+        Brain.Screen.printAt(50, 50, "Defensive Match Point");
+        break;
+      case 5:
+        Brain.Screen.printAt(50, 50, "Defensive Match Load");
+        break;
+      case 6:
+        Brain.Screen.printAt(50, 50, "Skills");
+        break;
+      case 7:
+        Brain.Screen.printAt(50, 50, "No Auton");
+        break;
+    }
+    if(Brain.Screen.pressing()){
+      while(Brain.Screen.pressing()) {}
+      current_auton_selection ++;
+    } else if (current_auton_selection == 8){
+      current_auton_selection = 0;
+    }
+    task::sleep(10);
+  }
 }
 
 void autonomous(void) {
+    
+
+
     int AngleOffset = 180;
 
     L1.setVelocity(100, percent);
@@ -359,89 +454,38 @@ void autonomous(void) {
     intake.setBrake(hold);
     intake.setVelocity(100, percent);
 
-    //start
-    intake.spin(reverse);
-    BackWings.set(true);
-    wait(.1, seconds);
+    auto_started = true;
+  switch(current_auton_selection){  
+    case 0:
+      Offensive5Point(); 
+      break;        
+    case 1:         
+      Offensive5Point();
+      break;
+    case 2:
+      Offensive6Point();
+      break;
+    case 3:
+      DefensiveRush();
+      break;
+    case 4:
+      DefensiveMatchPoint();
+      break;
+    case 5:
+      DefensiveMatchLoad();
+      break;
+    case 6:
+      Skills();
+      break;
+    case 7:
+      NoAuton();
+      break;
 
-
-    //flick ball
-    chassis.DriveL.setVelocity(60, percent);
-    chassis.DriveL.spin(reverse); //old forward
-    wait(.5, seconds); //.6
-    chassis.DriveL.setVelocity(100, percent);
-    BackWings.set(false);
-    chassis.DriveR.stop(vex::brakeType::brake);
-    chassis.DriveL.stop(vex::brakeType::brake);
-    chassis.turn_to_angle(-70); //old -60
-    intake.spin(reverse);
-    //wait(1, seconds);//.25
-    chassis.DriveR.spin(reverse,12,volt);
-    chassis.DriveL.spin(reverse,12,volt);
-    wait(.75, seconds);
-    chassis.DriveR.stop(vex::brakeType::coast);
-    chassis.DriveL.stop(vex::brakeType::coast);
-    intake.stop();
-    //Wings.set(false);
-
-    chassis.drive_distance(15); //old -15
-
-    //drive to ball to B3
-    chassis.turn_to_angle(-160 + AngleOffset); //old -157
-    intake.spin(forward);
-    chassis.drive_distance(51); //old 49
     
-
-    //go back
-    chassis.drive_distance(-5);
-    intake.stop();
     
-    //throw ball B3
-    //chassis.turn_to_angle(float angle, float turn_max_voltage, float turn_settle_error, float turn_settle_time, float turn_timeout)
-    chassis.turn_to_angle(-45 + AngleOffset, 12, 10, 200, 1350); //1500 last constant //48 degrees
-    //wait(0.25, seconds);
+    }
 
-    intake.setVelocity(100,percent);
-    intake.spin(reverse);
-    wait(0.6, seconds);
-        intake.setVelocity(100,percent);
-
-    intake.spin(forward);
-    chassis.turn_to_angle(-110 + AngleOffset); //old -115 /-105
-
-    chassis.drive_distance(23); //old 21
-    //chassis.left_swing_to_angle(0); //old -5
-
-    //(float angle, float swing_max_voltage, float swing_settle_error, float swing_settle_time, float swing_timeout, float swing_kp, float swing_ki, float swing_kd, float swing_starti);
-    //chassis.left_swing_to_angle(10, 12, 10, 300, 1500, .3, 0, 2, 15);
-    chassis.turn_to_angle(175, 12, 2.5, 300, 2000);
-    //chassis.left_swing_to_angle(90, 8, 2, 0, 1000, 2, 0, 7, 0);
-
-
-
-    intake.spin(reverse);
-    Wings.set(true);
     
-
-    //intake.spin(reverse);
-    chassis.DriveR.spin(fwd,12,volt);
-    chassis.DriveL.spin(fwd,12,volt);
-    wait(1, seconds);
-    intake.stop();
-    chassis.DriveR.spin(fwd,0,volt);
-    chassis.DriveL.spin(fwd,0,volt);
-
-    //go to the auton win point bar
-    //chassis.turn_to_angle(float angle, float turn_max_voltage, float turn_settle_error, float turn_settle_time, float turn_timeout)
-    chassis.turn_to_angle(130 - AngleOffset,12,5,300, 3000);//old 135
-    Wings.set(false);
-    chassis.DriveR.spin(fwd, 12,volt);
-    chassis.DriveL.spin(fwd,12,volt);
-    wait(1.5, seconds);
-    chassis.DriveR.stop(vex::brakeType::hold);
-    chassis.DriveR.stop(vex::brakeType::hold);
-    chassis.DriveR.stop();
-    chassis.DriveL.stop();
     
 }
 /*---------------------------------------------------------------------------*/
@@ -473,12 +517,11 @@ void usercontrol(void) {
   Wings.set(false);*/
 
   //wings Switch Case for 1 button control
+  bool LeftWingsSwitch = 1; 
+  bool RightWingsSwitch = 1; 
   bool WingsSwitch = 1; 
   bool EndGameSwitch = 1;
   bool BackWingsSwitch = 1;
-
-  //catasensor
-  int FirstValue = CataSensor.value(deg);
   // User control code here, inside the loop
   while (1) {
     // This is the main execution loop for the user control program.
@@ -505,16 +548,48 @@ void usercontrol(void) {
     Brain.Screen.newLine();
     
     //wings
+    //both
     if(Controller1.ButtonL2.pressing() && WingsSwitch == 1){
-      Wings.set(true);
+      rightwing.set(true);
+      leftwing.set(true);
+      RightWingsSwitch = 0;
+      LeftWingsSwitch = 0;
       WingsSwitch = 0;
-      wait(0.15, seconds);
+      wait(0.7, seconds);
     }
     else if(Controller1.ButtonL2.pressing() && WingsSwitch == 0){
-      Wings.set(false);
+      rightwing.set(false);
+      leftwing.set(false);
+      RightWingsSwitch = 1;
+      LeftWingsSwitch = 1;
       WingsSwitch = 1;
-      wait(0.15, seconds);
+      wait(0.7, seconds);
     }
+
+    //right side
+    if(Controller1.ButtonB.pressing() && RightWingsSwitch == 1){
+      rightwing.set(true);
+      RightWingsSwitch = 0;
+      wait(0.7, seconds);
+    }
+    else if(Controller1.ButtonB.pressing() && RightWingsSwitch == 0){
+      rightwing.set(false);
+      RightWingsSwitch = 1;
+      wait(0.7, seconds);
+    }
+
+    //left side
+    if(Controller1.ButtonDown.pressing() && LeftWingsSwitch == 1){
+      leftwing.set(true);
+      LeftWingsSwitch = 0;
+      wait(0.7, seconds);
+    }
+    else if(Controller1.ButtonDown.pressing() && LeftWingsSwitch == 0){
+      leftwing.set(false);
+      LeftWingsSwitch = 1;
+      wait(0.7, seconds);
+    }
+
 
     //back wings
     else if(Controller1.ButtonRight.pressing() && BackWingsSwitch == 1){
@@ -529,17 +604,8 @@ void usercontrol(void) {
     }
 
 
-    //end game
-    else if(Controller1.ButtonA.pressing() && EndGameSwitch == 1){
-        EndGame.set(true);
-        EndGameSwitch = 0;
-        wait(0.15,seconds);
-    }
-    else if(Controller1.ButtonA.pressing() && EndGameSwitch == 0){
-        EndGame.set(false);
-        EndGameSwitch = 1;
-        wait(0.15, seconds);
-    }
+
+    
     
     //catapult
     else if(Controller1.ButtonL1.pressing() or CataSensor.value(deg) < 80){
@@ -554,8 +620,6 @@ void usercontrol(void) {
       catapult.stop(vex::brakeType(coast));
       Catapult5W.stop(vex::brakeType(coast));
     }
-
-
     
     //chassis.control_arcade();
     chassis.control_tank();
