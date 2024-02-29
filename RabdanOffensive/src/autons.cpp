@@ -45,7 +45,7 @@ void Offensive5Point(){
     //flick ball
     chassis.DriveL.setVelocity(60, percent);
     chassis.DriveL.spin(reverse); //old forward
-    wait(.75, seconds); //0.6
+    wait(.7, seconds); //0.6
     chassis.DriveL.setVelocity(100, percent);
     BackWings.set(false);
     chassis.DriveR.stop(vex::brakeType::brake);
@@ -95,7 +95,7 @@ void Offensive5Point(){
     //chassis.left_swing_to_angle(10, 12, 10, 300, 1500, .3, 0, 2, 15);
     //chassis.left_swing_to_angle(90, 8, 2, 0, 1000, 2, 0, 7, 0);
 
-    chassis.turn_to_angle(-180, 12, 2.5, 300, 2000); //175 //176.5
+    chassis.turn_to_angle(-177, 12, 1, 300, 2000); //175 //176.5
 
 
     intake.spin(reverse);
@@ -115,7 +115,7 @@ void Offensive5Point(){
     //chassis.turn_to_angle(float angle, float turn_max_voltage, float turn_settle_error, float turn_settle_time, float turn_timeout)
     rightwing.set(false);
     leftwing.set(false);
-    chassis.turn_to_angle(-47.5,12,5,300, 3000); //-45
+    chassis.turn_to_angle(-47.5,12,2,300, 3000); //-45
     chassis.DriveR.spin(fwd, 12,volt);
     chassis.DriveL.spin(fwd,12,volt);
     wait(1.35, seconds);
@@ -443,17 +443,17 @@ void Skills(){
     chassis.turn_to_angle(-30,12,3,100,600); //old 30
     rightwing.set(false);
     leftwing.set(false);
-    chassis.drive_distance(10,-30,12,12,1,100,600);
-    chassis.turn_to_angle(20,12,1,100,600);
-    rightwing.set(true);
-    leftwing.set(true);
+    chassis.drive_distance(17,-30,12,12,1,100,600);
+    chassis.turn_to_angle(-160,12,1,100,600);
+    chassis.drive_distance(-1);
+    BackWings.set(true);
     chassis.DriveL.stop(vex::brakeType::brake);
     chassis.DriveR.stop(vex::brakeType::brake);
 
     //catapultt
     catapult.spin(forward);
     Catapult5W.spin(forward);
-    //wait(30, sec);
+    wait(30, sec);
     catapult.stop();
     Catapult5W.stop();
 
@@ -462,24 +462,23 @@ void Skills(){
     wait(.1, sec);
     catapult.stop();
     Catapult5W.stop();
-    rightwing.set(false);
-    leftwing.set(false);
+    BackWings.set(false);
     //go to left from the goal
-    chassis.drive_distance(-5);
-    chassis.turn_to_angle(140,12,2,100,1000);
-    chassis.drive_distance(29);
-    chassis.turn_to_angle(180.,12,3,100,2000);
+    chassis.drive_distance(4);
+    chassis.turn_to_angle(135,12,2,100,1000);
+    chassis.drive_distance(25);//29
+    chassis.turn_to_angle(180,12,3,300,2000);
     chassis.drive_distance(73);
     rightwing.set(true);
-    leftwing.set(true);
+    leftwing.set(false);
     wait(.2, sec);
     chassis.left_swing_to_angle(-135,10,3,100,750,.3, .001, 2, 15);
     intake.spin(reverse);
     chassis.drive_distance(23,-135,12,12,2,300,1000);
-    chassis.left_swing_to_angle(-95,12,3,100,750,.3, .001, 2, 15); //old -90
+    chassis.left_swing_to_angle(-90,12,3,100,750,.3, .001, 2, 15); //old -90
     chassis.drive_distance(-5,-90,12,12,3,100,750);
-    rightwing.set(false);
-    leftwing.set(false);
+    //rightwing.set(false);
+    //leftwing.set(false);
   
 
     chassis.DriveR.spin(forward,12,volt);
@@ -487,6 +486,8 @@ void Skills(){
     wait(0.75, seconds);
     chassis.DriveR.stop();
     chassis.DriveL.stop();
+    rightwing.set(false);
+    leftwing.set(false);
     
     //go away from goal
     chassis.drive_distance(-20,-90,12,12,3,100,750);
@@ -520,9 +521,9 @@ void Skills(){
     BackWings.set(false);
     rightwing.set(true);
     leftwing.set(true);
-    chassis.right_swing_to_angle(-125,12,2,150,750,.3, .001, 2, 15);
-    chassis.drive_distance(50,-125,12,12,2,150,1250);
-    chassis.right_swing_to_angle(90,12,5,50,2000,.3, .001, 2, 15);
+    chassis.right_swing_to_angle(-119,12,2,150,750,.3, .001, 2, 15);
+    chassis.drive_distance(50,-119,12,12,2,150,1250);
+    chassis.right_swing_to_angle(95,12,5,50,2000,.3, .001, 2, 15);
     
      chassis.DriveR.spin(forward,12,volt);
     chassis.DriveL.spin(forward,12,volt);
@@ -541,7 +542,7 @@ void Skills(){
 
 
     chassis.drive_distance(-5);
-    chassis.turn_to_angle(-3,12,1,100,2000);
+    chassis.turn_to_angle(-1,12,1,100,2000);
     rightwing.set(false);
     leftwing.set(false);
     BackWings.set(true);
@@ -555,6 +556,7 @@ void Skills(){
     chassis.DriveR.stop();
     chassis.DriveL.stop();
 }
+
 
 void NoAuton(){
   

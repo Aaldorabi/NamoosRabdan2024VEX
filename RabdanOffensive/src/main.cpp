@@ -555,7 +555,7 @@ void usercontrol(void) {
       RightWingsSwitch = 0;
       LeftWingsSwitch = 0;
       WingsSwitch = 0;
-      wait(0.7, seconds);
+      wait(0.3, seconds);
     }
     else if(Controller1.ButtonL2.pressing() && WingsSwitch == 0){
       rightwing.set(false);
@@ -563,31 +563,31 @@ void usercontrol(void) {
       RightWingsSwitch = 1;
       LeftWingsSwitch = 1;
       WingsSwitch = 1;
-      wait(0.7, seconds);
+      wait(0.3, seconds);
     }
 
     //right side
     if(Controller1.ButtonB.pressing() && RightWingsSwitch == 1){
       rightwing.set(true);
       RightWingsSwitch = 0;
-      wait(0.7, seconds);
+      wait(0.3, seconds);
     }
     else if(Controller1.ButtonB.pressing() && RightWingsSwitch == 0){
       rightwing.set(false);
       RightWingsSwitch = 1;
-      wait(0.7, seconds);
+      wait(0.3, seconds);
     }
 
     //left side
     if(Controller1.ButtonDown.pressing() && LeftWingsSwitch == 1){
       leftwing.set(true);
       LeftWingsSwitch = 0;
-      wait(0.7, seconds);
+      wait(0.3, seconds);
     }
     else if(Controller1.ButtonDown.pressing() && LeftWingsSwitch == 0){
       leftwing.set(false);
       LeftWingsSwitch = 1;
-      wait(0.7, seconds);
+      wait(0.3, seconds);
     }
 
 
