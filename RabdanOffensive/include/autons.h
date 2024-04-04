@@ -7,6 +7,7 @@ extern Drive chassis;
 
 void default_constants();
 
+void FinalRush();
 void Offensive5Point();
 void Offensive6Point();
 void DefensiveRush();
@@ -14,3 +15,5 @@ void DefensiveMatchPoint();
 void DefensiveMatchLoad();
 void Skills();
 void NoAuton();
+void DefensiveFarSide();
+void AutonTest();

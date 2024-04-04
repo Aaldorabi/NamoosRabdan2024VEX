@@ -20,9 +20,12 @@ controller Controller1 = controller(primary);
 digital_out rightwing = digital_out(Brain.ThreeWirePort.D);
 motor catapult = motor(PORT7, ratio36_1, true);
 digital_out leftwing = digital_out(Brain.ThreeWirePort.E);
-digital_out BackWings = digital_out(Brain.ThreeWirePort.A);
+digital_out BackWingLeft = digital_out(Brain.ThreeWirePort.A);
 motor Catapult5W = motor(PORT5, ratio18_1, false);
 pot CataSensor = pot(Brain.ThreeWirePort.B);
+digital_out Hang = digital_out(Brain.ThreeWirePort.F);
+digital_out BackWingRight = digital_out(Brain.ThreeWirePort.C);
+digital_out HangGUp = digital_out(Brain.ThreeWirePort.G);
 
 // VEXcode generated functions
 // define variable for remote controller enable/disable

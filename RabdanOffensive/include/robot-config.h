@@ -15,9 +15,12 @@ extern controller Controller1;
 extern digital_out rightwing;
 extern motor catapult;
 extern digital_out leftwing;
-extern digital_out BackWings;
+extern digital_out BackWingLeft;
 extern motor Catapult5W;
 extern pot CataSensor;
+extern digital_out Hang;
+extern digital_out BackWingRight;
+extern digital_out HangGUp;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Pro.
