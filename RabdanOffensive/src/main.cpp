@@ -728,7 +728,7 @@ void usercontrol(void) {
   Hang.set(true);
   HangGUp.set(false);
   intake.setVelocity(100.0, percent);
-  catapult.setVelocity(75, percent);
+  catapult.setVelocity(100, percent);
   Catapult5W.setVelocity(75, percent);
   catapult.setBrake(coast);
   Catapult5W.setBrake(coast);
@@ -865,15 +865,11 @@ void usercontrol(void) {
     
     
     //catapult
-     if(Controller1.ButtonL1.pressing() or CataSensor.value(deg) < 80){
+     if(Controller1.ButtonL1.pressing()){
       catapult.spin(forward);
       Catapult5W.spin(forward);
     }
-    else if(Controller1.ButtonL1.pressing() && CataSensor.value(deg) >= 80){
-      catapult.spinFor(forward, 90,deg);
-      Catapult5W.spinFor(forward, 90, degrees);
-    }
-    else if(CataSensor.value(deg) >= 80 && !Controller1.ButtonL1.pressing()){
+    else if(!Controller1.ButtonL1.pressing()){
       catapult.stop(vex::brakeType(coast));
       Catapult5W.stop(vex::brakeType(coast));
     }
