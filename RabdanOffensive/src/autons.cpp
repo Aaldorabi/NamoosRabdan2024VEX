@@ -677,7 +677,23 @@ void DefensiveFarSide(){
   chassis.drive_distance(45,7,12,9,2,650,2000); //35 
   leftwing.set(false);
   chassis.drive_distance(-25,25,12,9,2,150,2000);
-  chassis.drive_distance(-25,0,12,9,2,150,2000);
+  chassis.drive_distance(-35,0,12,9,2,150,2000);
+  intake.stop();
+  chassis.turn_to_angle(90,12,3,150,2000);
+  intake.spin(reverse);
+  chassis.drive_distance(5,90,12,12,1,150,1000);
+  chassis.drive_distance(-5,90,12,12,1,150,1000);
+  chassis.turn_to_angle(-45,12,3,150,1500);
+  chassis.drive_distance(25,-45,12,12,2,150,1500);
+  chassis.turn_to_angle(0,12,1,150,1500);
+
+  //independant
+  chassis.DriveL.spin(forward);
+  chassis.DriveR.spin(forward);
+  wait(1, sec);
+  chassis.DriveR.stop();
+  chassis.DriveL.stop();
+
 
   /*chassis.drive_distance(-55.2,5,12,9,2,250,2500);
   chassis.drive_distance(-12,90,12,9,2,250,2000);
