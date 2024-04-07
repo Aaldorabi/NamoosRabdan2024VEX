@@ -725,7 +725,7 @@ void autonomous(void) {
 void usercontrol(void) {
   
 
-  Hang.set(true);
+  Hang.set(false);
   HangGUp.set(false);
   intake.setVelocity(100.0, percent);
   catapult.setVelocity(100, percent);
@@ -902,8 +902,18 @@ int main() {
     });
   //BothWings
   Controller1.ButtonL2.pressed([](){
-    rightwing.set(!rightwing.value());
-    leftwing.set(!leftwing.value());
+    if(rightwing.value() == true && leftwing.value() == true){
+      rightwing.set(false);
+      leftwing.set(false);
+    }
+    else if(rightwing.value() == false && leftwing.value() == false){
+      rightwing.set(true);
+      leftwing.set(true);
+    }
+    else{
+      rightwing.set(false);
+      leftwing.set(false);
+    }
     });
   //hang
   Controller1.ButtonLeft.pressed([](){

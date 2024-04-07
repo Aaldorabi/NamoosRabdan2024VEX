@@ -671,13 +671,15 @@ void FinalRush(){
 
 void DefensiveFarSide(){
   leftwing.set(true);
-  chassis.left_swing_to_angle(20,12,1,150,1500,.3, .002, 2, 15);
+  //chassis.left_swing_to_angle(20,12,1,150,1500,.3, .002, 2, 15);
   //chassis.turn_to_angle(20);
   intake.spin(forward);
-  chassis.drive_distance(60,28.5,12,9,2,150,2000); //35 degree
+  chassis.drive_distance(45,7,12,9,2,650,2000); //35 
   leftwing.set(false);
+  chassis.drive_distance(-25,25,12,9,2,150,2000);
+  chassis.drive_distance(-25,0,12,9,2,150,2000);
 
-  chassis.drive_distance(-55.2,30,12,9,2,250,2500);
+  /*chassis.drive_distance(-55.2,5,12,9,2,250,2500);
   chassis.drive_distance(-12,90,12,9,2,250,2000);
   
   intake.spin(reverse);
@@ -698,7 +700,7 @@ void DefensiveFarSide(){
   chassis.drive_distance(10,-90,12,12,3,50,1000);
   chassis.turn_to_angle(90,12,3,50,1500);
   chassis.drive_distance(40);
-  
+  */
 }
 
 void AutonTest(){
