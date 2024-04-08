@@ -745,8 +745,11 @@ void AWPOffensiveFarSide(){
   intake.spin(forward);
   chassis.drive_distance(44,-10,12,12,2,150,2000);
 
-  wait(.75, sec);
-  intake.stop();
+  chassis.drive_distance(-52,-20,12,10,2,150,2000);
+
+  intake.spin(reverse,5,volt);
+  chassis.right_swing_to_angle(90,12,3,150,1500,.3, .001, 2, 15);
+  chassis.turn_to_angle(-90,12,1,150,1500);
 
 }
 
