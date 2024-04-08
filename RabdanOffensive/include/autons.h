@@ -17,3 +17,4 @@ void Skills();
 void NoAuton();
 void DefensiveFarSide();
 void AutonTest();
+void AWPOffensiveFarSide();

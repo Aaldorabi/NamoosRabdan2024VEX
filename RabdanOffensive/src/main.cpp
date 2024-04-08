@@ -637,6 +637,8 @@ void pre_auton(void) {
       case 9:
         Brain.Screen.printAt(50, 50, "DefensiveRUsh");
         break;
+      case 10:
+        Brain.Screen.printAt(50, 50, "AWP Offensive");
     }
     if(Brain.Screen.pressing()){
       while(Brain.Screen.pressing()) {}
@@ -672,7 +674,7 @@ void autonomous(void) {
     auto_started = true;
   switch(current_auton_selection){  
     case 0:
-      DefensiveFarSide();
+      AWPOffensiveFarSide();
       break;        
     case 1:         
       Offensive5Point();

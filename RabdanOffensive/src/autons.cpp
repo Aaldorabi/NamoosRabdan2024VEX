@@ -737,6 +737,19 @@ void DefensiveFarSide(){
   */
 }
 
+void AWPOffensiveFarSide(){
+  intake.setBrake(hold);
+  intake.setVelocity(100, percent);
+  intake.setMaxTorque(100, percent);
+
+  intake.spin(forward);
+  chassis.drive_distance(44,-10,12,12,2,150,2000);
+
+  wait(.75, sec);
+  intake.stop();
+
+}
+
 void AutonTest(){
     chassis.right_swing_to_angle(-90);
     chassis.left_swing_to_angle(90);
