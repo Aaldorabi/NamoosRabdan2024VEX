@@ -750,23 +750,25 @@ void AWPOffensiveFarSide(){
   chassis.drive_distance(-50,-20,12,10,2,150,2000);
 
   chassis.right_swing_to_angle(90,12,3,50,1500,.3, .001, 2, 15);
-  intake.spin(reverse,12,volt);
+  intake.spin(reverse,9,volt);
   chassis.turn_to_angle(-90,12,1,75,1500);
 
   intake.spin(forward);
   chassis.drive_distance(32,-90,12,12,2,350,2000);
 
-  chassis.drive_distance(-43,-100,12,12,2,150,2500);
+  chassis.drive_distance(-43,-100,12,12,2,50,2500);
 
 
   BackWingLeft.set(true);
-  chassis.left_swing_to_angle(-140,12,3,150,1500,.3, .001, 2, 15);
+  /*chassis.left_swing_to_angle(-140,12,3,150,1500,.3, .001, 2, 15);
+  
+  chassis.drive_distance(-10,-140,12,12,2,50,1500);*/
+  //chassis.turn_to_angle(-170,12,3,50,750);
+
+
+  chassis.left_swing_to_angle(-160,12,3,50,1500,.3, .001, 2, 15); //-170
   BackWingLeft.set(false);
   BackWingRight.set(true);
-  chassis.drive_distance(-10,-140,12,12,2,50,1500);
-  
-  //chassis.turn_to_angle(-170,12,3,50,750);
-  chassis.left_swing_to_angle(-170,12,3,150,1500,.3, .001, 2, 15);
   //chassis.drive_distance(-30,-160,12,12,3,50,750);
 
   chassis.DriveR.spin(reverse);
@@ -777,20 +779,20 @@ void AWPOffensiveFarSide(){
 
   BackWingRight.set(false);
   chassis.drive_distance(10,180,12,12,3,50,750);
-  chassis.turn_to_angle(25,12,3,50,1500);
+  chassis.turn_to_angle(17.5,12,3,50,1500);
   leftwing.set(true);
   intake.spin(reverse);
   chassis.DriveR.spin(forward);
   chassis.DriveL.spin(forward);
-  wait(.75, sec);
+  wait(.8, sec);
   chassis.DriveR.stop();
   chassis.DriveL.stop();
   leftwing.set(false);
 
   chassis.drive_distance(-10,0,12,12,1,150,1000);
-  chassis.turn_to_angle(-70,12,1,150,1000);
+  chassis.turn_to_angle(-90,12,1,150,1000);
   intake.spin(forward);
-  chassis.drive_distance(37,-60,12,12,2,150,2000);
+  chassis.drive_distance(47,-70,12,12,2,75,2000);
 
 
 
