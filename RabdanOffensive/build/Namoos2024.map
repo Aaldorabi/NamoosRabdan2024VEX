@@ -2788,7 +2788,7 @@ Linker script and memory map
                 0x00000400                _FIQ_STACK_SIZE = DEFINED (_FIQ_STACK_SIZE)?_FIQ_STACK_SIZE:0x400
                 0x00000400                _UNDEF_STACK_SIZE = DEFINED (_UNDEF_STACK_SIZE)?_UNDEF_STACK_SIZE:0x400
 
-.text           0x03800000     0x83d8
+.text           0x03800000     0x85f8
  *(.vectors)
  *(.boot_data)
  .boot_data     0x03800000       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
@@ -2861,893 +2861,894 @@ Linker script and memory map
                 0x0380325c      0x77c build/src/autons.o
                 0x0380325c                FinalRush()
  .text._Z19AWPOffensiveFarSidev
-                0x038039d8      0x360 build/src/autons.o
+                0x038039d8      0x57c build/src/autons.o
                 0x038039d8                AWPOffensiveFarSide()
  .text._Z9AutonTestv
-                0x03803d38       0x54 build/src/autons.o
-                0x03803d38                AutonTest()
+                0x03803f54       0x54 build/src/autons.o
+                0x03803f54                AutonTest()
  .text._Z33rc_auto_loop_function_Controller1v
-                0x03803d8c       0xe4 build/src/robot-config.o
-                0x03803d8c                rc_auto_loop_function_Controller1()
+                0x03803fa8       0xe4 build/src/robot-config.o
+                0x03803fa8                rc_auto_loop_function_Controller1()
  .text._Z11vexcodeInitv
-                0x03803e70       0x28 build/src/robot-config.o
-                0x03803e70                vexcodeInit()
+                0x0380408c       0x28 build/src/robot-config.o
+                0x0380408c                vexcodeInit()
  .text._GLOBAL__sub_I_robot_config.cpp
-                0x03803e98      0x398 build/src/robot-config.o
+                0x038040b4      0x398 build/src/robot-config.o
  .text._Z15reduce_0_to_360f
-                0x03804230       0x7c build/src/JAR-Template/util.o
-                0x03804230                reduce_0_to_360(float)
+                0x0380444c       0x7c build/src/JAR-Template/util.o
+                0x0380444c                reduce_0_to_360(float)
  .text._Z26reduce_negative_180_to_180f
-                0x038042ac       0x90 build/src/JAR-Template/util.o
-                0x038042ac                reduce_negative_180_to_180(float)
+                0x038044c8       0x90 build/src/JAR-Template/util.o
+                0x038044c8                reduce_negative_180_to_180(float)
  .text._Z5clampfff
-                0x0380433c       0x2c build/src/JAR-Template/util.o
-                0x0380433c                clamp(float, float, float)
+                0x03804558       0x2c build/src/JAR-Template/util.o
+                0x03804558                clamp(float, float, float)
  .text._Z11is_reversedd
-                0x03804368       0x18 build/src/JAR-Template/util.o
-                0x03804368                is_reversed(double)
+                0x03804584       0x18 build/src/JAR-Template/util.o
+                0x03804584                is_reversed(double)
+ *fill*         0x0380459c        0x4 
  .text._Z7to_voltf
-                0x03804380       0x30 build/src/JAR-Template/util.o
-                0x03804380                to_volt(float)
+                0x038045a0       0x30 build/src/JAR-Template/util.o
+                0x038045a0                to_volt(float)
  .text._Z7to_porti
-                0x038043b0       0x14 build/src/JAR-Template/util.o
-                0x038043b0                to_port(int)
+                0x038045d0       0x14 build/src/JAR-Template/util.o
+                0x038045d0                to_port(int)
  .text._Z8deadbandff
-                0x038043c4       0x28 build/src/JAR-Template/util.o
-                0x038043c4                deadband(float, float)
+                0x038045e4       0x28 build/src/JAR-Template/util.o
+                0x038045e4                deadband(float, float)
  .text._ZN4Odom22set_physical_distancesEff
-                0x038043ec        0x8 build/src/JAR-Template/odom.o
-                0x038043ec                Odom::set_physical_distances(float, float)
- *fill*         0x038043f4        0x4 
+                0x0380460c        0x8 build/src/JAR-Template/odom.o
+                0x0380460c                Odom::set_physical_distances(float, float)
+ *fill*         0x03804614        0x4 
  .text._ZN5DriveC2E11drive_setupN3vex11motor_groupES2_ifffiiiiiffiff
-                0x038043f8      0x238 build/src/JAR-Template/drive.o
-                0x038043f8                Drive::Drive(drive_setup, vex::motor_group, vex::motor_group, int, float, float, float, int, int, int, int, int, float, float, int, float, float)
-                0x038043f8                Drive::Drive(drive_setup, vex::motor_group, vex::motor_group, int, float, float, float, int, int, int, int, int, float, float, int, float, float)
+                0x03804618      0x238 build/src/JAR-Template/drive.o
+                0x03804618                Drive::Drive(drive_setup, vex::motor_group, vex::motor_group, int, float, float, float, int, int, int, int, int, float, float, int, float, float)
+                0x03804618                Drive::Drive(drive_setup, vex::motor_group, vex::motor_group, int, float, float, float, int, int, int, int, int, float, float, int, float, float)
  .text._ZN5Drive18drive_with_voltageEff
-                0x03804630       0x6c build/src/JAR-Template/drive.o
-                0x03804630                Drive::drive_with_voltage(float, float)
+                0x03804850       0x6c build/src/JAR-Template/drive.o
+                0x03804850                Drive::drive_with_voltage(float, float)
  .text._ZN5Drive18set_turn_constantsEfffff
-                0x0380469c       0x1c build/src/JAR-Template/drive.o
-                0x0380469c                Drive::set_turn_constants(float, float, float, float, float)
+                0x038048bc       0x1c build/src/JAR-Template/drive.o
+                0x038048bc                Drive::set_turn_constants(float, float, float, float, float)
  .text._ZN5Drive19set_drive_constantsEfffff
-                0x038046b8       0x1c build/src/JAR-Template/drive.o
-                0x038046b8                Drive::set_drive_constants(float, float, float, float, float)
+                0x038048d8       0x1c build/src/JAR-Template/drive.o
+                0x038048d8                Drive::set_drive_constants(float, float, float, float, float)
  .text._ZN5Drive21set_heading_constantsEfffff
-                0x038046d4       0x1c build/src/JAR-Template/drive.o
-                0x038046d4                Drive::set_heading_constants(float, float, float, float, float)
+                0x038048f4       0x1c build/src/JAR-Template/drive.o
+                0x038048f4                Drive::set_heading_constants(float, float, float, float, float)
  .text._ZN5Drive19set_swing_constantsEfffff
-                0x038046f0       0x1c build/src/JAR-Template/drive.o
-                0x038046f0                Drive::set_swing_constants(float, float, float, float, float)
+                0x03804910       0x1c build/src/JAR-Template/drive.o
+                0x03804910                Drive::set_swing_constants(float, float, float, float, float)
  .text._ZN5Drive24set_turn_exit_conditionsEfff
-                0x0380470c        0xc build/src/JAR-Template/drive.o
-                0x0380470c                Drive::set_turn_exit_conditions(float, float, float)
+                0x0380492c        0xc build/src/JAR-Template/drive.o
+                0x0380492c                Drive::set_turn_exit_conditions(float, float, float)
  .text._ZN5Drive25set_drive_exit_conditionsEfff
-                0x03804718        0xc build/src/JAR-Template/drive.o
-                0x03804718                Drive::set_drive_exit_conditions(float, float, float)
+                0x03804938        0xc build/src/JAR-Template/drive.o
+                0x03804938                Drive::set_drive_exit_conditions(float, float, float)
  .text._ZN5Drive25set_swing_exit_conditionsEfff
-                0x03804724        0xc build/src/JAR-Template/drive.o
-                0x03804724                Drive::set_swing_exit_conditions(float, float, float)
+                0x03804944        0xc build/src/JAR-Template/drive.o
+                0x03804944                Drive::set_swing_exit_conditions(float, float, float)
  .text._ZN5Drive13turn_to_angleEf
-                0x03804730       0x50 build/src/JAR-Template/drive.o
-                0x03804730                Drive::turn_to_angle(float)
+                0x03804950       0x50 build/src/JAR-Template/drive.o
+                0x03804950                Drive::turn_to_angle(float)
  .text._ZN5Drive13turn_to_angleEfffffffff
-                0x03804780      0x178 build/src/JAR-Template/drive.o
-                0x03804780                Drive::turn_to_angle(float, float, float, float, float, float, float, float, float)
+                0x038049a0      0x178 build/src/JAR-Template/drive.o
+                0x038049a0                Drive::turn_to_angle(float, float, float, float, float, float, float, float, float)
  .text._ZN5Drive13turn_to_angleEff
-                0x038048f8       0x4c build/src/JAR-Template/drive.o
-                0x038048f8                Drive::turn_to_angle(float, float)
+                0x03804b18       0x4c build/src/JAR-Template/drive.o
+                0x03804b18                Drive::turn_to_angle(float, float)
  .text._ZN5Drive13turn_to_angleEfffff
-                0x03804944       0x48 build/src/JAR-Template/drive.o
-                0x03804944                Drive::turn_to_angle(float, float, float, float, float)
+                0x03804b64       0x48 build/src/JAR-Template/drive.o
+                0x03804b64                Drive::turn_to_angle(float, float, float, float, float)
  .text._ZN5Drive14drive_distanceEf
-                0x0380498c       0x80 build/src/JAR-Template/drive.o
-                0x0380498c                Drive::drive_distance(float)
- *fill*         0x03804a0c        0x4 
+                0x03804bac       0x80 build/src/JAR-Template/drive.o
+                0x03804bac                Drive::drive_distance(float)
+ *fill*         0x03804c2c        0x4 
  .text._ZN5Drive14drive_distanceEfffffffffffffff
-                0x03804a10      0x2e0 build/src/JAR-Template/drive.o
-                0x03804a10                Drive::drive_distance(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)
+                0x03804c30      0x2e0 build/src/JAR-Template/drive.o
+                0x03804c30                Drive::drive_distance(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)
  .text._ZN5Drive14drive_distanceEfffffff
-                0x03804cf0       0x78 build/src/JAR-Template/drive.o
-                0x03804cf0                Drive::drive_distance(float, float, float, float, float, float, float)
+                0x03804f10       0x78 build/src/JAR-Template/drive.o
+                0x03804f10                Drive::drive_distance(float, float, float, float, float, float, float)
  .text._ZN5Drive19left_swing_to_angleEf
-                0x03804d68       0x50 build/src/JAR-Template/drive.o
-                0x03804d68                Drive::left_swing_to_angle(float)
+                0x03804f88       0x50 build/src/JAR-Template/drive.o
+                0x03804f88                Drive::left_swing_to_angle(float)
  .text._ZN5Drive19left_swing_to_angleEfffffffff
-                0x03804db8      0x1d8 build/src/JAR-Template/drive.o
-                0x03804db8                Drive::left_swing_to_angle(float, float, float, float, float, float, float, float, float)
+                0x03804fd8      0x1d8 build/src/JAR-Template/drive.o
+                0x03804fd8                Drive::left_swing_to_angle(float, float, float, float, float, float, float, float, float)
  .text._ZN5Drive20right_swing_to_angleEf
-                0x03804f90       0x50 build/src/JAR-Template/drive.o
-                0x03804f90                Drive::right_swing_to_angle(float)
+                0x038051b0       0x50 build/src/JAR-Template/drive.o
+                0x038051b0                Drive::right_swing_to_angle(float)
  .text._ZN5Drive20right_swing_to_angleEfffffffff
-                0x03804fe0      0x1d8 build/src/JAR-Template/drive.o
-                0x03804fe0                Drive::right_swing_to_angle(float, float, float, float, float, float, float, float, float)
+                0x03805200      0x1d8 build/src/JAR-Template/drive.o
+                0x03805200                Drive::right_swing_to_angle(float, float, float, float, float, float, float, float, float)
  .text._ZN5Drive12control_tankEv
-                0x038051b8       0xfc build/src/JAR-Template/drive.o
-                0x038051b8                Drive::control_tank()
+                0x038053d8       0xfc build/src/JAR-Template/drive.o
+                0x038053d8                Drive::control_tank()
  .text._ZN3PIDC2Efffff
-                0x038052b4       0x2c build/src/JAR-Template/PID.o
-                0x038052b4                PID::PID(float, float, float, float, float)
-                0x038052b4                PID::PID(float, float, float, float, float)
+                0x038054d4       0x2c build/src/JAR-Template/PID.o
+                0x038054d4                PID::PID(float, float, float, float, float)
+                0x038054d4                PID::PID(float, float, float, float, float)
  .text._ZN3PIDC2Effffffff
-                0x038052e0       0x44 build/src/JAR-Template/PID.o
-                0x038052e0                PID::PID(float, float, float, float, float, float, float, float)
-                0x038052e0                PID::PID(float, float, float, float, float, float, float, float)
+                0x03805500       0x44 build/src/JAR-Template/PID.o
+                0x03805500                PID::PID(float, float, float, float, float, float, float, float)
+                0x03805500                PID::PID(float, float, float, float, float, float, float, float)
  .text._ZN3PID7computeEf
-                0x03805324       0xd0 build/src/JAR-Template/PID.o
-                0x03805324                PID::compute(float)
+                0x03805544       0xd0 build/src/JAR-Template/PID.o
+                0x03805544                PID::compute(float)
  .text._ZN3PID10is_settledEv
-                0x038053f4       0x44 build/src/JAR-Template/PID.o
-                0x038053f4                PID::is_settled()
- .text.vexMain  0x03805438       0xb0 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03805438                vexMain
+                0x03805614       0x44 build/src/JAR-Template/PID.o
+                0x03805614                PID::is_settled()
+ .text.vexMain  0x03805658       0xb0 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03805658                vexMain
  .text.__vex_function_prolog
-                0x038054e8       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x038054e8                __vex_function_prolog
- .text._init    0x03805500        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03805500                _init
- .text._fini    0x03805504        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03805504                _fini
+                0x03805708       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03805708                __vex_function_prolog
+ .text._init    0x03805720        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03805720                _init
+ .text._fini    0x03805724        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03805724                _fini
  .text.vexStdlibVersionLinked
-                0x03805508        0xc C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_util.c.obj)
-                0x03805508                vexStdlibVersionLinked
+                0x03805728        0xc C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_util.c.obj)
+                0x03805728                vexStdlibVersionLinked
  .text.vexStdlibVersionVerify
-                0x03805514       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_util.c.obj)
-                0x03805514                vexStdlibVersionVerify
+                0x03805734       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_util.c.obj)
+                0x03805734                vexStdlibVersionVerify
  .text.vexPrivateApiEnable
-                0x03805544       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805544                vexPrivateApiEnable
+                0x03805764       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805764                vexPrivateApiEnable
  .text.vexStdlibMismatchError
-                0x03805554       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805554                vexStdlibMismatchError
+                0x03805774       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805774                vexStdlibMismatchError
  .text.vexTaskAdd
-                0x03805590       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805590                vexTaskAdd
+                0x038057b0       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038057b0                vexTaskAdd
  .text.vexTasksRun
-                0x038055a0       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038055a0                vexTasksRun
+                0x038057c0       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038057c0                vexTasksRun
  .text.vexTaskYield
-                0x038055b0       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038055b0                vexTaskYield
+                0x038057d0       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038057d0                vexTaskYield
  .text.vexTaskCheckTimeslice
-                0x038055c0       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038055c0                vexTaskCheckTimeslice
+                0x038057e0       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038057e0                vexTaskCheckTimeslice
  .text.vexTaskGetIndex
-                0x038055d0       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038055d0                vexTaskGetIndex
+                0x038057f0       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038057f0                vexTaskGetIndex
  .text.vexTaskSleep
-                0x038055e0       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038055e0                vexTaskSleep
+                0x03805800       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805800                vexTaskSleep
  .text.vexTasksDump
-                0x038055f0       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038055f0                vexTasksDump
+                0x03805810       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805810                vexTasksDump
  .text.vexTaskGetTaskIndex
-                0x0380560c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380560c                vexTaskGetTaskIndex
+                0x0380582c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380582c                vexTaskGetTaskIndex
  .text.vexTaskStopAll
-                0x0380561c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380561c                vexTaskStopAll
+                0x0380583c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380583c                vexTaskStopAll
  .text.vexTaskRemoveAllUser
-                0x0380562c       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380562c                vexTaskRemoveAllUser
+                0x0380584c       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380584c                vexTaskRemoveAllUser
  .text.vexTaskCompletionIdSet
-                0x03805660       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805660                vexTaskCompletionIdSet
+                0x03805880       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805880                vexTaskCompletionIdSet
  .text.vexTaskStopWithId
-                0x03805670       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805670                vexTaskStopWithId
+                0x03805890       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805890                vexTaskStopWithId
  .text.vexTaskGetCallbackAndId
-                0x03805680       0x54 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805680                vexTaskGetCallbackAndId
+                0x038058a0       0x54 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038058a0                vexTaskGetCallbackAndId
  .text.vexCriticalSection
-                0x038056d4       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038056d4                vexCriticalSection
+                0x038058f4       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038058f4                vexCriticalSection
  .text.vexEventAdd
-                0x03805700       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805700                vexEventAdd
+                0x03805920       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805920                vexEventAdd
  .text.vexEventUserIndexGet
-                0x03805734       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805734                vexEventUserIndexGet
+                0x03805954       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805954                vexEventUserIndexGet
  .text.vexEventAddWithArg
-                0x03805750       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805750                vexEventAddWithArg
+                0x03805970       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805970                vexEventAddWithArg
  .text.vexEventsCleanup
-                0x0380578c       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380578c                vexEventsCleanup
+                0x038059ac       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038059ac                vexEventsCleanup
  .text.vexDebug
-                0x038057b8       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038057b8                vexDebug
+                0x038059d8       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038059d8                vexDebug
  .text.vex_sprintf
-                0x038057f0       0x40 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038057f0                vex_sprintf
+                0x03805a10       0x40 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805a10                vex_sprintf
  .text.vex_vsnprintf
-                0x03805830       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805830                vex_vsnprintf
+                0x03805a50       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805a50                vex_vsnprintf
  .text.vexSystemTimeGet
-                0x0380586c       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380586c                vexSystemTimeGet
+                0x03805a8c       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805a8c                vexSystemTimeGet
  .text.vexSystemExitRequest
-                0x03805888       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805888                vexSystemExitRequest
+                0x03805aa8       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805aa8                vexSystemExitRequest
  .text.vexDeviceGetByIndex
-                0x038058a4       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038058a4                vexDeviceGetByIndex
+                0x03805ac4       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805ac4                vexDeviceGetByIndex
  .text.vexControllerGet
-                0x038058c8       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038058c8                vexControllerGet
+                0x03805ae8       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805ae8                vexControllerGet
  .text.vexControllerTextSet
-                0x038058f4       0x74 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038058f4                vexControllerTextSet
+                0x03805b14       0x74 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805b14                vexControllerTextSet
  .text.vexDeviceAdiPortConfigSet
-                0x03805968       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805968                vexDeviceAdiPortConfigSet
+                0x03805b88       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805b88                vexDeviceAdiPortConfigSet
  .text.vexDeviceAdiPortConfigGet
-                0x0380599c       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380599c                vexDeviceAdiPortConfigGet
+                0x03805bbc       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805bbc                vexDeviceAdiPortConfigGet
  .text.vexDeviceAdiValueSet
-                0x038059c8       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038059c8                vexDeviceAdiValueSet
+                0x03805be8       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805be8                vexDeviceAdiValueSet
  .text.vexDeviceAdiValueGet
-                0x038059fc       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038059fc                vexDeviceAdiValueGet
+                0x03805c1c       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805c1c                vexDeviceAdiValueGet
  .text.vexDeviceMotorVelocitySet
-                0x03805a28       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805a28                vexDeviceMotorVelocitySet
+                0x03805c48       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805c48                vexDeviceMotorVelocitySet
  .text.vexDeviceMotorVoltageSet
-                0x03805a54       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805a54                vexDeviceMotorVoltageSet
+                0x03805c74       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805c74                vexDeviceMotorVoltageSet
  .text.vexDeviceMotorActualVelocityGet
-                0x03805a80       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805a80                vexDeviceMotorActualVelocityGet
+                0x03805ca0       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805ca0                vexDeviceMotorActualVelocityGet
  .text.vexDeviceMotorCurrentLimitSet
-                0x03805aa4       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805aa4                vexDeviceMotorCurrentLimitSet
+                0x03805cc4       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805cc4                vexDeviceMotorCurrentLimitSet
  .text.vexDeviceMotorReverseFlagSet
-                0x03805ad0       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805ad0                vexDeviceMotorReverseFlagSet
+                0x03805cf0       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805cf0                vexDeviceMotorReverseFlagSet
  .text.vexDeviceMotorEncoderUnitsSet
-                0x03805afc       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805afc                vexDeviceMotorEncoderUnitsSet
+                0x03805d1c       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805d1c                vexDeviceMotorEncoderUnitsSet
  .text.vexDeviceMotorBrakeModeSet
-                0x03805b28       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805b28                vexDeviceMotorBrakeModeSet
+                0x03805d48       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805d48                vexDeviceMotorBrakeModeSet
  .text.vexDeviceMotorPositionSet
-                0x03805b54       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805b54                vexDeviceMotorPositionSet
+                0x03805d74       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805d74                vexDeviceMotorPositionSet
  .text.vexDeviceMotorPositionGet
-                0x03805b88       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805b88                vexDeviceMotorPositionGet
+                0x03805da8       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805da8                vexDeviceMotorPositionGet
  .text.vexDeviceMotorGearingSet
-                0x03805bac       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805bac                vexDeviceMotorGearingSet
+                0x03805dcc       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805dcc                vexDeviceMotorGearingSet
  .text.vexDeviceMotorGearingGet
-                0x03805bd8       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805bd8                vexDeviceMotorGearingGet
+                0x03805df8       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805df8                vexDeviceMotorGearingGet
  .text.vexDeviceImuReset
-                0x03805bfc       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805bfc                vexDeviceImuReset
+                0x03805e1c       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805e1c                vexDeviceImuReset
  .text.vexDeviceImuHeadingGet
-                0x03805c20       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805c20                vexDeviceImuHeadingGet
+                0x03805e40       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805e40                vexDeviceImuHeadingGet
  .text.vexDeviceImuDegreesGet
-                0x03805c44       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805c44                vexDeviceImuDegreesGet
+                0x03805e64       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805e64                vexDeviceImuDegreesGet
  .text.vexDeviceImuStatusGet
-                0x03805c68       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805c68                vexDeviceImuStatusGet
+                0x03805e88       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805e88                vexDeviceImuStatusGet
  .text.vexDeviceAbsEncAngleGet
-                0x03805c8c       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805c8c                vexDeviceAbsEncAngleGet
+                0x03805eac       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805eac                vexDeviceAbsEncAngleGet
  .text.vexDeviceAbsEncReverseFlagSet
-                0x03805cb0       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805cb0                vexDeviceAbsEncReverseFlagSet
+                0x03805ed0       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805ed0                vexDeviceAbsEncReverseFlagSet
  .text.vexDisplayForegroundColor
-                0x03805cdc       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805cdc                vexDisplayForegroundColor
+                0x03805efc       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805efc                vexDisplayForegroundColor
  .text.vexDisplayBackgroundColor
-                0x03805d00       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805d00                vexDisplayBackgroundColor
+                0x03805f20       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805f20                vexDisplayBackgroundColor
  .text.vexDisplayBackgroundColorGet
-                0x03805d24       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805d24                vexDisplayBackgroundColorGet
+                0x03805f44       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805f44                vexDisplayBackgroundColorGet
  .text.vexDisplayRectClear
-                0x03805d40       0x4c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805d40                vexDisplayRectClear
+                0x03805f60       0x4c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805f60                vexDisplayRectClear
  .text.vexDisplayVPrintf
-                0x03805d8c       0x50 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805d8c                vexDisplayVPrintf
+                0x03805fac       0x50 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805fac                vexDisplayVPrintf
  .text.vexDisplayTextReference
-                0x03805ddc       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805ddc                vexDisplayTextReference
+                0x03805ffc       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03805ffc                vexDisplayTextReference
  .text.vexDisplayTextSize
-                0x03805e00       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805e00                vexDisplayTextSize
+                0x03806020       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03806020                vexDisplayTextSize
  .text.vexDisplayFontNamedSet
-                0x03805e2c       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805e2c                vexDisplayFontNamedSet
+                0x0380604c       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380604c                vexDisplayFontNamedSet
  .text.vexDisplayStringWidthGet
-                0x03805e50       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805e50                vexDisplayStringWidthGet
+                0x03806070       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03806070                vexDisplayStringWidthGet
  .text.vexSystemStdlibImpureDataAddr
-                0x03805e74       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805e74                vexSystemStdlibImpureDataAddr
+                0x03806094       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03806094                vexSystemStdlibImpureDataAddr
  .text.vexSystemStdlibImpureDataSize
-                0x03805e9c       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805e9c                vexSystemStdlibImpureDataSize
+                0x038060bc       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038060bc                vexSystemStdlibImpureDataSize
  .text.vexSystemSaveUserData
-                0x03805ec4       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805ec4                vexSystemSaveUserData
+                0x038060e4       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038060e4                vexSystemSaveUserData
  .text.vexTouchDataGet
-                0x03805f00       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805f00                vexTouchDataGet
+                0x03806120       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03806120                vexTouchDataGet
  .text.vexDisplayThemeIdGet
-                0x03805f10       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805f10                vexDisplayThemeIdGet
+                0x03806130       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03806130                vexDisplayThemeIdGet
  .text.vexDeviceEventMaskSet
-                0x03805f48       0x48 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805f48                vexDeviceEventMaskSet
+                0x03806168       0x48 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03806168                vexDeviceEventMaskSet
  .text.vexDeviceEventMaskGet
-                0x03805f90       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03805f90                vexDeviceEventMaskGet
+                0x038061b0       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038061b0                vexDeviceEventMaskGet
  .text.vexSystemVersion
-                0x03805fcc       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiversions.c.obj)
-                0x03805fcc                vexSystemVersion
+                0x038061ec       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiversions.c.obj)
+                0x038061ec                vexSystemVersion
  .text.vexStdlibVersion
-                0x03805fdc       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiversions.c.obj)
-                0x03805fdc                vexStdlibVersion
- *fill*         0x03805fec        0x4 
+                0x038061fc       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiversions.c.obj)
+                0x038061fc                vexStdlibVersion
+ *fill*         0x0380620c        0x4 
  .text._ZN3vex4waitEdNS_9timeUnitsE
-                0x03805ff0       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03805ff0                vex::wait(double, vex::timeUnits)
+                0x03806210       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03806210                vex::wait(double, vex::timeUnits)
  .text._ZN3vex5motorD2Ev
-                0x03806020       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806020                vex::motor::~motor()
-                0x03806020                vex::motor::~motor()
+                0x03806240       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806240                vex::motor::~motor()
+                0x03806240                vex::motor::~motor()
  .text._ZN3vex5motorD0Ev
-                0x03806040       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806040                vex::motor::~motor()
+                0x03806260       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806260                vex::motor::~motor()
  .text._ZN3vex5motor9installedEv
-                0x0380605c       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x0380605c                vex::motor::installed()
+                0x0380627c       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x0380627c                vex::motor::installed()
  .text._ZN3vex5motor15defaultStoppingENS_9brakeTypeE
-                0x03806074       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806074                vex::motor::defaultStopping(vex::brakeType)
+                0x03806294       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806294                vex::motor::defaultStopping(vex::brakeType)
  .text._ZN3vex5motor8setBrakeENS_9brakeTypeE
-                0x038060a4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038060a4                vex::motor::setBrake(vex::brakeType)
+                0x038062c4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x038062c4                vex::motor::setBrake(vex::brakeType)
  .text._ZN3vex5motorC2El
-                0x038060a8       0x78 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038060a8                vex::motor::motor(long)
-                0x038060a8                vex::motor::motor(long)
+                0x038062c8       0x78 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x038062c8                vex::motor::motor(long)
+                0x038062c8                vex::motor::motor(long)
  .text._ZN3vex5motorC2ElNS_11gearSettingEb
-                0x03806120       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806120                vex::motor::motor(long, vex::gearSetting, bool)
-                0x03806120                vex::motor::motor(long, vex::gearSetting, bool)
+                0x03806340       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806340                vex::motor::motor(long, vex::gearSetting, bool)
+                0x03806340                vex::motor::motor(long, vex::gearSetting, bool)
  .text._ZN3vex5motorC2Elb
-                0x03806154       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806154                vex::motor::motor(long, bool)
-                0x03806154                vex::motor::motor(long, bool)
+                0x03806374       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806374                vex::motor::motor(long, bool)
+                0x03806374                vex::motor::motor(long, bool)
  .text._ZN3vex5motor4spinENS_13directionTypeEdNS_12voltageUnitsE
-                0x03806178       0x50 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806178                vex::motor::spin(vex::directionType, double, vex::voltageUnits)
+                0x03806398       0x50 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806398                vex::motor::spin(vex::directionType, double, vex::voltageUnits)
  .text._ZN3vex5motor4stopENS_9brakeTypeE
-                0x038061c8       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038061c8                vex::motor::stop(vex::brakeType)
+                0x038063e8       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x038063e8                vex::motor::stop(vex::brakeType)
  .text._ZN3vex5motor4stopEv
-                0x038061f8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038061f8                vex::motor::stop()
+                0x03806418        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806418                vex::motor::stop()
  .text._ZN3vex5motor12setMaxTorqueEdNS_12percentUnitsE
-                0x03806200       0x88 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806200                vex::motor::setMaxTorque(double, vex::percentUnits)
+                0x03806420       0x88 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806420                vex::motor::setMaxTorque(double, vex::percentUnits)
  .text._ZN3vex5motor16velocityToScaledEdNS_13velocityUnitsE
-                0x03806288       0x5c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806288                vex::motor::velocityToScaled(double, vex::velocityUnits)
+                0x038064a8       0x5c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x038064a8                vex::motor::velocityToScaled(double, vex::velocityUnits)
  .text._ZN3vex5motor8velocityENS_13velocityUnitsE
-                0x038062e4       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038062e4                vex::motor::velocity(vex::velocityUnits)
+                0x03806504       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806504                vex::motor::velocity(vex::velocityUnits)
  .text._ZN3vex5motor5valueEv
-                0x03806314       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806314                vex::motor::value()
+                0x03806534       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806534                vex::motor::value()
  .text._ZN3vex5motor16scaledToVelocityEdNS_13velocityUnitsE
-                0x03806330       0xa4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806330                vex::motor::scaledToVelocity(double, vex::velocityUnits)
+                0x03806550       0xa4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806550                vex::motor::scaledToVelocity(double, vex::velocityUnits)
  .text._ZN3vex5motor4spinENS_13directionTypeEdNS_13velocityUnitsE
-                0x038063d4       0x5c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038063d4                vex::motor::spin(vex::directionType, double, vex::velocityUnits)
+                0x038065f4       0x5c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x038065f4                vex::motor::spin(vex::directionType, double, vex::velocityUnits)
  .text._ZN3vex5motor4spinENS_13directionTypeE
-                0x03806430       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806430                vex::motor::spin(vex::directionType)
+                0x03806650       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806650                vex::motor::spin(vex::directionType)
  .text._ZN3vex5motor11setVelocityEdNS_13velocityUnitsE
-                0x03806458       0x54 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03806458                vex::motor::setVelocity(double, vex::velocityUnits)
+                0x03806678       0x54 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03806678                vex::motor::setVelocity(double, vex::velocityUnits)
  .text._ZN3vex5motor16setRotationUnitsENS_13rotationUnitsE
-                0x038064ac       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038064ac                vex::motor::setRotationUnits(vex::rotationUnits)
+                0x038066cc       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x038066cc                vex::motor::setRotationUnits(vex::rotationUnits)
  .text._ZN3vex5motor8positionENS_13rotationUnitsE
-                0x038064c8       0x44 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038064c8                vex::motor::position(vex::rotationUnits)
+                0x038066e8       0x44 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x038066e8                vex::motor::position(vex::rotationUnits)
  .text._ZN3vex8inertial11getTurnTypeEv
-                0x0380650c        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x0380650c                vex::inertial::getTurnType()
+                0x0380672c        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x0380672c                vex::inertial::getTurnType()
  .text._ZThn16_N3vex8inertial11getTurnTypeEv
-                0x03806514        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806514                non-virtual thunk to vex::inertial::getTurnType()
- *fill*         0x0380651c        0x4 
+                0x03806734        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806734                non-virtual thunk to vex::inertial::getTurnType()
+ *fill*         0x0380673c        0x4 
  .text._ZN3vex8inertial10setHeadingEdNS_13rotationUnitsE
-                0x03806520       0x58 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806520                vex::inertial::setHeading(double, vex::rotationUnits)
+                0x03806740       0x58 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806740                vex::inertial::setHeading(double, vex::rotationUnits)
  .text._ZThn16_N3vex8inertial10setHeadingEdNS_13rotationUnitsE
-                0x03806578        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806578                non-virtual thunk to vex::inertial::setHeading(double, vex::rotationUnits)
+                0x03806798        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806798                non-virtual thunk to vex::inertial::setHeading(double, vex::rotationUnits)
  .text._ZN3vex8inertial11setRotationEdNS_13rotationUnitsE
-                0x03806580       0x58 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806580                vex::inertial::setRotation(double, vex::rotationUnits)
+                0x038067a0       0x58 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x038067a0                vex::inertial::setRotation(double, vex::rotationUnits)
  .text._ZThn16_N3vex8inertial11setRotationEdNS_13rotationUnitsE
-                0x038065d8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x038065d8                non-virtual thunk to vex::inertial::setRotation(double, vex::rotationUnits)
+                0x038067f8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x038067f8                non-virtual thunk to vex::inertial::setRotation(double, vex::rotationUnits)
  .text._ZN3vex8inertialD2Ev
-                0x038065e0       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x038065e0                vex::inertial::~inertial()
-                0x038065e0                vex::inertial::~inertial()
+                0x03806800       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806800                vex::inertial::~inertial()
+                0x03806800                vex::inertial::~inertial()
  .text._ZThn16_N3vex8inertialD1Ev
-                0x03806600        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806600                non-virtual thunk to vex::inertial::~inertial()
+                0x03806820        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806820                non-virtual thunk to vex::inertial::~inertial()
  .text._ZN3vex8inertialD0Ev
-                0x03806608       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806608                vex::inertial::~inertial()
+                0x03806828       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806828                vex::inertial::~inertial()
  .text._ZThn16_N3vex8inertialD0Ev
-                0x03806624        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806624                non-virtual thunk to vex::inertial::~inertial()
+                0x03806844        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806844                non-virtual thunk to vex::inertial::~inertial()
  .text._ZN3vex8inertial9installedEv
-                0x0380662c       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x0380662c                vex::inertial::installed()
+                0x0380684c       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x0380684c                vex::inertial::installed()
  .text._ZN3vex8inertial5angleENS_13rotationUnitsE
-                0x03806644       0x6c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806644                vex::inertial::angle(vex::rotationUnits)
+                0x03806864       0x6c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806864                vex::inertial::angle(vex::rotationUnits)
  .text._ZThn16_N3vex8inertial5angleENS_13rotationUnitsE
-                0x038066b0        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x038066b0                non-virtual thunk to vex::inertial::angle(vex::rotationUnits)
+                0x038068d0        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x038068d0                non-virtual thunk to vex::inertial::angle(vex::rotationUnits)
  .text._ZN3vex8inertial7headingENS_13rotationUnitsE
-                0x038066b8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x038066b8                vex::inertial::heading(vex::rotationUnits)
+                0x038068d8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x038068d8                vex::inertial::heading(vex::rotationUnits)
  .text._ZThn16_N3vex8inertial7headingENS_13rotationUnitsE
-                0x038066bc        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x038066bc                non-virtual thunk to vex::inertial::heading(vex::rotationUnits)
+                0x038068dc        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x038068dc                non-virtual thunk to vex::inertial::heading(vex::rotationUnits)
  .text._ZN3vex8inertial5valueEv
-                0x038066c4       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x038066c4                vex::inertial::value()
+                0x038068e4       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x038068e4                vex::inertial::value()
  .text._ZN3vex8inertial8rotationENS_13rotationUnitsE
-                0x038066e0       0x48 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x038066e0                vex::inertial::rotation(vex::rotationUnits)
+                0x03806900       0x48 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806900                vex::inertial::rotation(vex::rotationUnits)
  .text._ZThn16_N3vex8inertial8rotationENS_13rotationUnitsE
-                0x03806728        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806728                non-virtual thunk to vex::inertial::rotation(vex::rotationUnits)
+                0x03806948        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806948                non-virtual thunk to vex::inertial::rotation(vex::rotationUnits)
  .text._ZN3vex8inertial13isCalibratingEv
-                0x03806730       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806730                vex::inertial::isCalibrating()
+                0x03806950       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806950                vex::inertial::isCalibrating()
  .text._ZThn16_N3vex8inertial13isCalibratingEv
-                0x03806768        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806768                non-virtual thunk to vex::inertial::isCalibrating()
+                0x03806988        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806988                non-virtual thunk to vex::inertial::isCalibrating()
  .text._ZN3vex8inertialC2ElNS_8turnTypeE
-                0x03806770       0x4c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03806770                vex::inertial::inertial(long, vex::turnType)
-                0x03806770                vex::inertial::inertial(long, vex::turnType)
+                0x03806990       0x4c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03806990                vex::inertial::inertial(long, vex::turnType)
+                0x03806990                vex::inertial::inertial(long, vex::turnType)
  .text._ZN3vex8inertial16startCalibrationEl
-                0x038067bc       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x038067bc                vex::inertial::startCalibration(long)
+                0x038069dc       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x038069dc                vex::inertial::startCalibration(long)
  .text._ZN3vex8inertial9calibrateEl
-                0x038067dc        0xc C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x038067dc                vex::inertial::calibrate(long)
-                0x038067e0                non-virtual thunk to vex::inertial::calibrate(long)
+                0x038069fc        0xc C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x038069fc                vex::inertial::calibrate(long)
+                0x03806a00                non-virtual thunk to vex::inertial::calibrate(long)
  .text._ZN3vex8rotationD2Ev
-                0x038067e8       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
-                0x038067e8                vex::rotation::~rotation()
-                0x038067e8                vex::rotation::~rotation()
+                0x03806a08       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
+                0x03806a08                vex::rotation::~rotation()
+                0x03806a08                vex::rotation::~rotation()
  .text._ZN3vex8rotationD0Ev
-                0x03806808       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
-                0x03806808                vex::rotation::~rotation()
+                0x03806a28       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
+                0x03806a28                vex::rotation::~rotation()
  .text._ZN3vex8rotation9installedEv
-                0x03806824       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
-                0x03806824                vex::rotation::installed()
+                0x03806a44       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
+                0x03806a44                vex::rotation::installed()
  .text._ZN3vex8rotation5valueEv
-                0x0380683c        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
-                0x0380683c                vex::rotation::value()
+                0x03806a5c        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
+                0x03806a5c                vex::rotation::value()
  .text._ZN3vex8rotationC2Elb
-                0x03806844       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
-                0x03806844                vex::rotation::rotation(long, bool)
-                0x03806844                vex::rotation::rotation(long, bool)
+                0x03806a64       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
+                0x03806a64                vex::rotation::rotation(long, bool)
+                0x03806a64                vex::rotation::rotation(long, bool)
  .text._ZN3vex10controllerD2Ev
-                0x03806874        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806874                vex::controller::~controller()
-                0x03806874                vex::controller::~controller()
+                0x03806a94        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806a94                vex::controller::~controller()
+                0x03806a94                vex::controller::~controller()
  .text._ZN3vex10controller5valueE19_V5_ControllerIndex
-                0x03806878        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806878                vex::controller::value(_V5_ControllerIndex)
+                0x03806a98        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806a98                vex::controller::value(_V5_ControllerIndex)
  .text._ZNK3vex10controller6button8pressingEv
-                0x03806880       0xc8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806880                vex::controller::button::pressing() const
+                0x03806aa0       0xc8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806aa0                vex::controller::button::pressing() const
  .text._ZNK3vex10controller6button7pressedEPFvvE
-                0x03806948      0x108 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806948                vex::controller::button::pressed(void (*)()) const
+                0x03806b68      0x108 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806b68                vex::controller::button::pressed(void (*)()) const
  .text._ZNK3vex10controller6button21_buttonToPressedEventEv
-                0x03806a50       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806a50                vex::controller::button::_buttonToPressedEvent() const
+                0x03806c70       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806c70                vex::controller::button::_buttonToPressedEvent() const
  .text._ZNK3vex10controller6button22_buttonToReleasedEventEv
-                0x03806a70       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806a70                vex::controller::button::_buttonToReleasedEvent() const
+                0x03806c90       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806c90                vex::controller::button::_buttonToReleasedEvent() const
  .text._ZN3vex10controller6buttonC2ENS0_11tButtonTypeEPS0_
-                0x03806a90       0x48 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806a90                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
-                0x03806a90                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
+                0x03806cb0       0x48 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806cb0                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
+                0x03806cb0                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
  .text._ZNK3vex10controller4axis5valueEv
-                0x03806ad8       0x58 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806ad8                vex::controller::axis::value() const
+                0x03806cf8       0x58 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806cf8                vex::controller::axis::value() const
  .text._ZNK3vex10controller4axis23_joystickToChangedEventEv
-                0x03806b30       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806b30                vex::controller::axis::_joystickToChangedEvent() const
+                0x03806d50       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806d50                vex::controller::axis::_joystickToChangedEvent() const
  .text._ZN3vex10controller4axisC2ENS0_9tAxisTypeEPS0_
-                0x03806b50       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806b50                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
-                0x03806b50                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
+                0x03806d70       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806d70                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
+                0x03806d70                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
  .text._ZN3vex10controllerC2ENS_14controllerTypeE
-                0x03806b7c      0x16c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806b7c                vex::controller::controller(vex::controllerType)
-                0x03806b7c                vex::controller::controller(vex::controllerType)
+                0x03806d9c      0x16c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806d9c                vex::controller::controller(vex::controllerType)
+                0x03806d9c                vex::controller::controller(vex::controllerType)
  .text._ZN3vex10controller3lcd15getControllerIdEv
-                0x03806ce8       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806ce8                vex::controller::lcd::getControllerId()
+                0x03806f08       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806f08                vex::controller::lcd::getControllerId()
  .text._ZN3vex10controller3lcd5printEPKcz
-                0x03806cf8       0x80 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806cf8                vex::controller::lcd::print(char const*, ...)
+                0x03806f18       0x80 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806f18                vex::controller::lcd::print(char const*, ...)
  .text._ZN3vex10controller3lcd9clearLineEi
-                0x03806d78       0x80 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806d78                vex::controller::lcd::clearLine(int)
+                0x03806f98       0x80 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03806f98                vex::controller::lcd::clearLine(int)
  .text._ZN3vex10controller3lcd9clearLineEv
-                0x03806df8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806df8                vex::controller::lcd::clearLine()
+                0x03807018        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03807018                vex::controller::lcd::clearLine()
  .text._ZN3vex10controller3lcd7newLineEv
-                0x03806e00       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03806e00                vex::controller::lcd::newLine()
+                0x03807020       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03807020                vex::controller::lcd::newLine()
  .text._ZN3vex4taskC2Ev
-                0x03806e20       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03806e20                vex::task::task()
-                0x03806e20                vex::task::task()
+                0x03807040       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03807040                vex::task::task()
+                0x03807040                vex::task::task()
  .text._ZN3vex4taskC2EPFivE
-                0x03806e48       0x5c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03806e48                vex::task::task(int (*)())
-                0x03806e48                vex::task::task(int (*)())
+                0x03807068       0x5c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03807068                vex::task::task(int (*)())
+                0x03807068                vex::task::task(int (*)())
  .text._ZN3vex4taskD2Ev
-                0x03806ea4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03806ea4                vex::task::~task()
-                0x03806ea4                vex::task::~task()
+                0x038070c4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x038070c4                vex::task::~task()
+                0x038070c4                vex::task::~task()
  .text._ZN3vex4task4stopEPvi
-                0x03806ea8       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03806ea8                vex::task::stop(void*, int)
+                0x038070c8       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x038070c8                vex::task::stop(void*, int)
  .text._ZN3vex4task5sleepEm
-                0x03806ec4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03806ec4                vex::task::sleep(unsigned long)
+                0x038070e4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x038070e4                vex::task::sleep(unsigned long)
  .text._ZN3vex4task6_indexEPFivE
-                0x03806ec8       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03806ec8                vex::task::_index(int (*)())
+                0x038070e8       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x038070e8                vex::task::_index(int (*)())
  .text._ZN3vex4task8_stopAllEv
-                0x03806edc       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03806edc                vex::task::_stopAll()
+                0x038070fc       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x038070fc                vex::task::_stopAll()
  .text._ZN3vex11this_thread9sleep_forEm
-                0x03806f18        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_thread.cpp.obj)
-                0x03806f18                vex::this_thread::sleep_for(unsigned long)
+                0x03807138        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_thread.cpp.obj)
+                0x03807138                vex::this_thread::sleep_for(unsigned long)
  .text._ZN3vex5event4initEmmPFvvE
-                0x03806f1c        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_event.cpp.obj)
-                0x03806f1c                vex::event::init(unsigned long, unsigned long, void (*)())
+                0x0380713c        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x0380713c                vex::event::init(unsigned long, unsigned long, void (*)())
  .text._ZN3vex5event4initEmmPFvPvES1_
-                0x03806f20        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_event.cpp.obj)
-                0x03806f20                vex::event::init(unsigned long, unsigned long, void (*)(void*), void*)
+                0x03807140        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x03807140                vex::event::init(unsigned long, unsigned long, void (*)(void*), void*)
  .text._ZN3vex5event9userindexEv
-                0x03806f24        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_event.cpp.obj)
-                0x03806f24                vex::event::userindex()
+                0x03807144        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x03807144                vex::event::userindex()
  .text._ZZN3vex6meventC4EmmENUlvE_4_FUNEv
-                0x03806f28        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_mevent.cpp.obj)
+                0x03807148        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_mevent.cpp.obj)
  .text._ZN3vex6meventC2Emm
-                0x03806f2c       0x70 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_mevent.cpp.obj)
-                0x03806f2c                vex::mevent::mevent(unsigned long, unsigned long)
-                0x03806f2c                vex::mevent::mevent(unsigned long, unsigned long)
+                0x0380714c       0x70 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_mevent.cpp.obj)
+                0x0380714c                vex::mevent::mevent(unsigned long, unsigned long)
+                0x0380714c                vex::mevent::mevent(unsigned long, unsigned long)
  .text._ZN3vex5brain9_getIndexEv
-                0x03806f9c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03806f9c                vex::brain::_getIndex()
+                0x038071bc       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038071bc                vex::brain::_getIndex()
  .text._ZN3vex5brain3lcd9setCursorEll
-                0x03806fac       0x44 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03806fac                vex::brain::lcd::setCursor(long, long)
+                0x038071cc       0x44 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038071cc                vex::brain::lcd::setCursor(long, long)
  .text._ZN3vex5brain3lcd7setFontENS_8fontTypeE
-                0x03806ff0      0x23c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03806ff0                vex::brain::lcd::setFont(vex::fontType)
+                0x03807210      0x23c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03807210                vex::brain::lcd::setFont(vex::fontType)
  .text._ZN3vex5brain3lcdC2Ev
-                0x0380722c       0x94 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x0380722c                vex::brain::lcd::lcd()
-                0x0380722c                vex::brain::lcd::lcd()
+                0x0380744c       0x94 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x0380744c                vex::brain::lcd::lcd()
+                0x0380744c                vex::brain::lcd::lcd()
  .text._ZN3vex5brainC2Ev
-                0x038072c0       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038072c0                vex::brain::brain()
-                0x038072c0                vex::brain::brain()
+                0x038074e0       0x3c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038074e0                vex::brain::brain()
+                0x038074e0                vex::brain::brain()
  .text._ZN3vex5brain3lcd7printAtEllPKcz
-                0x038072fc       0x54 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038072fc                vex::brain::lcd::printAt(long, long, char const*, ...)
+                0x0380751c       0x54 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x0380751c                vex::brain::lcd::printAt(long, long, char const*, ...)
  .text._ZN3vex5brain3lcd12_clearScreenEm
-                0x03807350       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03807350                vex::brain::lcd::_clearScreen(unsigned long)
+                0x03807570       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03807570                vex::brain::lcd::_clearScreen(unsigned long)
  .text._ZN3vex5brain3lcd11clearScreenERKNS_5colorE
-                0x03807388       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03807388                vex::brain::lcd::clearScreen(vex::color const&)
+                0x038075a8       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038075a8                vex::brain::lcd::clearScreen(vex::color const&)
  .text._ZN3vex5brain3lcd11clearScreenEv
-                0x038073a8       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038073a8                vex::brain::lcd::clearScreen()
+                0x038075c8       0x2c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038075c8                vex::brain::lcd::clearScreen()
  .text._ZN3vex5brain3lcd7newLineEv
-                0x038073d4       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038073d4                vex::brain::lcd::newLine()
+                0x038075f4       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038075f4                vex::brain::lcd::newLine()
  .text._ZN3vex5brain3lcd8pressingEv
-                0x038073f4       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038073f4                vex::brain::lcd::pressing()
+                0x03807614       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03807614                vex::brain::lcd::pressing()
  .text._ZN3vex5brain3lcd10rowToPixelEl
-                0x03807414       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03807414                vex::brain::lcd::rowToPixel(long)
+                0x03807634       0x34 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03807634                vex::brain::lcd::rowToPixel(long)
  .text._ZN3vex5brain3lcd5printEPKcz
-                0x03807448       0xb8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03807448                vex::brain::lcd::print(char const*, ...)
+                0x03807668       0xb8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03807668                vex::brain::lcd::print(char const*, ...)
  .text._ZN3vex5brainD2Ev
-                0x03807500       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03807500                vex::brain::~brain()
-                0x03807500                vex::brain::~brain()
+                0x03807720       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03807720                vex::brain::~brain()
+                0x03807720                vex::brain::~brain()
  .text._ZN3vex11competition8_disableEPv
-                0x03807520       0xa4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03807520                vex::competition::_disable(void*)
+                0x03807740       0xa4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03807740                vex::competition::_disable(void*)
  .text._ZN3vex11competition11_autonomousEv
-                0x038075c4       0x80 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038075c4                vex::competition::_autonomous()
+                0x038077e4       0x80 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x038077e4                vex::competition::_autonomous()
  .text._ZN3vex11competition14_drivercontrolEv
-                0x03807644       0x80 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03807644                vex::competition::_drivercontrol()
+                0x03807864       0x80 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03807864                vex::competition::_drivercontrol()
  .text._ZN3vex11competitionC2Ev
-                0x038076c4      0x13c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038076c4                vex::competition::competition()
-                0x038076c4                vex::competition::competition()
+                0x038078e4      0x13c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x038078e4                vex::competition::competition()
+                0x038078e4                vex::competition::competition()
  .text._ZN3vex11competitionD2Ev
-                0x03807800        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03807800                vex::competition::~competition()
-                0x03807800                vex::competition::~competition()
+                0x03807a20        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03807a20                vex::competition::~competition()
+                0x03807a20                vex::competition::~competition()
  .text._ZN3vex11competition10autonomousEPFvvE
-                0x03807804       0x44 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03807804                vex::competition::autonomous(void (*)())
+                0x03807a24       0x44 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03807a24                vex::competition::autonomous(void (*)())
  .text._ZN3vex11competition13drivercontrolEPFvvE
-                0x03807848       0x44 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03807848                vex::competition::drivercontrol(void (*)())
+                0x03807a68       0x44 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03807a68                vex::competition::drivercontrol(void (*)())
  .text._ZN3vex7triportD2Ev
-                0x0380788c       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x0380788c                vex::triport::~triport()
-                0x0380788c                vex::triport::~triport()
+                0x03807aac       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807aac                vex::triport::~triport()
+                0x03807aac                vex::triport::~triport()
  .text._ZN3vex7triportD0Ev
-                0x038078c4       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x038078c4                vex::triport::~triport()
+                0x03807ae4       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807ae4                vex::triport::~triport()
  .text._ZN3vex7triport9installedEv
-                0x038078e0       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x038078e0                vex::triport::installed()
+                0x03807b00       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807b00                vex::triport::installed()
  .text._ZN3vex7triport4portC2ElPS0_
-                0x038078f8       0x74 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x038078f8                vex::triport::port::port(long, vex::triport*)
-                0x038078f8                vex::triport::port::port(long, vex::triport*)
+                0x03807b18       0x74 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807b18                vex::triport::port::port(long, vex::triport*)
+                0x03807b18                vex::triport::port::port(long, vex::triport*)
  .text._ZN3vex7triportC2El
-                0x0380796c       0xf0 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x0380796c                vex::triport::triport(long)
-                0x0380796c                vex::triport::triport(long)
+                0x03807b8c       0xf0 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807b8c                vex::triport::triport(long)
+                0x03807b8c                vex::triport::triport(long)
  .text._ZN3vex7triport4port4typeENS_11triportTypeE
-                0x03807a5c       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807a5c                vex::triport::port::type(vex::triportType)
+                0x03807c7c       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807c7c                vex::triport::port::type(vex::triportType)
  .text._ZN3vex7triport4port4typeEv
-                0x03807a8c       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807a8c                vex::triport::port::type()
+                0x03807cac       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807cac                vex::triport::port::type()
  .text._ZN3vex7triport4port5valueEv
-                0x03807ac4       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807ac4                vex::triport::port::value()
+                0x03807ce4       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807ce4                vex::triport::port::value()
  .text._ZN3vex7triport4port5valueEl
-                0x03807ad8       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807ad8                vex::triport::port::value(long)
+                0x03807cf8       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807cf8                vex::triport::port::value(long)
  .text._ZN3vex7triport4port14_convertAnalogENS_11analogUnitsE
-                0x03807af0       0x58 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807af0                vex::triport::port::_convertAnalog(vex::analogUnits)
+                0x03807d10       0x58 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807d10                vex::triport::port::_convertAnalog(vex::analogUnits)
  .text._ZN3vex11__trideviceC2ERNS_7triport4portENS_11triportTypeE
-                0x03807b48       0x5c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807b48                vex::__tridevice::__tridevice(vex::triport::port&, vex::triportType)
-                0x03807b48                vex::__tridevice::__tridevice(vex::triport::port&, vex::triportType)
+                0x03807d68       0x5c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807d68                vex::__tridevice::__tridevice(vex::triport::port&, vex::triportType)
+                0x03807d68                vex::__tridevice::__tridevice(vex::triport::port&, vex::triportType)
  .text._ZN3vex11__tridevice14_convertAnalogENS_11analogUnitsE
-                0x03807ba4        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807ba4                vex::__tridevice::_convertAnalog(vex::analogUnits)
+                0x03807dc4        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807dc4                vex::__tridevice::_convertAnalog(vex::analogUnits)
  .text._ZN3vex11digital_outC2ERNS_7triport4portE
-                0x03807bac       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807bac                vex::digital_out::digital_out(vex::triport::port&)
-                0x03807bac                vex::digital_out::digital_out(vex::triport::port&)
+                0x03807dcc       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807dcc                vex::digital_out::digital_out(vex::triport::port&)
+                0x03807dcc                vex::digital_out::digital_out(vex::triport::port&)
  .text._ZN3vex11digital_outD2Ev
-                0x03807bc4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807bc4                vex::digital_out::~digital_out()
-                0x03807bc4                vex::digital_out::~digital_out()
+                0x03807de4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807de4                vex::digital_out::~digital_out()
+                0x03807de4                vex::digital_out::~digital_out()
  .text._ZN3vex11digital_out5valueEv
-                0x03807bc8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807bc8                vex::digital_out::value()
+                0x03807de8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807de8                vex::digital_out::value()
  .text._ZN3vex11digital_out3setEb
-                0x03807bd0        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807bd0                vex::digital_out::set(bool)
+                0x03807df0        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807df0                vex::digital_out::set(bool)
  .text._ZN3vex3potC2ERNS_7triport4portE
-                0x03807bd8       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807bd8                vex::pot::pot(vex::triport::port&)
-                0x03807bd8                vex::pot::pot(vex::triport::port&)
+                0x03807df8       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807df8                vex::pot::pot(vex::triport::port&)
+                0x03807df8                vex::pot::pot(vex::triport::port&)
  .text._ZN3vex3potD2Ev
-                0x03807bf8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807bf8                vex::pot::~pot()
-                0x03807bf8                vex::pot::~pot()
- *fill*         0x03807bfc        0x4 
+                0x03807e18        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807e18                vex::pot::~pot()
+                0x03807e18                vex::pot::~pot()
+ *fill*         0x03807e1c        0x4 
  .text._ZN3vex3pot5valueENS_13rotationUnitsE
-                0x03807c00       0x60 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807c00                vex::pot::value(vex::rotationUnits)
+                0x03807e20       0x60 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807e20                vex::pot::value(vex::rotationUnits)
  .text._ZN3vex7encoderC2ERNS_7triport4portE
-                0x03807c60       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807c60                vex::encoder::encoder(vex::triport::port&)
-                0x03807c60                vex::encoder::encoder(vex::triport::port&)
+                0x03807e80       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807e80                vex::encoder::encoder(vex::triport::port&)
+                0x03807e80                vex::encoder::encoder(vex::triport::port&)
  .text._ZN3vex7encoderD2Ev
-                0x03807c80        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03807c80                vex::encoder::~encoder()
-                0x03807c80                vex::encoder::~encoder()
+                0x03807ea0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03807ea0                vex::encoder::~encoder()
+                0x03807ea0                vex::encoder::~encoder()
  .text._ZN3vex5colorD2Ev
-                0x03807c84        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03807c84                vex::color::~color()
-                0x03807c84                vex::color::~color()
+                0x03807ea4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03807ea4                vex::color::~color()
+                0x03807ea4                vex::color::~color()
  .text._ZNK3vex5colorcvmEv
-                0x03807c88        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03807c88                vex::color::operator unsigned long() const
+                0x03807ea8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03807ea8                vex::color::operator unsigned long() const
  .text.startup._GLOBAL__sub_I__ZN3vex5color5blackE
-                0x03807c90      0x164 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03807eb0      0x164 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
  .text._ZN3vex5timerD2Ev
-                0x03807df4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_timer.cpp.obj)
-                0x03807df4                vex::timer::~timer()
-                0x03807df4                vex::timer::~timer()
+                0x03808014        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x03808014                vex::timer::~timer()
+                0x03808014                vex::timer::~timer()
  .text._ZN3vex5timer5clearEv
-                0x03807df8       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_timer.cpp.obj)
-                0x03807df8                vex::timer::clear()
+                0x03808018       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x03808018                vex::timer::clear()
  .text._ZN3vex5timerC2Ev
-                0x03807e14       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_timer.cpp.obj)
-                0x03807e14                vex::timer::timer()
-                0x03807e14                vex::timer::timer()
+                0x03808034       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x03808034                vex::timer::timer()
+                0x03808034                vex::timer::timer()
  .text._ZN3vex11motor_group18motor_group_motorsC2Ev
-                0x03807e28       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
-                0x03807e28                vex::motor_group::motor_group_motors::motor_group_motors()
-                0x03807e28                vex::motor_group::motor_group_motors::motor_group_motors()
+                0x03808048       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x03808048                vex::motor_group::motor_group_motors::motor_group_motors()
+                0x03808048                vex::motor_group::motor_group_motors::motor_group_motors()
  .text._ZN3vex11motor_group18motor_group_motorsC2ERKS1_
-                0x03807e50       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
-                0x03807e50                vex::motor_group::motor_group_motors::motor_group_motors(vex::motor_group::motor_group_motors const&)
-                0x03807e50                vex::motor_group::motor_group_motors::motor_group_motors(vex::motor_group::motor_group_motors const&)
+                0x03808070       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x03808070                vex::motor_group::motor_group_motors::motor_group_motors(vex::motor_group::motor_group_motors const&)
+                0x03808070                vex::motor_group::motor_group_motors::motor_group_motors(vex::motor_group::motor_group_motors const&)
  .text._ZN3vex11motor_groupC2Ev
-                0x03807e70       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
-                0x03807e70                vex::motor_group::motor_group()
-                0x03807e70                vex::motor_group::motor_group()
+                0x03808090       0x1c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x03808090                vex::motor_group::motor_group()
+                0x03808090                vex::motor_group::motor_group()
  .text._ZN3vex11motor_groupD2Ev
-                0x03807e8c        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
-                0x03807e8c                vex::motor_group::~motor_group()
-                0x03807e8c                vex::motor_group::~motor_group()
+                0x038080ac        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x038080ac                vex::motor_group::~motor_group()
+                0x038080ac                vex::motor_group::~motor_group()
  .text._ZN3vex11motor_group9_addMotorERNS_5motorE
-                0x03807e90       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
-                0x03807e90                vex::motor_group::_addMotor(vex::motor&)
+                0x038080b0       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x038080b0                vex::motor_group::_addMotor(vex::motor&)
  .text._ZN3vex11motor_group11setVelocityEdNS_13velocityUnitsE
-                0x03807eb0       0x4c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
-                0x03807eb0                vex::motor_group::setVelocity(double, vex::velocityUnits)
+                0x038080d0       0x4c C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x038080d0                vex::motor_group::setVelocity(double, vex::velocityUnits)
  .text._ZN3vex11motor_group4spinENS_13directionTypeE
-                0x03807efc       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
-                0x03807efc                vex::motor_group::spin(vex::directionType)
+                0x0380811c       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x0380811c                vex::motor_group::spin(vex::directionType)
  .text._ZN3vex11motor_group4spinENS_13directionTypeEdNS_12voltageUnitsE
-                0x03807f34       0x54 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
-                0x03807f34                vex::motor_group::spin(vex::directionType, double, vex::voltageUnits)
+                0x03808154       0x54 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x03808154                vex::motor_group::spin(vex::directionType, double, vex::voltageUnits)
  .text._ZN3vex11motor_group4stopEv
-                0x03807f88       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
-                0x03807f88                vex::motor_group::stop()
+                0x038081a8       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x038081a8                vex::motor_group::stop()
  .text._ZN3vex11motor_group4stopENS_9brakeTypeE
-                0x03807fb8       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
-                0x03807fb8                vex::motor_group::stop(vex::brakeType)
+                0x038081d8       0x38 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x038081d8                vex::motor_group::stop(vex::brakeType)
  .text._ZN3vex11motor_group8positionENS_13rotationUnitsE
-                0x03807ff0        0xc C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
-                0x03807ff0                vex::motor_group::position(vex::rotationUnits)
+                0x03808210        0xc C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x03808210                vex::motor_group::position(vex::rotationUnits)
  .text.vexAdiPortConfigSet
-                0x03807ffc       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03807ffc                vexAdiPortConfigSet
+                0x0380821c       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380821c                vexAdiPortConfigSet
  .text.vexAdiPortConfigGet
-                0x03808024       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03808024                vexAdiPortConfigGet
+                0x03808244       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03808244                vexAdiPortConfigGet
  .text.vexAdiValueSet
-                0x0380804c       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380804c                vexAdiValueSet
+                0x0380826c       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380826c                vexAdiValueSet
  .text.vexAdiValueGet
-                0x03808074       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03808074                vexAdiValueGet
+                0x03808294       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03808294                vexAdiValueGet
  .text.vexMotorVelocitySet
-                0x03808094       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03808094                vexMotorVelocitySet
+                0x038082b4       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038082b4                vexMotorVelocitySet
  .text.vexMotorVoltageSet
-                0x038080b4       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038080b4                vexMotorVoltageSet
+                0x038082d4       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038082d4                vexMotorVoltageSet
  .text.vexMotorActualVelocityGet
-                0x038080d4       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038080d4                vexMotorActualVelocityGet
+                0x038082f4       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038082f4                vexMotorActualVelocityGet
  .text.vexMotorCurrentLimitSet
-                0x038080f8       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038080f8                vexMotorCurrentLimitSet
+                0x03808318       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03808318                vexMotorCurrentLimitSet
  .text.vexMotorReverseFlagSet
-                0x03808118       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03808118                vexMotorReverseFlagSet
+                0x03808338       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03808338                vexMotorReverseFlagSet
  .text.vexMotorEncoderUnitsSet
-                0x03808138       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03808138                vexMotorEncoderUnitsSet
+                0x03808358       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03808358                vexMotorEncoderUnitsSet
  .text.vexMotorBrakeModeSet
-                0x03808158       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03808158                vexMotorBrakeModeSet
+                0x03808378       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03808378                vexMotorBrakeModeSet
  .text.vexMotorPositionSet
-                0x03808178       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03808178                vexMotorPositionSet
+                0x03808398       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03808398                vexMotorPositionSet
  .text.vexMotorPositionGet
-                0x038081a0       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038081a0                vexMotorPositionGet
+                0x038083c0       0x24 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038083c0                vexMotorPositionGet
  .text.vexMotorGearingSet
-                0x038081c4       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038081c4                vexMotorGearingSet
+                0x038083e4       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038083e4                vexMotorGearingSet
  .text.vexMotorGearingGet
-                0x038081e4       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038081e4                vexMotorGearingGet
+                0x03808404       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03808404                vexMotorGearingGet
  .text.vexImuReset
-                0x038081fc       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038081fc                vexImuReset
+                0x0380841c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380841c                vexImuReset
  .text.vexImuHeadingGet
-                0x0380820c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380820c                vexImuHeadingGet
+                0x0380842c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380842c                vexImuHeadingGet
  .text.vexImuDegreesGet
-                0x0380821c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380821c                vexImuDegreesGet
+                0x0380843c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380843c                vexImuDegreesGet
  .text.vexImuStatusGet
-                0x0380822c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380822c                vexImuStatusGet
+                0x0380844c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380844c                vexImuStatusGet
  .text.vexAbsEncAngleGet
-                0x0380823c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380823c                vexAbsEncAngleGet
+                0x0380845c       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380845c                vexAbsEncAngleGet
  .text.vexAbsEncReverseFlagSet
-                0x0380824c       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380824c                vexAbsEncReverseFlagSet
+                0x0380846c       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380846c                vexAbsEncReverseFlagSet
  .text.vexEventMaskSet
-                0x03808264       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03808264                vexEventMaskSet
+                0x03808484       0x28 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03808484                vexEventMaskSet
  .text.vexEventMaskGet
-                0x0380828c       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380828c                vexEventMaskGet
+                0x038084ac       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038084ac                vexEventMaskGet
  .text._ZN3vex6deviceD2Ev
-                0x038082a4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038082a4                vex::device::~device()
-                0x038082a4                vex::device::~device()
+                0x038084c4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x038084c4                vex::device::~device()
+                0x038084c4                vex::device::~device()
  .text._ZN3vex6device5valueEv
-                0x038082a8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038082a8                vex::device::value()
+                0x038084c8        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x038084c8                vex::device::value()
  .text._ZN3vex6deviceD0Ev
-                0x038082b0       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038082b0                vex::device::~device()
+                0x038084d0       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x038084d0                vex::device::~device()
  .text._ZN3vex6device4initEl
-                0x038082c4       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038082c4                vex::device::init(long)
+                0x038084e4       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x038084e4                vex::device::init(long)
  .text._ZN3vex6deviceC2El
-                0x038082f4       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038082f4                vex::device::device(long)
-                0x038082f4                vex::device::device(long)
+                0x03808514       0x20 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03808514                vex::device::device(long)
+                0x03808514                vex::device::device(long)
  .text._ZN3vex6device4typeEv
-                0x03808314       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03808314                vex::device::type()
+                0x03808534       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03808534                vex::device::type()
  .text._ZN3vex6device9installedEv
-                0x03808324       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03808324                vex::device::installed()
+                0x03808544       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03808544                vex::device::installed()
  .text.__libc_fini_array
-                0x03808338       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-fini.o)
-                0x03808338                __libc_fini_array
+                0x03808558       0x30 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-fini.o)
+                0x03808558                __libc_fini_array
  .text.__libc_init_array
-                0x03808368       0x58 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-init.o)
-                0x03808368                __libc_init_array
+                0x03808588       0x58 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-init.o)
+                0x03808588                __libc_init_array
  .text.__libc_init_array.__stub
-                0x038083c0       0x18 linker stubs
+                0x038085e0       0x18 linker stubs
  *(.gnu.linkonce.t.*)
  *(.plt)
  *(.gnu_warning)
@@ -3761,10 +3762,10 @@ Linker script and memory map
  *(.ARM.extab)
  *(.gnu.linkonce.armextab.*)
 
-.v4_bx          0x038083d8        0x0
+.v4_bx          0x038085f8        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x038083d8        0x0
+.iplt           0x038085f8        0x0
  .iplt          0x00000000        0x0 build/src/main.o
 
 .init
@@ -3773,228 +3774,228 @@ Linker script and memory map
 .fini
  *(.fini)
 
-.rodata         0x038083d8      0x2b4
-                0x038083d8                __rodata_start = .
+.rodata         0x038085f8      0x2b4
+                0x038085f8                __rodata_start = .
  *(.rodata)
  *(.rodata.*)
  .rodata.str1.1
-                0x038083d8       0xb0 build/src/main.o
+                0x038085f8       0xb0 build/src/main.o
  .rodata.str1.1
-                0x03808488       0x2e C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
- *fill*         0x038084b6        0x2 
+                0x038086a8       0x2e C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
+ *fill*         0x038086d6        0x2 
  .rodata._ZN3vex3fwdE
-                0x038084b8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084b8                vex::fwd
+                0x038086d8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038086d8                vex::fwd
  .rodata._ZN3vex5PORT3E
-                0x038084bc        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084bc                vex::PORT3
+                0x038086dc        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038086dc                vex::PORT3
  .rodata._ZN3vex5PORT1E
-                0x038084c0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084c0                vex::PORT1
+                0x038086e0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038086e0                vex::PORT1
  .rodata._ZN3vex7reverseE
-                0x038084c4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084c4                vex::reverse
+                0x038086e4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038086e4                vex::reverse
  .rodata._ZN3vex4voltE
-                0x038084c8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084c8                vex::volt
+                0x038086e8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038086e8                vex::volt
  .rodata._ZN3vex6PORT10E
-                0x038084cc        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084cc                vex::PORT10
+                0x038086ec        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038086ec                vex::PORT10
  .rodata._ZN3vex5PORT5E
-                0x038084d0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084d0                vex::PORT5
+                0x038086f0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038086f0                vex::PORT5
  .rodata._ZN3vex7forwardE
-                0x038084d4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084d4                vex::forward
+                0x038086f4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038086f4                vex::forward
  .rodata._ZN3vex3secE
-                0x038084d8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084d8                vex::sec
+                0x038086f8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038086f8                vex::sec
  .rodata._ZN3vex4msecE
-                0x038084dc        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084dc                vex::msec
+                0x038086fc        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038086fc                vex::msec
  .rodata._ZN3vex5PORT9E
-                0x038084e0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084e0                vex::PORT9
+                0x03808700        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808700                vex::PORT9
  .rodata._ZN3vex5PORT2E
-                0x038084e4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084e4                vex::PORT2
+                0x03808704        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808704                vex::PORT2
  .rodata._ZN3vex7primaryE
-                0x038084e8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084e8                vex::primary
+                0x03808708        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808708                vex::primary
  .rodata._ZN3vex3degE
-                0x038084ec        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084ec                vex::deg
+                0x0380870c        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x0380870c                vex::deg
  .rodata._ZN3vex7percentE
-                0x038084f0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084f0                vex::percent
+                0x03808710        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808710                vex::percent
  .rodata._ZN3vex6PORT22E
-                0x038084f4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084f4                vex::PORT22
+                0x03808714        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808714                vex::PORT22
  .rodata._ZN3vex4holdE
-                0x038084f8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084f8                vex::hold
+                0x03808718        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808718                vex::hold
  .rodata._ZN3vex6PORT12E
-                0x038084fc        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038084fc                vex::PORT12
+                0x0380871c        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x0380871c                vex::PORT12
  .rodata._ZN3vex5PORT7E
-                0x03808500        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03808500                vex::PORT7
+                0x03808720        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808720                vex::PORT7
  .rodata._ZN3vex8ratio6_1E
-                0x03808504        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03808504                vex::ratio6_1
+                0x03808724        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808724                vex::ratio6_1
  .rodata._ZN3vex5coastE
-                0x03808508        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03808508                vex::coast
+                0x03808728        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808728                vex::coast
  .rodata._ZN3vex5PORT4E
-                0x0380850c        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x0380850c                vex::PORT4
+                0x0380872c        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x0380872c                vex::PORT4
  .rodata._ZN3vex5PORT8E
-                0x03808510        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03808510                vex::PORT8
+                0x03808730        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808730                vex::PORT8
  .rodata._ZN3vex9ratio18_1E
-                0x03808514        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03808514                vex::ratio18_1
+                0x03808734        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808734                vex::ratio18_1
  .rodata._ZN3vex7secondsE
-                0x03808518        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03808518                vex::seconds
- *fill*         0x0380851c        0x4 
+                0x03808738        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808738                vex::seconds
+ *fill*         0x0380873c        0x4 
  .rodata._ZTVN3vex5motorE
-                0x03808520       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03808520                vtable for vex::motor
+                0x03808740       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03808740                vtable for vex::motor
  .rodata._ZTVN3vex8inertialE
-                0x03808538       0x68 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
-                0x03808538                vtable for vex::inertial
+                0x03808758       0x68 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03808758                vtable for vex::inertial
  .rodata._ZTVN3vex8rotationE
-                0x038085a0       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
-                0x038085a0                vtable for vex::rotation
+                0x038087c0       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
+                0x038087c0                vtable for vex::rotation
  .rodata.str1.1
-                0x038085b8       0x1f C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038087d8       0x1f C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
                                  0x20 (size before relaxing)
  .rodata.CSWTCH.16
-                0x038085d7        0xb C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038087f7        0xb C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .rodata.CSWTCH.18
-                0x038085e2        0xb C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03808802        0xb C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .rodata.CSWTCH.24
-                0x038085ed        0x3 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x0380880d        0x3 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .rodata.str1.1
-                0x038085f0       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03808810       0x14 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
  .rodata.str1.1
-                0x03808604       0x2d C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
- *fill*         0x03808631        0x7 
+                0x03808824       0x2d C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+ *fill*         0x03808851        0x7 
  .rodata._ZTVN3vex7triportE
-                0x03808638       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03808638                vtable for vex::triport
+                0x03808858       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03808858                vtable for vex::triport
  .rodata.CSWTCH.38
-                0x03808650       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03808870       0x10 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
  .rodata.CSWTCH.33
-                0x03808660        0xe C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
- *fill*         0x0380866e        0x2 
+                0x03808880        0xe C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+ *fill*         0x0380888e        0x2 
  .rodata._ZTVN3vex6deviceE
-                0x03808670       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03808670                vtable for vex::device
+                0x03808890       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03808890                vtable for vex::device
  .rodata.str1.4
-                0x03808688        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x038088a8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-impure.o)
                                   0x2 (size before relaxing)
  *(.gnu.linkonce.r.*)
-                0x0380868c                __rodata_end = .
+                0x038088ac                __rodata_end = .
 
-.rodata1        0x0380868c        0x0
-                0x0380868c                __rodata1_start = .
+.rodata1        0x038088ac        0x0
+                0x038088ac                __rodata1_start = .
  *(.rodata1)
  *(.rodata1.*)
-                0x0380868c                __rodata1_end = .
+                0x038088ac                __rodata1_end = .
 
-.sdata2         0x0380868c        0x0
-                0x0380868c                __sdata2_start = .
+.sdata2         0x038088ac        0x0
+                0x038088ac                __sdata2_start = .
  *(.sdata2)
  *(.sdata2.*)
  *(.gnu.linkonce.s2.*)
-                0x0380868c                __sdata2_end = .
+                0x038088ac                __sdata2_end = .
 
-.sbss2          0x0380868c        0x0
-                0x0380868c                __sbss2_start = .
+.sbss2          0x038088ac        0x0
+                0x038088ac                __sbss2_start = .
  *(.sbss2)
  *(.sbss2.*)
  *(.gnu.linkonce.sb2.*)
-                0x0380868c                __sbss2_end = .
+                0x038088ac                __sbss2_end = .
 
-.data           0x03808690      0x444
-                0x03808690                __data_start = .
+.data           0x038088b0      0x444
+                0x038088b0                __data_start = .
  *(.data)
  *(.data.*)
  .data.AngleOffset
-                0x03808690        0x4 build/src/autons.o
-                0x03808690                AngleOffset
+                0x038088b0        0x4 build/src/autons.o
+                0x038088b0                AngleOffset
  .data.RemoteControlCodeEnabled
-                0x03808694        0x1 build/src/robot-config.o
-                0x03808694                RemoteControlCodeEnabled
+                0x038088b4        0x1 build/src/robot-config.o
+                0x038088b4                RemoteControlCodeEnabled
  .data.Controller1RightShoulderControlMotorsStopped
-                0x03808695        0x1 build/src/robot-config.o
-                0x03808695                Controller1RightShoulderControlMotorsStopped
- *fill*         0x03808696        0x2 
+                0x038088b5        0x1 build/src/robot-config.o
+                0x038088b5                Controller1RightShoulderControlMotorsStopped
+ *fill*         0x038088b6        0x2 
  .data.appRunning
-                0x03808698        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03808698                appRunning
- .data.__yoff   0x0380869c        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038088b8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x038088b8                appRunning
+ .data.__yoff   0x038088bc        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
  .data._ZN3vex24__default_motor_velocityE
-                0x038086a0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038086a0                vex::__default_motor_velocity
- *fill*         0x038086a4        0x4 
+                0x038088c0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x038088c0                vex::__default_motor_velocity
+ *fill*         0x038088c4        0x4 
  .data.impure_data
-                0x038086a8      0x428 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x038088c8      0x428 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-impure.o)
  .data._impure_ptr
-                0x03808ad0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-impure.o)
-                0x03808ad0                _impure_ptr
+                0x03808cf0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x03808cf0                _impure_ptr
  *(.gnu.linkonce.d.*)
  *(.jcr)
  *(.got)
  *(.got.plt)
-                0x03808ad4                __data_end = .
+                0x03808cf4                __data_end = .
 
-.igot.plt       0x03808ad4        0x0
+.igot.plt       0x03808cf4        0x0
  .igot.plt      0x00000000        0x0 build/src/main.o
 
-.data1          0x03808ad4        0x0
-                0x03808ad4                __data1_start = .
+.data1          0x03808cf4        0x0
+                0x03808cf4                __data1_start = .
  *(.data1)
  *(.data1.*)
-                0x03808ad4                __data1_end = .
+                0x03808cf4                __data1_end = .
 
 .got
  *(.got)
 
-.ctors          0x03808ad4        0x0
-                0x03808ad4                __CTOR_LIST__ = .
-                0x03808ad4                ___CTORS_LIST___ = .
+.ctors          0x03808cf4        0x0
+                0x03808cf4                __CTOR_LIST__ = .
+                0x03808cf4                ___CTORS_LIST___ = .
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x03808ad4                __CTOR_END__ = .
-                0x03808ad4                ___CTORS_END___ = .
+                0x03808cf4                __CTOR_END__ = .
+                0x03808cf4                ___CTORS_END___ = .
 
-.dtors          0x03808ad4        0x0
-                0x03808ad4                __DTOR_LIST__ = .
-                0x03808ad4                ___DTORS_LIST___ = .
+.dtors          0x03808cf4        0x0
+                0x03808cf4                __DTOR_LIST__ = .
+                0x03808cf4                ___DTORS_LIST___ = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x03808ad4                __DTOR_END__ = .
-                0x03808ad4                ___DTORS_END___ = .
+                0x03808cf4                __DTOR_END__ = .
+                0x03808cf4                ___DTORS_END___ = .
 
-.fixup          0x03808ad4        0x0
-                0x03808ad4                __fixup_start = .
+.fixup          0x03808cf4        0x0
+                0x03808cf4                __fixup_start = .
  *(.fixup)
-                0x03808ad4                __fixup_end = .
+                0x03808cf4                __fixup_end = .
 
 .eh_frame
  *(.eh_frame)
 
-.eh_framehdr    0x03808ad4        0x0
-                0x03808ad4                __eh_framehdr_start = .
+.eh_framehdr    0x03808cf4        0x0
+                0x03808cf4                __eh_framehdr_start = .
  *(.eh_framehdr)
-                0x03808ad4                __eh_framehdr_end = .
+                0x03808cf4                __eh_framehdr_end = .
 
 .gcc_except_table
  *(.gcc_except_table)
@@ -4004,480 +4005,480 @@ Linker script and memory map
  *(.mmu_tbl)
                 0x0380c000                __mmu_tbl_end = .
 
-.ARM.exidx      0x03808ad4        0x8
-                0x03808ad4                __exidx_start = .
+.ARM.exidx      0x03808cf4        0x8
+                0x03808cf4                __exidx_start = .
  *(.ARM.exidx*)
  .ARM.exidx.text._ZN3vex11motor_groupC2IJNS_5motorES2_EEERS2_DpRT_
-                0x03808ad4        0x8 build/src/main.o
+                0x03808cf4        0x8 build/src/main.o
  .ARM.exidx.text._ZN5DriveD2Ev
-                0x03808adc        0x0 build/src/main.o
+                0x03808cfc        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z9pre_autonv
-                0x03808adc        0x0 build/src/main.o
+                0x03808cfc        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z10autonomousv
-                0x03808adc        0x0 build/src/main.o
+                0x03808cfc        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z11usercontrolv
-                0x03808adc        0x0 build/src/main.o
+                0x03808cfc        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text.main
-                0x03808adc        0x0 build/src/main.o
+                0x03808cfc        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZZ4mainEN3$_08__invokeEv
-                0x03808adc        0x0 build/src/main.o
+                0x03808cfc        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZZ4mainEN3$_18__invokeEv
-                0x03808adc        0x0 build/src/main.o
+                0x03808cfc        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZZ4mainEN3$_28__invokeEv
-                0x03808adc        0x0 build/src/main.o
+                0x03808cfc        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZZ4mainEN3$_38__invokeEv
-                0x03808adc        0x0 build/src/main.o
+                0x03808cfc        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZZ4mainEN3$_48__invokeEv
-                0x03808adc        0x0 build/src/main.o
+                0x03808cfc        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._GLOBAL__sub_I_main.cpp
-                0x03808adc        0x0 build/src/main.o
+                0x03808cfc        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z17default_constantsv
-                0x03808adc        0x0 build/src/autons.o
+                0x03808cfc        0x0 build/src/autons.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z15Offensive5Pointv
-                0x03808adc        0x0 build/src/autons.o
+                0x03808cfc        0x0 build/src/autons.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z15Offensive6Pointv
-                0x03808adc        0x0 build/src/autons.o
+                0x03808cfc        0x0 build/src/autons.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z13DefensiveRushv
-                0x03808adc        0x0 build/src/autons.o
+                0x03808cfc        0x0 build/src/autons.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z19DefensiveMatchPointv
-                0x03808adc        0x0 build/src/autons.o
+                0x03808cfc        0x0 build/src/autons.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z18DefensiveMatchLoadv
-                0x03808adc        0x0 build/src/autons.o
+                0x03808cfc        0x0 build/src/autons.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z6Skillsv
-                0x03808adc        0x0 build/src/autons.o
+                0x03808cfc        0x0 build/src/autons.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z7NoAutonv
-                0x03808adc        0x0 build/src/autons.o
+                0x03808cfc        0x0 build/src/autons.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z9FinalRushv
-                0x03808adc        0x0 build/src/autons.o
+                0x03808cfc        0x0 build/src/autons.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z19AWPOffensiveFarSidev
-                0x03808adc        0x0 build/src/autons.o
+                0x03808cfc        0x0 build/src/autons.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z9AutonTestv
-                0x03808adc        0x0 build/src/autons.o
+                0x03808cfc        0x0 build/src/autons.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z33rc_auto_loop_function_Controller1v
-                0x03808adc        0x0 build/src/robot-config.o
+                0x03808cfc        0x0 build/src/robot-config.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z11vexcodeInitv
-                0x03808adc        0x0 build/src/robot-config.o
+                0x03808cfc        0x0 build/src/robot-config.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._GLOBAL__sub_I_robot_config.cpp
-                0x03808adc        0x0 build/src/robot-config.o
+                0x03808cfc        0x0 build/src/robot-config.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z15reduce_0_to_360f
-                0x03808adc        0x0 build/src/JAR-Template/util.o
+                0x03808cfc        0x0 build/src/JAR-Template/util.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z26reduce_negative_180_to_180f
-                0x03808adc        0x0 build/src/JAR-Template/util.o
+                0x03808cfc        0x0 build/src/JAR-Template/util.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z5clampfff
-                0x03808adc        0x0 build/src/JAR-Template/util.o
+                0x03808cfc        0x0 build/src/JAR-Template/util.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z11is_reversedd
-                0x03808adc        0x0 build/src/JAR-Template/util.o
+                0x03808cfc        0x0 build/src/JAR-Template/util.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z7to_voltf
-                0x03808adc        0x0 build/src/JAR-Template/util.o
+                0x03808cfc        0x0 build/src/JAR-Template/util.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z7to_porti
-                0x03808adc        0x0 build/src/JAR-Template/util.o
+                0x03808cfc        0x0 build/src/JAR-Template/util.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z8deadbandff
-                0x03808adc        0x0 build/src/JAR-Template/util.o
+                0x03808cfc        0x0 build/src/JAR-Template/util.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN4Odom22set_physical_distancesEff
-                0x03808adc        0x0 build/src/JAR-Template/odom.o
+                0x03808cfc        0x0 build/src/JAR-Template/odom.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5DriveC2E11drive_setupN3vex11motor_groupES2_ifffiiiiiffiff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive18drive_with_voltageEff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive18set_turn_constantsEfffff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive19set_drive_constantsEfffff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive21set_heading_constantsEfffff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive19set_swing_constantsEfffff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive24set_turn_exit_conditionsEfff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive25set_drive_exit_conditionsEfff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive25set_swing_exit_conditionsEfff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive13turn_to_angleEf
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive13turn_to_angleEfffffffff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive13turn_to_angleEff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive13turn_to_angleEfffff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive14drive_distanceEf
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive14drive_distanceEfffffffffffffff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive14drive_distanceEfffffff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive19left_swing_to_angleEf
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive19left_swing_to_angleEfffffffff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive20right_swing_to_angleEf
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive20right_swing_to_angleEfffffffff
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN5Drive12control_tankEv
-                0x03808adc        0x0 build/src/JAR-Template/drive.o
+                0x03808cfc        0x0 build/src/JAR-Template/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN3PIDC2Efffff
-                0x03808adc        0x0 build/src/JAR-Template/PID.o
+                0x03808cfc        0x0 build/src/JAR-Template/PID.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN3PIDC2Effffffff
-                0x03808adc        0x0 build/src/JAR-Template/PID.o
+                0x03808cfc        0x0 build/src/JAR-Template/PID.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN3PID7computeEf
-                0x03808adc        0x0 build/src/JAR-Template/PID.o
+                0x03808cfc        0x0 build/src/JAR-Template/PID.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._ZN3PID10is_settledEv
-                0x03808adc        0x0 build/src/JAR-Template/PID.o
+                0x03808cfc        0x0 build/src/JAR-Template/PID.o
                                   0x8 (size before relaxing)
  *(.gnu.linkonce.armexidix.*.*)
-                0x03808adc                __exidx_end = .
+                0x03808cfc                __exidx_end = .
 
-.rel.dyn        0x03808adc        0x0
+.rel.dyn        0x03808cfc        0x0
  .rel.iplt      0x00000000        0x0 build/src/main.o
 
-.preinit_array  0x03808adc        0x0
-                0x03808adc                __preinit_array_start = .
+.preinit_array  0x03808cfc        0x0
+                0x03808cfc                __preinit_array_start = .
  *(SORT(.preinit_array.*))
  *(.preinit_array)
-                0x03808adc                __preinit_array_end = .
+                0x03808cfc                __preinit_array_end = .
 
-.init_array     0x03808adc        0xc
-                0x03808adc                __init_array_start = .
+.init_array     0x03808cfc        0xc
+                0x03808cfc                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x03808adc        0x4 build/src/main.o
- .init_array    0x03808ae0        0x4 build/src/robot-config.o
- .init_array    0x03808ae4        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03808ae8                __init_array_end = .
+ .init_array    0x03808cfc        0x4 build/src/main.o
+ .init_array    0x03808d00        0x4 build/src/robot-config.o
+ .init_array    0x03808d04        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03808d08                __init_array_end = .
 
-.fini_array     0x03808ae8        0x0
-                0x03808ae8                __fini_array_start = .
+.fini_array     0x03808d08        0x0
+                0x03808d08                __fini_array_start = .
  *(SORT(.fini_array.*))
  *(.fini_array)
-                0x03808ae8                __fini_array_end = .
+                0x03808d08                __fini_array_end = .
 
 .ARM.attributes
-                0x03808ae8       0x3c
-                0x03808ae8                __ARM.attributes_start = .
+                0x03808d08       0x3c
+                0x03808d08                __ARM.attributes_start = .
  *(.ARM.attributes)
  .ARM.attributes
-                0x03808ae8       0x3a build/src/main.o
+                0x03808d08       0x3a build/src/main.o
  .ARM.attributes
-                0x03808b22       0x3a build/src/autons.o
+                0x03808d42       0x3a build/src/autons.o
  .ARM.attributes
-                0x03808b5c       0x3a build/src/robot-config.o
+                0x03808d7c       0x3a build/src/robot-config.o
  .ARM.attributes
-                0x03808b96       0x3a build/src/JAR-Template/util.o
+                0x03808db6       0x3a build/src/JAR-Template/util.o
  .ARM.attributes
-                0x03808bd0       0x3a build/src/JAR-Template/odom.o
+                0x03808df0       0x3a build/src/JAR-Template/odom.o
  .ARM.attributes
-                0x03808c0a       0x3a build/src/JAR-Template/drive.o
+                0x03808e2a       0x3a build/src/JAR-Template/drive.o
  .ARM.attributes
-                0x03808c44       0x3a build/src/JAR-Template/PID.o
+                0x03808e64       0x3a build/src/JAR-Template/PID.o
  .ARM.attributes
-                0x03808c7e       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03808e9e       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
  .ARM.attributes
-                0x03808cb3       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_util.c.obj)
+                0x03808ed3       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_util.c.obj)
  .ARM.attributes
-                0x03808ce8       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03808f08       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
  .ARM.attributes
-                0x03808d1d       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiversions.c.obj)
+                0x03808f3d       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiversions.c.obj)
  .ARM.attributes
-                0x03808d52       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03808f72       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_global.cpp.obj)
  .ARM.attributes
-                0x03808d87       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03808fa7       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motor.cpp.obj)
  .ARM.attributes
-                0x03808dbc       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
+                0x03808fdc       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_imu.cpp.obj)
  .ARM.attributes
-                0x03808df1       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
+                0x03809011       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_rotation.cpp.obj)
  .ARM.attributes
-                0x03808e26       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03809046       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .ARM.attributes
-                0x03808e5b       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x0380907b       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
  .ARM.attributes
-                0x03808e90       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_thread.cpp.obj)
+                0x038090b0       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_thread.cpp.obj)
  .ARM.attributes
-                0x03808ec5       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x038090e5       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_event.cpp.obj)
  .ARM.attributes
-                0x03808efa       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_mevent.cpp.obj)
+                0x0380911a       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_mevent.cpp.obj)
  .ARM.attributes
-                0x03808f2f       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x0380914f       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_brain.cpp.obj)
  .ARM.attributes
-                0x03808f64       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03809184       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
  .ARM.attributes
-                0x03808f99       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x038091b9       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_triport.cpp.obj)
  .ARM.attributes
-                0x03808fce       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038091ee       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
  .ARM.attributes
-                0x03809003       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x03809223       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_timer.cpp.obj)
  .ARM.attributes
-                0x03809038       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
+                0x03809258       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_motorgroup.cpp.obj)
  .ARM.attributes
-                0x0380906d       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380928d       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apiuser.c.obj)
  .ARM.attributes
-                0x038090a2       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x038092c2       0x35 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_device.cpp.obj)
  .ARM.attributes
-                0x038090d7       0x2b C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-fini.o)
+                0x038092f7       0x2b C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-fini.o)
  .ARM.attributes
-                0x03809102       0x2b C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x03809322       0x2b C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-impure.o)
  .ARM.attributes
-                0x0380912d       0x2b C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-init.o)
-                0x03809158                __ARM.attributes_end = .
+                0x0380934d       0x2b C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/gcc/libs\libc.a(lib_a-init.o)
+                0x03809378                __ARM.attributes_end = .
 
-.sdata          0x03808ae8        0x0
-                0x03808ae8                __sdata_start = .
+.sdata          0x03808d08        0x0
+                0x03808d08                __sdata_start = .
  *(.sdata)
  *(.sdata.*)
  *(.gnu.linkonce.s.*)
-                0x03808ae8                __sdata_end = .
+                0x03808d08                __sdata_end = .
 
-.sbss           0x03808ae8        0x0
-                0x03808ae8                __sbss_start = .
+.sbss           0x03808d08        0x0
+                0x03808d08                __sbss_start = .
  *(.sbss)
  *(.sbss.*)
  *(.gnu.linkonce.sb.*)
-                0x03808ae8                __sbss_end = .
+                0x03808d08                __sbss_end = .
 
-.tdata          0x03808ae8        0x0
-                0x03808ae8                __tdata_start = .
+.tdata          0x03808d08        0x0
+                0x03808d08                __tdata_start = .
  *(.tdata)
  *(.tdata.*)
  *(.gnu.linkonce.td.*)
-                0x03808ae8                __tdata_end = .
+                0x03808d08                __tdata_end = .
 
-.tbss           0x03808ae8        0x0
-                0x03808ae8                __tbss_start = .
+.tbss           0x03808d08        0x0
+                0x03808d08                __tbss_start = .
  *(.tbss)
  *(.tbss.*)
  *(.gnu.linkonce.tb.*)
-                0x03808ae8                __tbss_end = .
+                0x03808d08                __tbss_end = .
 
-.bss            0x03808ae8      0xb34
-                0x03808ae8                __bss_start = .
+.bss            0x03808d08      0xb34
+                0x03808d08                __bss_start = .
  *(.bss)
  *(.bss.*)
  .bss.Competition
-                0x03808ae8       0x28 build/src/main.o
-                0x03808ae8                Competition
- .bss.chassis   0x03808b10      0x3f0 build/src/main.o
-                0x03808b10                chassis
+                0x03808d08       0x28 build/src/main.o
+                0x03808d08                Competition
+ .bss.chassis   0x03808d30      0x3f0 build/src/main.o
+                0x03808d30                chassis
  .bss.current_auton_selection
-                0x03808f00        0x4 build/src/main.o
-                0x03808f00                current_auton_selection
+                0x03809120        0x4 build/src/main.o
+                0x03809120                current_auton_selection
  .bss.auto_started
-                0x03808f04        0x1 build/src/main.o
-                0x03808f04                auto_started
- *fill*         0x03808f05        0x3 
- .bss.Brain     0x03808f08      0x2bc build/src/robot-config.o
-                0x03808f08                Brain
- .bss.R1        0x038091c4       0x24 build/src/robot-config.o
-                0x038091c4                R1
- .bss.R2        0x038091e8       0x24 build/src/robot-config.o
-                0x038091e8                R2
- .bss.R3        0x0380920c       0x24 build/src/robot-config.o
-                0x0380920c                R3
- .bss.L1        0x03809230       0x24 build/src/robot-config.o
-                0x03809230                L1
- .bss.L2        0x03809254       0x24 build/src/robot-config.o
-                0x03809254                L2
- .bss.L3        0x03809278       0x24 build/src/robot-config.o
-                0x03809278                L3
- .bss.intake    0x0380929c       0x24 build/src/robot-config.o
-                0x0380929c                intake
- .bss.INERT     0x038092c0       0x38 build/src/robot-config.o
-                0x038092c0                INERT
+                0x03809124        0x1 build/src/main.o
+                0x03809124                auto_started
+ *fill*         0x03809125        0x3 
+ .bss.Brain     0x03809128      0x2bc build/src/robot-config.o
+                0x03809128                Brain
+ .bss.R1        0x038093e4       0x24 build/src/robot-config.o
+                0x038093e4                R1
+ .bss.R2        0x03809408       0x24 build/src/robot-config.o
+                0x03809408                R2
+ .bss.R3        0x0380942c       0x24 build/src/robot-config.o
+                0x0380942c                R3
+ .bss.L1        0x03809450       0x24 build/src/robot-config.o
+                0x03809450                L1
+ .bss.L2        0x03809474       0x24 build/src/robot-config.o
+                0x03809474                L2
+ .bss.L3        0x03809498       0x24 build/src/robot-config.o
+                0x03809498                L3
+ .bss.intake    0x038094bc       0x24 build/src/robot-config.o
+                0x038094bc                intake
+ .bss.INERT     0x038094e0       0x38 build/src/robot-config.o
+                0x038094e0                INERT
  .bss.Controller1
-                0x038092f8      0x1ac build/src/robot-config.o
-                0x038092f8                Controller1
+                0x03809518      0x1ac build/src/robot-config.o
+                0x03809518                Controller1
  .bss.rightwing
-                0x038094a4       0x18 build/src/robot-config.o
-                0x038094a4                rightwing
- .bss.catapult  0x038094bc       0x24 build/src/robot-config.o
-                0x038094bc                catapult
- .bss.leftwing  0x038094e0       0x18 build/src/robot-config.o
-                0x038094e0                leftwing
+                0x038096c4       0x18 build/src/robot-config.o
+                0x038096c4                rightwing
+ .bss.catapult  0x038096dc       0x24 build/src/robot-config.o
+                0x038096dc                catapult
+ .bss.leftwing  0x03809700       0x18 build/src/robot-config.o
+                0x03809700                leftwing
  .bss.BackWingLeft
-                0x038094f8       0x18 build/src/robot-config.o
-                0x038094f8                BackWingLeft
+                0x03809718       0x18 build/src/robot-config.o
+                0x03809718                BackWingLeft
  .bss.Catapult5W
-                0x03809510       0x24 build/src/robot-config.o
-                0x03809510                Catapult5W
+                0x03809730       0x24 build/src/robot-config.o
+                0x03809730                Catapult5W
  .bss.CataSensor
-                0x03809534       0x1c build/src/robot-config.o
-                0x03809534                CataSensor
- .bss.Hang      0x03809550       0x18 build/src/robot-config.o
-                0x03809550                Hang
+                0x03809754       0x1c build/src/robot-config.o
+                0x03809754                CataSensor
+ .bss.Hang      0x03809770       0x18 build/src/robot-config.o
+                0x03809770                Hang
  .bss.BackWingRight
-                0x03809568       0x18 build/src/robot-config.o
-                0x03809568                BackWingRight
- .bss.HangGUp   0x03809580       0x18 build/src/robot-config.o
-                0x03809580                HangGUp
+                0x03809788       0x18 build/src/robot-config.o
+                0x03809788                BackWingRight
+ .bss.HangGUp   0x038097a0       0x18 build/src/robot-config.o
+                0x038097a0                HangGUp
  .bss.__dso_handle
-                0x03809598        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03809598                __dso_handle
+                0x038097b8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x038097b8                __dso_handle
  .bss.lastTime.9835
-                0x0380959c        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038097bc        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_apijump.c.obj)
  .bss._ZN3vex4task8_labelIdE
-                0x038095a0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x038095a0                vex::task::_labelId
+                0x038097c0        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x038097c0                vex::task::_labelId
  .bss._ZN3vex11competition22bStopTasksBetweenModesE
-                0x038095a4        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038095a4                vex::competition::bStopTasksBetweenModes
+                0x038097c4        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x038097c4                vex::competition::bStopTasksBetweenModes
  .bss._ZN3vex11competition25bStopAllTasksBetweenModesE
-                0x038095a5        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038095a5                vex::competition::bStopAllTasksBetweenModes
+                0x038097c5        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x038097c5                vex::competition::bStopAllTasksBetweenModes
  .bss._ZN3vex11competition14_auton_pendingE
-                0x038095a6        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038095a6                vex::competition::_auton_pending
- *fill*         0x038095a7        0x1 
+                0x038097c6        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x038097c6                vex::competition::_auton_pending
+ *fill*         0x038097c7        0x1 
  .bss._ZN3vex11competition20_autonomous_callbackE
-                0x038095a8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038095a8                vex::competition::_autonomous_callback
+                0x038097c8        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x038097c8                vex::competition::_autonomous_callback
  .bss._ZN3vex11competition23_drivercontrol_callbackE
-                0x038095ac        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038095ac                vex::competition::_drivercontrol_callback
+                0x038097cc        0x4 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x038097cc                vex::competition::_drivercontrol_callback
  .bss._ZN3vex11competition15_driver_pendingE
-                0x038095b0        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038095b0                vex::competition::_driver_pending
- *fill*         0x038095b1        0x3 
+                0x038097d0        0x1 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x038097d0                vex::competition::_driver_pending
+ *fill*         0x038097d1        0x3 
  .bss._ZN3vex5color6orangeE
-                0x038095b4        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038095b4                vex::color::orange
+                0x038097d4        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038097d4                vex::color::orange
  .bss._ZN3vex5color5blackE
-                0x038095bc        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038095bc                vex::color::black
+                0x038097dc        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038097dc                vex::color::black
  .bss._ZN3vex5color6yellowE
-                0x038095c4        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038095c4                vex::color::yellow
+                0x038097e4        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038097e4                vex::color::yellow
  .bss._ZN3vex5color5greenE
-                0x038095cc        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038095cc                vex::color::green
+                0x038097ec        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038097ec                vex::color::green
  .bss._ZN3vex5color6purpleE
-                0x038095d4        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038095d4                vex::color::purple
+                0x038097f4        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038097f4                vex::color::purple
  .bss._ZN3vex5color4cyanE
-                0x038095dc        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038095dc                vex::color::cyan
+                0x038097fc        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038097fc                vex::color::cyan
  .bss._ZN3vex5color4blueE
-                0x038095e4        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038095e4                vex::color::blue
+                0x03809804        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03809804                vex::color::blue
  .bss._ZN3vex5color3redE
-                0x038095ec        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038095ec                vex::color::red
+                0x0380980c        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x0380980c                vex::color::red
  .bss._ZN3vex5color11transparentE
-                0x038095f4        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038095f4                vex::color::transparent
+                0x03809814        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03809814                vex::color::transparent
  .bss._ZN3vex5color5whiteE
-                0x038095fc        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038095fc                vex::color::white
+                0x0380981c        0x8 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x0380981c                vex::color::white
  *(.gnu.linkonce.b.*)
  *(COMMON)
- COMMON         0x03809604       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03809608                __vex_critical_section
-                0x0380961c                __bss_end = .
-                0x03808ae8                _SDA_BASE_ = (__sdata_start + ((__sbss_end - __sdata_start) / 0x2))
-                0x0380868c                _SDA2_BASE_ = (__sdata2_start + ((__sbss2_end - __sdata2_start) / 0x2))
+ COMMON         0x03809824       0x18 C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03809828                __vex_critical_section
+                0x0380983c                __bss_end = .
+                0x03808d08                _SDA_BASE_ = (__sdata_start + ((__sbss_end - __sdata_start) / 0x2))
+                0x038088ac                _SDA2_BASE_ = (__sdata2_start + ((__sbss2_end - __sdata2_start) / 0x2))
 
-.heap           0x0380961c   0x100004
-                0x03809620                . = ALIGN (0x10)
- *fill*         0x0380961c        0x4 
-                0x03809620                _heap = .
-                0x03809620                HeapBase = .
-                0x03809620                _heap_start = .
-                0x03909620                . = (. + _HEAP_SIZE)
- *fill*         0x03809620   0x100000 
-                0x03909620                _heap_end = .
-                0x03909620                HeapLimit = .
+.heap           0x0380983c   0x100004
+                0x03809840                . = ALIGN (0x10)
+ *fill*         0x0380983c        0x4 
+                0x03809840                _heap = .
+                0x03809840                HeapBase = .
+                0x03809840                _heap_start = .
+                0x03909840                . = (. + _HEAP_SIZE)
+ *fill*         0x03809840   0x100000 
+                0x03909840                _heap_end = .
+                0x03909840                HeapLimit = .
 
-.stack          0x03909620     0x3800
-                0x03909620                . = ALIGN (0x10)
-                0x03909620                _stack_end = .
-                0x0390b620                . = (. + _STACK_SIZE)
- *fill*         0x03909620     0x2000 
-                0x0390b620                . = ALIGN (0x10)
-                0x0390b620                _stack = .
-                0x0390b620                __stack = _stack
-                0x0390b620                . = ALIGN (0x10)
-                0x0390b620                _irq_stack_end = .
-                0x0390ba20                . = (. + _IRQ_STACK_SIZE)
- *fill*         0x0390b620      0x400 
-                0x0390ba20                . = ALIGN (0x10)
-                0x0390ba20                __irq_stack = .
-                0x0390ba20                _supervisor_stack_end = .
-                0x0390c220                . = (. + _SUPERVISOR_STACK_SIZE)
- *fill*         0x0390ba20      0x800 
-                0x0390c220                . = ALIGN (0x10)
-                0x0390c220                __supervisor_stack = .
-                0x0390c220                _abort_stack_end = .
-                0x0390c620                . = (. + _ABORT_STACK_SIZE)
- *fill*         0x0390c220      0x400 
-                0x0390c620                . = ALIGN (0x10)
-                0x0390c620                __abort_stack = .
-                0x0390c620                _fiq_stack_end = .
-                0x0390ca20                . = (. + _FIQ_STACK_SIZE)
- *fill*         0x0390c620      0x400 
-                0x0390ca20                . = ALIGN (0x10)
-                0x0390ca20                __fiq_stack = .
-                0x0390ca20                _undef_stack_end = .
-                0x0390ce20                . = (. + _UNDEF_STACK_SIZE)
- *fill*         0x0390ca20      0x400 
-                0x0390ce20                . = ALIGN (0x10)
-                0x0390ce20                __undef_stack = .
-                0x0390ce20                _end = .
+.stack          0x03909840     0x3800
+                0x03909840                . = ALIGN (0x10)
+                0x03909840                _stack_end = .
+                0x0390b840                . = (. + _STACK_SIZE)
+ *fill*         0x03909840     0x2000 
+                0x0390b840                . = ALIGN (0x10)
+                0x0390b840                _stack = .
+                0x0390b840                __stack = _stack
+                0x0390b840                . = ALIGN (0x10)
+                0x0390b840                _irq_stack_end = .
+                0x0390bc40                . = (. + _IRQ_STACK_SIZE)
+ *fill*         0x0390b840      0x400 
+                0x0390bc40                . = ALIGN (0x10)
+                0x0390bc40                __irq_stack = .
+                0x0390bc40                _supervisor_stack_end = .
+                0x0390c440                . = (. + _SUPERVISOR_STACK_SIZE)
+ *fill*         0x0390bc40      0x800 
+                0x0390c440                . = ALIGN (0x10)
+                0x0390c440                __supervisor_stack = .
+                0x0390c440                _abort_stack_end = .
+                0x0390c840                . = (. + _ABORT_STACK_SIZE)
+ *fill*         0x0390c440      0x400 
+                0x0390c840                . = ALIGN (0x10)
+                0x0390c840                __abort_stack = .
+                0x0390c840                _fiq_stack_end = .
+                0x0390cc40                . = (. + _FIQ_STACK_SIZE)
+ *fill*         0x0390c840      0x400 
+                0x0390cc40                . = ALIGN (0x10)
+                0x0390cc40                __fiq_stack = .
+                0x0390cc40                _undef_stack_end = .
+                0x0390d040                . = (. + _UNDEF_STACK_SIZE)
+ *fill*         0x0390cc40      0x400 
+                0x0390d040                . = ALIGN (0x10)
+                0x0390d040                __undef_stack = .
+                0x0390d040                _end = .
 LOAD C:\Program Files (x86)\VEX Robotics\VEXcode Pro V5\sdk/vexv5/stdlib_0.lib
 LOAD build/src/main.o
 LOAD build/src/autons.o

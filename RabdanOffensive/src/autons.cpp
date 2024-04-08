@@ -760,12 +760,38 @@ void AWPOffensiveFarSide(){
 
 
   BackWingLeft.set(true);
-  chassis.left_swing_to_angle(-170,12,3,150,1500,.3, .001, 2, 15);
-  chassis.drive_distance(-5,-170,12,12,2,50,1500);
+  chassis.left_swing_to_angle(-140,12,3,150,1500,.3, .001, 2, 15);
   BackWingLeft.set(false);
   BackWingRight.set(true);
-  chassis.turn_to_angle(-160,12,3,50,750);
-  chassis.drive_distance(-30,-160,12,12,3,50,750);
+  chassis.drive_distance(-10,-140,12,12,2,50,1500);
+  
+  //chassis.turn_to_angle(-170,12,3,50,750);
+  chassis.left_swing_to_angle(-170,12,3,150,1500,.3, .001, 2, 15);
+  //chassis.drive_distance(-30,-160,12,12,3,50,750);
+
+  chassis.DriveR.spin(reverse);
+  chassis.DriveL.spin(reverse);
+  wait(.75, sec);
+  chassis.DriveR.stop();
+  chassis.DriveL.stop();
+
+  BackWingRight.set(false);
+  chassis.drive_distance(10,180,12,12,3,50,750);
+  chassis.turn_to_angle(25,12,3,50,1500);
+  leftwing.set(true);
+  intake.spin(reverse);
+  chassis.DriveR.spin(forward);
+  chassis.DriveL.spin(forward);
+  wait(.75, sec);
+  chassis.DriveR.stop();
+  chassis.DriveL.stop();
+  leftwing.set(false);
+
+  chassis.drive_distance(-10,0,12,12,1,150,1000);
+  chassis.turn_to_angle(-70,12,1,150,1000);
+  intake.spin(forward);
+  chassis.drive_distance(37,-60,12,12,2,150,2000);
+
 
 
 }
