@@ -711,7 +711,7 @@ void DefensiveFarSide(){
   chassis.turn_to_angle(125,12,3,50,1500);
   BackWingLeft.set(false);
   intake.spin(reverse,6,volt);
-  chassis.drive_distance(36.5,90,12,9,1,150,2500);
+  chassis.drive_distance(37.5,90,12,9,1,150,2500);
   intake.stop(brakeType::coast);
   /*chassis.drive_distance(-55.2,5,12,9,2,250,2500);
   chassis.drive_distance(-12,90,12,9,2,250,2000);
@@ -756,7 +756,7 @@ void AWPOffensiveFarSide(){
   intake.spin(forward);
   chassis.drive_distance(32,-90,12,12,2,350,2000);
 
-  chassis.drive_distance(-43,-100,12,12,2,50,2500);
+  chassis.drive_distance(-43,-97,12,12,2,50,2500); //-43,angle -100
 
 
   BackWingLeft.set(true);
@@ -799,6 +799,8 @@ void AWPOffensiveFarSide(){
 }
 
 void AutonTest(){
+    chassis.drive_distance(30);
+    chassis.drive_distance(-30);
     chassis.right_swing_to_angle(-90);
     chassis.left_swing_to_angle(90);
     chassis.right_swing_to_angle(-45);

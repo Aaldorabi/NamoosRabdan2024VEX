@@ -675,6 +675,7 @@ void autonomous(void) {
   switch(current_auton_selection){  
     case 0:
       AWPOffensiveFarSide();
+      //AWPOffensiveFarSide
       break;        
     case 1:         
       Offensive5Point();
