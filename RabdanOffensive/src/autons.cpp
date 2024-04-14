@@ -745,7 +745,7 @@ void AWPOffensiveFarSide(){
   intake.spin(forward);
   rightwing.set(true);
 
-  chassis.drive_distance(44,-10,12,12,2,150,2000);
+  chassis.drive_distance(44,-10,12,12,2,300,2000); //150mm  settle time
   rightwing.set(false);
   chassis.drive_distance(-50,-20,12,10,2,150,2000);
 
@@ -756,7 +756,7 @@ void AWPOffensiveFarSide(){
   intake.spin(forward);
   chassis.drive_distance(32,-90,12,12,2,350,2000);
 
-  chassis.drive_distance(-43,-97,12,12,2,50,2500); //-43,angle -100
+  chassis.drive_distance(-43,-100,12,12,2,50,2500); //-43,angle -100
 
 
   BackWingLeft.set(true);
@@ -792,7 +792,21 @@ void AWPOffensiveFarSide(){
   chassis.drive_distance(-10,0,12,12,1,150,1000);
   chassis.turn_to_angle(-90,12,1,150,1000);
   intake.spin(forward);
-  chassis.drive_distance(47,-70,12,12,2,75,2000);
+  chassis.drive_distance(47,-75,12,12,2,75,2000);
+
+
+  chassis.turn_to_angle(25,12,3,50,1000);
+  intake.spin(reverse);
+  chassis.drive_distance(40,75,12,12,3,50,1500);
+
+  chassis.turn_to_angle(-70,12,3,50,1000);
+
+  intake.spin(forward);
+  chassis.drive_distance(20,-90,12,12,2,50,1000);
+  chassis.turn_to_angle(90,12,3,50,1000);
+  intake.spin(reverse,7,volt);
+  chassis.drive_distance(25,90,12,12,3,50,1500);
+  
 
 
 
