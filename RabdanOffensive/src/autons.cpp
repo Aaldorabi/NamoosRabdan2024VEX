@@ -745,13 +745,15 @@ void AWPOffensiveFarSide(){
   intake.spin(forward);
   rightwing.set(true);
 
-  chassis.drive_distance(44,-10,12,12,2,300,2000); //150mm  settle time
+  chassis.drive_distance(44,-10,12,12,2,100,2000); //150mm  settle time
   rightwing.set(false);
-  chassis.drive_distance(-50,-20,12,10,2,150,2000);
+  chassis.drive_distance(-50,-20,12,10,2,100,2000);
 
+
+  intake.spin(reverse,7,volt);
   chassis.right_swing_to_angle(90,12,3,50,1500,.3, .001, 2, 15);
-  intake.spin(reverse,9,volt);
-  chassis.turn_to_angle(-90,12,1,75,1500);
+  
+  chassis.turn_to_angle(-90,12,2,50,1500);
 
   intake.spin(forward);
   chassis.drive_distance(32,-90,12,12,2,350,2000);
@@ -765,8 +767,8 @@ void AWPOffensiveFarSide(){
   chassis.drive_distance(-10,-140,12,12,2,50,1500);*/
   //chassis.turn_to_angle(-170,12,3,50,750);
 
-
-  chassis.left_swing_to_angle(-160,12,3,50,1500,.3, .001, 2, 15); //-170
+  //flick ball out
+  chassis.left_swing_to_angle(-160,12,3,50,500,.3, .001, 2, 15); //-170
   BackWingLeft.set(false);
   BackWingRight.set(true);
   //chassis.drive_distance(-30,-160,12,12,3,50,750);
@@ -790,19 +792,37 @@ void AWPOffensiveFarSide(){
   leftwing.set(false);
 
   chassis.drive_distance(-10,0,12,12,1,150,1000);
-  chassis.turn_to_angle(-90,12,1,150,1000);
+  chassis.turn_to_angle(-90,12,1,75,1000);
+
+  //pickupandthrowtriballandgetotherone
   intake.spin(forward);
-  chassis.drive_distance(47,-75,12,12,2,75,2000);
-
-
-  chassis.turn_to_angle(25,12,3,50,1000);
+  chassis.drive_distance(47,-75,12,12,2,100,2000);
+  chassis.turn_to_angle(70,12,3,50,1000); //60
+  intake.spin(reverse,8,volt);
+  chassis.drive_distance(10,60,12,12,2,50,1000);
+  //otherone
+  chassis.turn_to_angle(-35,12,2,50,1000);
+  intake.spin(forward,12,volt);
+  chassis.drive_distance(21,-35,12,12,2,50,1000); //-40
+  chassis.turn_to_angle(90,12,3,50,1000);
+  rightwing.set(true);
+  leftwing.set(true);
   intake.spin(reverse);
-  chassis.drive_distance(40,75,12,12,3,50,1500);
+  chassis.drive_distance(40,90,12,12,3,50,1000);
+  chassis.drive_distance(-50,45,12,12,5,50,1000);
+  rightwing.set(false);
+  leftwing.set(false);
 
-  chassis.turn_to_angle(-70,12,3,50,1000);
 
+  /*
+  leftwing.set(true);
+  chassis.drive_distance(40,60,12,12,3,50,1500);
+  */
+
+  chassis.turn_to_angle(-75,12,3,50,1000);
+  leftwing.set(false);
   intake.spin(forward);
-  chassis.drive_distance(20,-90,12,12,2,50,1000);
+  chassis.drive_distance(23,-75,12,12,2,50,1000);//20in
   chassis.turn_to_angle(90,12,3,50,1000);
   intake.spin(reverse,7,volt);
   chassis.drive_distance(25,90,12,12,3,50,1500);

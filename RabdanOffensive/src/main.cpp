@@ -920,7 +920,10 @@ int main() {
     });
   //hang
   Controller1.ButtonLeft.pressed([](){
-    Hang.set(!Hang.value());
+    if(Controller1.ButtonLeft.pressing() && Controller1.ButtonA.pressing()){
+      Hang.set(!Hang.value());
+    }
+    
     //HangGUp.set(Hang.value());
   });
 
