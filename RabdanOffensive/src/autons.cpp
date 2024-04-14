@@ -747,18 +747,19 @@ void AWPOffensiveFarSide(){
 
   chassis.drive_distance(44,-10,12,12,2,100,2000); //150mm  settle time
   rightwing.set(false);
-  chassis.drive_distance(-50,-20,12,10,2,100,2000);
+  chassis.drive_distance(-50,-20,12,10,2,50,2000);
 
 
-  intake.spin(reverse,5,volt);
-  chassis.right_swing_to_angle(90,12,3,75,1500,.3, .001, 2, 15);
-  
-  chassis.turn_to_angle(-90,12,2,75,1500);
+  //intake.spin(reverse,5,volt);
+  chassis.right_swing_to_angle(90,12,3,25,750,.3, .001, 2, 15);
+  intake.spin(reverse,12,volt);
 
-  intake.spin(forward);
-  chassis.drive_distance(32,-90,12,12,2,350,2000);
+  chassis.turn_to_angle(-90,12,2,50,1500);
 
-  chassis.drive_distance(-43,-100,12,12,2,50,2500); //-43,angle -100
+  intake.spin(forward,12,volt);
+  chassis.drive_distance(32,-90,12,12,2,50,2000);
+
+  chassis.drive_distance(-45.5,-100,12,12,1,50,2500); //-43,angle -100
 
 
   BackWingLeft.set(true);
@@ -768,48 +769,64 @@ void AWPOffensiveFarSide(){
   //chassis.turn_to_angle(-170,12,3,50,750);
 
   //flick ball out
-  chassis.left_swing_to_angle(-160,12,3,50,500,.3, .001, 2, 15); //-170
+  chassis.left_swing_to_angle(-145,12,3,75,600,.3, .001, 2, 15); //-160
+  intake.spin(forward,12,volt);
   BackWingLeft.set(false);
   BackWingRight.set(true);
-  //chassis.drive_distance(-30,-160,12,12,3,50,750);
-
+  chassis.drive_distance(-10,-147,12,12,2,25,250); //-145 degree
+  //chassis.drive_distance(-30,-160,12,12,5,25,450); //1000ms
+  
   chassis.DriveR.spin(reverse);
   chassis.DriveL.spin(reverse);
-  wait(.8, sec);
+  wait(.55, sec);
   chassis.DriveR.stop();
   chassis.DriveL.stop();
-
   BackWingRight.set(false);
-  chassis.drive_distance(10,180,12,12,3,50,750);
-  chassis.turn_to_angle(10,12,3,50,1500);
+  chassis.drive_distance(10,180,12,12,3,25,750);
+  chassis.turn_to_angle(40,12,3,25,1500);//30degree
+
   leftwing.set(true);
   intake.spin(reverse);
+  chassis.drive_distance(5,27.5,12,12,2,25,350);
+  chassis.drive_distance(25,5,12,12,5,25,1000);
+
+  /*
   chassis.DriveR.spin(forward);
   chassis.DriveL.spin(forward);
-  wait(.75, sec);
+  wait(.65, sec);
   chassis.DriveR.stop();
   chassis.DriveL.stop();
+  */
   leftwing.set(false);
+  chassis.drive_distance(-10,0,12,12,1,25,1000);
 
-  chassis.drive_distance(-10,0,12,12,1,150,1000);
-  chassis.turn_to_angle(-90,12,2,50,1000);
 
+  chassis.turn_to_angle(-70,10,1,50,1000); //12volts loooooooooooooooool //-72.5degree
   //pickupandthrowtriballandgetotherone
   intake.spin(forward);
-  chassis.drive_distance(47,-75,12,12,2,50,2000); //100ms timeout
-  chassis.turn_to_angle(87.5,12,3,50,1000); //70
-  intake.spin(reverse,6,volt);
-  chassis.drive_distance(10,60,12,12,2,50,1000);
+  chassis.drive_distance(46,-72.5,12,12,2,50,2000); //100ms timeout //47in
+  chassis.turn_to_angle(67.5,12,3,50,1000); //70
+  intake.spin(reverse,10,volt);
+  chassis.drive_distance(7.5,70,12,12,2,25,1000); //87.5 degree
   //otherone
-  chassis.turn_to_angle(-40,12,2,50,1000); //-35
+  chassis.turn_to_angle(-34,12,2,50,1000); //-37.5
   intake.spin(forward,12,volt);
-  chassis.drive_distance(21,-35,12,12,2,50,1000); //-40
+  chassis.drive_distance(23,-36.5,12,12,2,50,1000); //-35 //21in
   chassis.turn_to_angle(90,12,3,50,1000);
   rightwing.set(true);
   leftwing.set(true);
   intake.spin(reverse);
-  chassis.drive_distance(40,90,12,12,3,50,1000);
-  chassis.drive_distance(-50,45,12,12,5,50,1000);
+
+
+  ////independent motor
+    intake.spin(reverse,12,volt);
+    chassis.DriveR.spin(forward);
+    chassis.DriveL.spin(forward);
+    wait(0.75, sec);
+    chassis.DriveR.stop();
+    chassis.DriveL.stop();
+  //chassis.drive_distance(40,90,12,12,3,50,1000);
+  chassis.drive_distance(-30,90,12,12,5,50,1000);
   rightwing.set(false);
   leftwing.set(false);
 
@@ -817,7 +834,7 @@ void AWPOffensiveFarSide(){
   /*
   leftwing.set(true);
   chassis.drive_distance(40,60,12,12,3,50,1500);
-  */
+  
 
   chassis.turn_to_angle(-75,12,3,50,1000);
   leftwing.set(false);
@@ -833,7 +850,7 @@ void AWPOffensiveFarSide(){
   chassis.DriveR.stop();
   chassis.DriveL.stop();
   //chassis.drive_distance(25,90,12,12,3,50,1500);
-  
+  */
 
 
 
