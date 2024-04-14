@@ -750,10 +750,10 @@ void AWPOffensiveFarSide(){
   chassis.drive_distance(-50,-20,12,10,2,100,2000);
 
 
-  intake.spin(reverse,7,volt);
-  chassis.right_swing_to_angle(90,12,3,50,1500,.3, .001, 2, 15);
+  intake.spin(reverse,5,volt);
+  chassis.right_swing_to_angle(90,12,3,75,1500,.3, .001, 2, 15);
   
-  chassis.turn_to_angle(-90,12,2,50,1500);
+  chassis.turn_to_angle(-90,12,2,75,1500);
 
   intake.spin(forward);
   chassis.drive_distance(32,-90,12,12,2,350,2000);
@@ -775,33 +775,33 @@ void AWPOffensiveFarSide(){
 
   chassis.DriveR.spin(reverse);
   chassis.DriveL.spin(reverse);
-  wait(.75, sec);
+  wait(.8, sec);
   chassis.DriveR.stop();
   chassis.DriveL.stop();
 
   BackWingRight.set(false);
   chassis.drive_distance(10,180,12,12,3,50,750);
-  chassis.turn_to_angle(17.5,12,3,50,1500);
+  chassis.turn_to_angle(10,12,3,50,1500);
   leftwing.set(true);
   intake.spin(reverse);
   chassis.DriveR.spin(forward);
   chassis.DriveL.spin(forward);
-  wait(.8, sec);
+  wait(.75, sec);
   chassis.DriveR.stop();
   chassis.DriveL.stop();
   leftwing.set(false);
 
   chassis.drive_distance(-10,0,12,12,1,150,1000);
-  chassis.turn_to_angle(-90,12,1,75,1000);
+  chassis.turn_to_angle(-90,12,2,50,1000);
 
   //pickupandthrowtriballandgetotherone
   intake.spin(forward);
-  chassis.drive_distance(47,-75,12,12,2,100,2000);
-  chassis.turn_to_angle(70,12,3,50,1000); //60
-  intake.spin(reverse,8,volt);
+  chassis.drive_distance(47,-75,12,12,2,50,2000); //100ms timeout
+  chassis.turn_to_angle(87.5,12,3,50,1000); //70
+  intake.spin(reverse,6,volt);
   chassis.drive_distance(10,60,12,12,2,50,1000);
   //otherone
-  chassis.turn_to_angle(-35,12,2,50,1000);
+  chassis.turn_to_angle(-40,12,2,50,1000); //-35
   intake.spin(forward,12,volt);
   chassis.drive_distance(21,-35,12,12,2,50,1000); //-40
   chassis.turn_to_angle(90,12,3,50,1000);
@@ -825,7 +825,14 @@ void AWPOffensiveFarSide(){
   chassis.drive_distance(23,-75,12,12,2,50,1000);//20in
   chassis.turn_to_angle(90,12,3,50,1000);
   intake.spin(reverse,7,volt);
-  chassis.drive_distance(25,90,12,12,3,50,1500);
+
+  //independent motor
+  chassis.DriveR.spin(forward);
+  chassis.DriveL.spin(forward);
+  wait(0.75, sec);
+  chassis.DriveR.stop();
+  chassis.DriveL.stop();
+  //chassis.drive_distance(25,90,12,12,3,50,1500);
   
 
 
