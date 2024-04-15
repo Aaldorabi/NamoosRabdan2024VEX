@@ -751,7 +751,7 @@ void AWPOffensiveFarSide(){
 
 
   //intake.spin(reverse,5,volt);
-  intake.spin(reverse,4,volt);
+  intake.spin(reverse,2,volt);
   chassis.right_swing_to_angle(90,12,3,25,750,.3, .001, 2, 15);
   intake.spin(reverse,12,volt);
   chassis.turn_to_angle(-90,12,2,50,1500);
@@ -804,14 +804,14 @@ void AWPOffensiveFarSide(){
   chassis.turn_to_angle(-70,10,1,50,1000); //12volts loooooooooooooooool //-72.5degree
   //pickupandthrowtriballandgetotherone
   intake.spin(forward);
-  chassis.drive_distance(46,-72.5,12,12,2,50,2000); //100ms timeout //47in
+  chassis.drive_distance(45,-72.5,12,12,2,50,2000); //100ms timeout //46in
   chassis.turn_to_angle(67.5,12,3,50,1000); //70
   intake.spin(reverse,10,volt);
   chassis.drive_distance(7.5,70,12,12,2,25,1000); //87.5 degree
   //otherone
   chassis.turn_to_angle(-34,12,2,50,1000); //-37.5
   intake.spin(forward,12,volt);
-  chassis.drive_distance(23,-36.5,12,12,2,50,1000); //-35 //21in
+  chassis.drive_distance(22,-36.5,12,12,2,50,1000); //-35 //23in
   chassis.turn_to_angle(90,12,3,50,1000);
   rightwing.set(true);
   leftwing.set(true);
