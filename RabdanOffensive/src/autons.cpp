@@ -580,93 +580,107 @@ void NoAuton(){
   
 }
 
-void FinalRush(){
-  rightwing.set(true);
-  chassis.drive_distance(8,0,12,12,1,51500,1000);
-  chassis.turn_to_angle(-30,12,1,150,1000); //-29
-  rightwing.set(false);
+void Offensive_5_Point_Rush(){
+  L1.setBrake(coast);
+  L2.setBrake(coast);
+  L3.setBrake(coast);
+  R1.setBrake(coast);
+  R2.setBrake(coast);
+  R3.setBrake(coast);
+  intake.setBrake(hold);
+  intake.setVelocity(100, percent);
+  intake.setMaxTorque(100, percent);
   intake.spin(forward,12,volt);
-  chassis.drive_distance(60,-30,12,12,1,100,2500);//63
-  chassis.turn_to_angle(90,12,5,100,1000);
-  intake.stop();
+  rightwing.set(true);
+
+  chassis.drive_distance(44,-10,12,12,2,100,2000); //150mm  settle time
+  rightwing.set(false);
+  chassis.drive_distance(-43,-20,12,10,2,50,2000); //-50 //-49
+
+
+  //intake.spin(reverse,5,volt);
   
+  intake.spin(forward,12,volt);
+  chassis.left_swing_to_angle(-100,12,3,25,525,.3, .001, 2, 15); //725ms
+  BackWingLeft.set(true);
+  //garbagenumbersniq
+  chassis.drive_distance(-11,-110,12,12,1,50,1000); //-45,angle -100 //-47 angle //-16
+
+
+  /*BackWingLeft.set(true);
+  chassis.left_swing_to_angle(-90,12,3,150,1500,.3, .001, 2, 15);*/
+  //BackWingLeft.set(true);
+  //chassis.drive_distance(-6,-140,12,12,2,50,1500);
+  //chassis.turn_to_angle(-170,12,3,50,750);
+  
+  //flick ball out
+  chassis.left_swing_to_angle(-145,12,3,25,600,.3, .001, 2, 15); //-160
+  intake.spin(forward,12,volt);
+  BackWingLeft.set(false);
+  BackWingRight.set(true);
+  chassis.drive_distance(-5,-145,12,12,2,25,250); //-145 degree
+  //chassis.drive_distance(-30,-160,12,12,5,25,450); //1000ms
+  
+  chassis.DriveR.spin(reverse);
+  chassis.DriveL.spin(reverse);
+  wait(.55, sec);
+  chassis.DriveR.stop();
+  chassis.DriveL.stop();
+  BackWingRight.set(false);
+  chassis.drive_distance(10,180,12,12,3,25,750);
+  chassis.turn_to_angle(40,12,3,25,1500);//30degree
+
+  leftwing.set(false);
+  intake.spin(reverse,12,volt);
+  chassis.drive_distance(5,27.5,12,12,2,25,350);
+  chassis.drive_distance(25,5,12,12,5,25,550); //1000
+
+  /*
+  chassis.DriveR.spin(forward);
+  chassis.DriveL.spin(forward);
+  wait(.65, sec);
+  chassis.DriveR.stop();
+  chassis.DriveL.stop();
+  */
+  
+  leftwing.set(false);
+  chassis.drive_distance(-10,0,12,12,1,25,1000);
+
+
+  chassis.turn_to_angle(-70,10,1,50,1000); //12volts loooooooooooooooool //-72.5degree
+  //pickupandthrowtriballandgetotherone
+  intake.spin(forward);
+  chassis.drive_distance(45,-72.5,12,12,2,50,2000); //100ms timeout //46in
+  chassis.turn_to_angle(45,12,3,50,1000); //70
+  leftwing.set(true);
+  intake.spin(reverse,8,volt);
+  chassis.drive_distance(35,70,12,12,3,25,1000);
+  chassis.drive_distance(-20,45,12,12,2,50,1250);
+  chassis.turn_to_angle(-35,12,2,50,750);
+  /*
+  chassis.drive_distance(7.5,70,12,12,2,25,1000); //87.5 degree
+  */
+  //otherone
+  //chassis.turn_to_angle(-34,12,2,50,1000); //-37.5
+  intake.spin(forward,12,volt);
+  chassis.drive_distance(26,-36.5,12,12,2,50,1000); //-35 //23in
+  chassis.turn_to_angle(90,12,3,50,1000);
   rightwing.set(true);
   leftwing.set(true);
   intake.spin(reverse);
-  chassis.DriveR.spin(forward);
-  chassis.DriveL.spin(forward);
-  wait(1, sec);
-  chassis.DriveR.stop();
-  chassis.DriveL.stop();
+
+
+  ////independent motor
+    intake.spin(reverse,12,volt);
+    chassis.DriveR.spin(forward);
+    chassis.DriveL.spin(forward);
+    wait(0.75, sec);
+    chassis.DriveR.stop();
+    chassis.DriveL.stop();
+  //chassis.drive_distance(40,90,12,12,3,50,1000);
+  chassis.drive_distance(-30,90,12,12,5,50,1000);
   rightwing.set(false);
   leftwing.set(false);
-
-  chassis.DriveL.spin(reverse);
-  chassis.DriveR.spin(reverse);
-  wait(.75, sec);
-  chassis.DriveL.stop();
-  chassis.DriveR.stop();
-  wait(0.25, sec);
-  chassis.turn_to_angle(-160,12,3,100,1000);
-  intake.spin(forward);
-  chassis.drive_distance(41,-160,12,12,2,100,2000);//39
-  intake.stop();
-
-
-  //after hitting bar to recalculate
-  chassis.drive_distance(-10,-180,12,12,1,100,500);
-  chassis.right_swing_to_angle(90,12,3,10,1000,.3, .001, 2, 15);
-  //chassis.turn_to_angle(95,12,3,150,1000);
-  intake.spin(reverse);
-  chassis.drive_distance(25,95,12,12,2,100,1500);
-
-  chassis.left_swing_to_angle(-125,12,3,100,1500,.3, .001, 2, 15); //-145
-
-  chassis.drive_distance(18,-125,12,12,1,100,2000); //heading -130
-  chassis.turn_to_angle(-90,12,2,100,1000);
-
-  //pick up triball under bar
-  intake.spin(forward);
-  chassis.drive_distance(30,-90,12,12,2,100,1500); //18 ///35
-  chassis.drive_distance(-40,-90,12,12,2,100,2000); //-35
-  intake.stop();
-
-  //deload
-  chassis.left_swing_to_angle(-135,12,3,100,1000,.3, .001, 2, 15);
-  BackWingLeft.set(true);
-    BackWingRight.set(true);
-  chassis.drive_distance(-7,-135,12,12,1,100,1000);
-  chassis.left_swing_to_angle(-170,12,3,100,1500,.3, .001, 2, 15);
-  
-  //first back score side
-  chassis.DriveR.spin(reverse);
-  chassis.DriveL.spin(reverse);
-  wait(.75,sec);
-  chassis.DriveR.stop();
-  chassis.DriveL.stop();
-
-  chassis.drive_distance(20,-170,12,12,3,100,1000);
-
-  rightwing.set(false);
-  leftwing.set(false);
-
-  chassis.turn_to_angle(30,12,3,100,1000);
-  intake.spin(reverse);
-
-  //second back score side
-  chassis.DriveR.spin(forward);
-  chassis.DriveL.spin(forward);
-  wait(.75,sec);
-  chassis.DriveR.stop();
-  chassis.DriveL.stop();
-
-  chassis.drive_distance(-10,30,12,12,2,50,1000);
-  
-  chassis.DriveR.spin(forward);
-  chassis.DriveL.spin(forward);
-  wait(.75,sec);
-  chassis.DriveR.stop();
-  chassis.DriveL.stop();
 }
 
 void DefensiveFarSide(){
@@ -738,28 +752,33 @@ void DefensiveFarSide(){
 }
 
 void AWPOffensiveFarSide(){
+  L1.setBrake(coast);
+  L2.setBrake(coast);
+  L3.setBrake(coast);
+  R1.setBrake(coast);
+  R2.setBrake(coast);
+  R3.setBrake(coast);
   intake.setBrake(hold);
   intake.setVelocity(100, percent);
   intake.setMaxTorque(100, percent);
-
   intake.spin(forward);
   rightwing.set(true);
 
   chassis.drive_distance(44,-10,12,12,2,100,2000); //150mm  settle time
   rightwing.set(false);
-  chassis.drive_distance(-49,-20,12,10,2,50,2000); //-50
+  chassis.drive_distance(-47,-20,12,10,2,50,2000); //-50 //-49
 
 
   //intake.spin(reverse,5,volt);
-  intake.spin(reverse,2,volt);
-  chassis.right_swing_to_angle(90,12,3,25,750,.3, .001, 2, 15);
+  intake.spin(reverse,6,volt);
+  chassis.right_swing_to_angle(90,12,3,25,525,.3, .001, 2, 15); //725ms
   intake.spin(reverse,12,volt);
-  chassis.turn_to_angle(-90,12,2,50,1500);
+  chassis.turn_to_angle(-90,8,2,50,1500); //12voltfunnnnn
 
   intake.spin(forward,12,volt);
   chassis.drive_distance(32,-90,12,12,2,50,2000);
 
-  chassis.drive_distance(-45,-100,12,12,1,50,2500); //-43,angle -100
+  chassis.drive_distance(-48,-100,12,12,1,50,2500); //-45,angle -100 //-47 angle
 
 
   BackWingLeft.set(true);
@@ -769,7 +788,7 @@ void AWPOffensiveFarSide(){
   //chassis.turn_to_angle(-170,12,3,50,750);
 
   //flick ball out
-  chassis.left_swing_to_angle(-145,12,3,75,600,.3, .001, 2, 15); //-160
+  chassis.left_swing_to_angle(-145,12,3,25,600,.3, .001, 2, 15); //-160
   intake.spin(forward,12,volt);
   BackWingLeft.set(false);
   BackWingRight.set(true);

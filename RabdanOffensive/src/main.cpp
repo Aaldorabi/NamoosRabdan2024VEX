@@ -674,7 +674,7 @@ void autonomous(void) {
     auto_started = true;
   switch(current_auton_selection){  
     case 0:
-      AWPOffensiveFarSide();
+      Offensive_5_Point_Rush();
       //AWPOffensiveFarSide
       break;        
     case 1:         
@@ -684,7 +684,7 @@ void autonomous(void) {
       Offensive6Point();
       break;
     case 3:
-      FinalRush();
+      NoAuton();
       break;
     case 4:
       DefensiveMatchPoint();
