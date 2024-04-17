@@ -674,8 +674,8 @@ void autonomous(void) {
     auto_started = true;
   switch(current_auton_selection){  
     case 0:
-      Offensive_5_Point_Rush();
-      //AWPOffensiveFarSide
+      Skills();
+      //AWPOffensiveFarSide Offensive_5_Point_Rush
       break;        
     case 1:         
       Offensive5Point();
@@ -788,7 +788,14 @@ void usercontrol(void) {
     CataSensor.value(deg);
     Brain.Screen.print(CataSensor.value(deg));
     Brain.Screen.newLine();
-    
+    if(Controller1.ButtonL1.pressing()){
+      catapult.spin(forward);
+      Catapult5W.spin(forward);
+    }
+    else if(!Controller1.ButtonL1.pressing()){
+      catapult.stop(vex::brakeType(coast));
+      Catapult5W.stop(vex::brakeType(coast));
+    }
     //wings
     //both
     /*
@@ -868,14 +875,7 @@ void usercontrol(void) {
     
     
     //catapult
-     if(Controller1.ButtonL1.pressing()){
-      catapult.spin(forward);
-      Catapult5W.spin(forward);
-    }
-    else if(!Controller1.ButtonL1.pressing()){
-      catapult.stop(vex::brakeType(coast));
-      Catapult5W.stop(vex::brakeType(coast));
-    }
+     
     
     //chassis.control_arcade();
     chassis.control_tank();
