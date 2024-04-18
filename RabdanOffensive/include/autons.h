@@ -15,6 +15,6 @@ void DefensiveMatchPoint();
 void DefensiveMatchLoad();
 void Skills();
 void NoAuton();
-void DefensiveFarSide();
+void Defensive_Rush();
 void AutonTest();
 void AWPOffensiveFarSide();

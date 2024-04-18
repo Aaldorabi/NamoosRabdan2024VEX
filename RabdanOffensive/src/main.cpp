@@ -608,17 +608,18 @@ void pre_auton(void) {
     Brain.Screen.clearScreen();            //brain screen for auton selection.
     switch(current_auton_selection){       //Tap the brain screen to cycle through autons.
       case 0:
-        Brain.Screen.printAt(50, 50, "Offensive 5 Point");
+        Brain.Screen.printAt(50, 50, "Offensive 5 Point Rush");
         break;
       case 1:
-        Brain.Screen.printAt(50, 50, "Offensive 5 Point");
-        break;
-      case 2:
-        Brain.Screen.printAt(50, 50, "Offensive 6 Point");
-        break;
-      case 3:
         Brain.Screen.printAt(50, 50, "Defensive Rush");
         break;
+      case 2:
+        Brain.Screen.printAt(50, 50, "No Auton");
+        break;
+      case 3:
+        Brain.Screen.printAt(50, 50, "Skills");
+        break;
+        /*
       case 4:
         Brain.Screen.printAt(50, 50, "Defensive Match Point");
         break;
@@ -638,7 +639,7 @@ void pre_auton(void) {
         Brain.Screen.printAt(50, 50, "DefensiveRUsh");
         break;
       case 10:
-        Brain.Screen.printAt(50, 50, "AWP Offensive");
+        Brain.Screen.printAt(50, 50, "AWP Offensive");*/
     }
     if(Brain.Screen.pressing()){
       while(Brain.Screen.pressing()) {}
@@ -674,21 +675,22 @@ void autonomous(void) {
     auto_started = true;
   switch(current_auton_selection){  
     case 0:
-      Skills();
+      Offensive_5_Point_Rush();
       //AWPOffensiveFarSide Offensive_5_Point_Rush
       break;        
     case 1:         
-      Offensive5Point();
+      Defensive_Rush();
       break;
     case 2:
-      Offensive6Point();
-      break;
-    case 3:
       NoAuton();
       break;
+    case 3:
+      Skills();
+      break;/*
     case 4:
-      DefensiveMatchPoint();
+      Skills();
       break;
+      
     case 5:
       DefensiveMatchLoad();
       break;
@@ -706,7 +708,7 @@ void autonomous(void) {
       break;
     case 10:
       AutonTest();
-      break;
+      break;*/
 
     
     
@@ -739,13 +741,16 @@ void usercontrol(void) {
   Catapult5W.setMaxTorque(100, percent);
   chassis.DriveL.setVelocity(100, percent);
   chassis.DriveR.setVelocity(100, percent);
-  /*L1.setBrake(coast);
+  L1.setBrake(coast);
   L2.setBrake(coast);
   L3.setBrake(coast);
   R1.setBrake(coast);
   R2.setBrake(coast);
   R3.setBrake(coast);
-  Wings.set(false);*/
+  rightwing.set(false);
+  leftwing.set(false);
+  BackWingLeft.set(false);
+  BackWingRight.set(false);
 
   //wings Switch Case for 1 button control
   bool LeftWingsSwitch = 1; 
