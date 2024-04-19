@@ -598,6 +598,7 @@ PORT3,     -PORT4,
 
 int current_auton_selection = 0;
 bool auto_started = false;
+
 void pre_auton(void) {
   // Initializing Robot Configuration. DO NOT REMOVE!
   vexcodeInit();
@@ -675,7 +676,7 @@ void autonomous(void) {
     auto_started = true;
   switch(current_auton_selection){  
     case 0:
-      Offensive_5_Point_Rush();
+      Skills();
       //AWPOffensiveFarSide Offensive_5_Point_Rush
       break;        
     case 1:         
@@ -896,7 +897,7 @@ void usercontrol(void) {
 //
 int main() {
   //Backwing
-  Controller1.ButtonRight.pressed([](){
+  Controller1.ButtonY.pressed([](){
     BackWingRight.set(!BackWingRight.value());
     BackWingLeft.set(!BackWingLeft.value());
     });
