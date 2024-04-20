@@ -657,7 +657,8 @@ void autonomous(void) {
 
 
     int AngleOffset = 180;
-
+    catapult.setVelocity(100, percent);
+    catapult.setMaxTorque(100, percent);
     L1.setVelocity(100, percent);
     L2.setVelocity(100, percent);
     L3.setVelocity(100, percent);
