@@ -19,3 +19,5 @@ void Defensive_Rush();
 void AutonTest();
 void AWPOffensiveFarSide();
 void DefensiveFarSide();
+void Defensive_AWP();
+void Offensive6PointRush();

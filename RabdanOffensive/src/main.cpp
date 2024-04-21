@@ -609,24 +609,24 @@ void pre_auton(void) {
     Brain.Screen.clearScreen();            //brain screen for auton selection.
     switch(current_auton_selection){       //Tap the brain screen to cycle through autons.
       case 0:
-        Brain.Screen.printAt(50, 50, "Offensive 5 Point Rush");
+        Brain.Screen.printAt(50, 50, "Offensive 5 Point Rush AWP");
         break;
       case 1:
-        Brain.Screen.printAt(50, 50, "Defensive Rush");
+        Brain.Screen.printAt(50, 50, "Offensive 6 Point Rush");
         break;
       case 2:
-        Brain.Screen.printAt(50, 50, "No Auton");
+        Brain.Screen.printAt(50, 50, "Defensive Rush AWP");
         break;
       case 3:
+        Brain.Screen.printAt(50, 50, "Defensive Rush Match Load");
+        break;
+      
+      case 4:
         Brain.Screen.printAt(50, 50, "Skills");
         break;
-        /*
-      case 4:
-        Brain.Screen.printAt(50, 50, "Defensive Match Point");
-        break;
       case 5:
-        Brain.Screen.printAt(50, 50, "Defensive Match Load");
-        break;
+        Brain.Screen.printAt(50, 50, "No Auton");
+        break;/*
       case 6:
         Brain.Screen.printAt(50, 50, "Skills");
         break;
@@ -681,21 +681,21 @@ void autonomous(void) {
       //AWPOffensiveFarSide Offensive_5_Point_Rush
       break;        
     case 1:         
-      Defensive_Rush();
+      Offensive6PointRush();
       break;
     case 2:
-      NoAuton();
+      Defensive_AWP();
       break;
     case 3:
-      Skills();
-      break;/*
+      Defensive_Rush();
+      break;
     case 4:
       Skills();
       break;
-      
+    
     case 5:
-      DefensiveMatchLoad();
-      break;
+      NoAuton();
+      break;/*
     case 6:
       Skills();
       break;
@@ -756,14 +756,14 @@ void usercontrol(void) {
 
   //temp
 
-
+  /*
   L1.setBrake(hold);
   L2.setBrake(hold);
   L3.setBrake(hold);
   R1.setBrake(hold);
   R2.setBrake(hold);
   R3.setBrake(hold);
-
+  */
 
   //temp
 
