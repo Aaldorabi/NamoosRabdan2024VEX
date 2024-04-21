@@ -677,7 +677,7 @@ void autonomous(void) {
     auto_started = true;
   switch(current_auton_selection){  
     case 0:
-      Skills();
+      Offensive_5_Point_Rush();
       //AWPOffensiveFarSide Offensive_5_Point_Rush
       break;        
     case 1:         
@@ -753,6 +753,19 @@ void usercontrol(void) {
   leftwing.set(false);
   BackWingLeft.set(false);
   BackWingRight.set(false);
+
+  //temp
+
+
+  L1.setBrake(hold);
+  L2.setBrake(hold);
+  L3.setBrake(hold);
+  R1.setBrake(hold);
+  R2.setBrake(hold);
+  R3.setBrake(hold);
+
+
+  //temp
 
   //wings Switch Case for 1 button control
   bool LeftWingsSwitch = 1; 

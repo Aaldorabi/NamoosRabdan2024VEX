@@ -18,3 +18,4 @@ void NoAuton();
 void Defensive_Rush();
 void AutonTest();
 void AWPOffensiveFarSide();
+void DefensiveFarSide();
