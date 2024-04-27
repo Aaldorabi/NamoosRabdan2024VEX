@@ -643,10 +643,11 @@ void Skills(){
 
 
 void NoAuton(){
-  chassis.drive_distance(24);
-  chassis.drive_distance(-24);
-  chassis.turn_to_angle(-90);
+  chassis.drive_distance(12);
+  chassis.drive_distance(-12);
+  chassis.drive_distance(12);
   chassis.turn_to_angle(90);
+  chassis.turn_to_angle(-90);
 }
 
 void Offensive_5_Point_Rush(){
@@ -754,7 +755,7 @@ void Offensive_5_Point_Rush(){
   intake.spin(forward,12,volt);
   chassis.drive_distance(25,-67,12,12,2,100,1000); //-35 //23in //-70 heading
   chassis.turn_to_angle(90,12,2,15,1500);
-  rightwing.set(true);
+  rightwing.set(false);
   leftwing.set(true);
   intake.spin(reverse,12,volt);
 
@@ -769,10 +770,14 @@ void Offensive_5_Point_Rush(){
     BackWingLeft.set(false);
     leftwing.set(false);
     rightwing.set(false);
-  //chassis.drive_distance(40,90,12,12,3,50,1000);
-
+    //chassis.drive_distance(-20);
+    //chassis.drive_distance(40,90,12,12,3,50,1000);
+    //chassis.drive_distance(-24,90,12,12,4,5,1000);
   
-  chassis.turn_to_angle(-145,12,1,50,1000); //-142.5
+  chassis.turn_to_angle(-136.5,12,1,150,1500); //-142.5 //-140
+  intake.spin(forward);
+  rightwing.set(true);
+  leftwing.set(true);
   L1.setBrake(hold);
   L2.setBrake(hold);
   L3.setBrake(hold);
@@ -781,13 +786,14 @@ void Offensive_5_Point_Rush(){
   R3.setBrake(hold);
   chassis.DriveR.spin(forward,12,volt);
   chassis.DriveL.spin(forward,12,volt);
-  wait(3, sec);
+  wait(2.25, sec); //3
+  intake.stop(brakeType::brake);
   chassis.DriveR.stop(brakeType::hold);
   chassis.DriveL.stop(brakeType::hold);
 
   //chassis.drive_distance(-110,25,12,12,5,50,1000);
-  rightwing.set(false);
-  leftwing.set(false);
+  //rightwing.set(false);
+  //leftwing.set(false);
   
 }
 
@@ -803,37 +809,37 @@ void Defensive_AWP(){
   chassis.drive_distance(44,8,12,9,2,650,3500); //7 degree //45in
   leftwing.set(false);
   chassis.drive_distance(-25,25,8,9,2,150,3500);
-  chassis.drive_distance(-32,0,8,9,2,150,3500);
+  chassis.drive_distance(-29,0,8,9,2,75,2500); //-32
   intake.stop();
   chassis.turn_to_angle(90,12,3,150,2000);
   intake.spin(reverse);
   chassis.drive_distance(5,90,12,12,1,150,1000);
-  chassis.drive_distance(-10,90,12,12,1,150,1000);
-  chassis.turn_to_angle(-60,12,3,150,1500); //-50
-  chassis.drive_distance(28,-45,12,12,2,150,1500); //30
+  chassis.drive_distance(-8,90,12,12,1,150,1000); //-10
+  chassis.turn_to_angle(150,12,3,150,1500); //-60
+  chassis.drive_distance(-28,135,12,12,2,150,1500); //30
 
   //chassis.drive_distance(-15);
-  chassis.left_swing_to_angle(-10,12,3,150,1500,.3, .001, 2, 15);
+  chassis.left_swing_to_angle(170,12,3,150,1500,.3, .001, 2, 15);
   //independant
-  chassis.drive_distance(-5,-10,12,12,1,150,1500);
+  chassis.drive_distance(5,170,12,12,1,150,1500);
   intake.spin(reverse);
-  chassis.DriveL.spin(forward);
-  chassis.DriveR.spin(forward);
-  wait(1, sec);
+  chassis.DriveL.spin(reverse);
+  chassis.DriveR.spin(reverse);
+  wait(.65, sec);
   chassis.DriveR.stop();
   chassis.DriveL.stop();
   intake.stop();
 
-  chassis.drive_distance(-15,0,12,12,1,50,1500); //-20
+  chassis.drive_distance(15,180,12,12,1,50,1500); //-20
   BackWingLeft.set(true);
-  chassis.left_swing_to_angle(-45,12,5,50,1500,.3, .001, 2, 15);
+  chassis.turn_to_angle(-45,12,5,50,1500);
   chassis.drive_distance(-12,-45,12,12,1,50,1500);
-  chassis.left_swing_to_angle(-90,12,3,50,1500,.3, .001, 2, 15);
-  chassis.drive_distance(-10,-90,12,12,1,50,1500);
+  chassis.right_swing_to_angle(-90,12,3,50,1500,.3, .001, 2, 15);
+  chassis.drive_distance(-14,-75,12,12,1,50,1500); //-10in //-90degree
   chassis.turn_to_angle(125,12,3,50,1500);
   BackWingLeft.set(false);
   intake.spin(reverse,6,volt);
-  chassis.drive_distance(38,90,12,9,1,150,2500); //37.5
+  chassis.drive_distance(35,90,12,9,1,150,2500); //37.5 //38
   intake.stop(brakeType::coast);
   /*chassis.drive_distance(-55.2,5,12,9,2,250,2500);
   chassis.drive_distance(-12,90,12,9,2,250,2000);
@@ -998,11 +1004,60 @@ void Offensive6PointRush(){
 
 }
 
-void AutonTest(){
-    chassis.drive_distance(30);
-    chassis.drive_distance(-30);
-    chassis.right_swing_to_angle(-90);
-    chassis.left_swing_to_angle(90);
-    chassis.right_swing_to_angle(-45);
-    chassis.left_swing_to_angle(45);
+void Offensive_AWP(){
+  
+  L1.setBrake(coast);
+  L2.setBrake(coast);
+  L3.setBrake(coast);
+  R1.setBrake(coast);
+  R2.setBrake(coast);
+  R3.setBrake(coast);
+  intake.setBrake(hold);
+  intake.setVelocity(100, percent);
+  intake.setMaxTorque(100, percent);
+  intake.spin(forward,12,volt);
+  rightwing.set(true);
+
+
+
+  //intake.spin(reverse,5,volt);
+  
+  intake.spin(forward,12,volt);
+  rightwing.set(false);
+  BackWingLeft.set(true);
+  //garbagenumbersniq
+  //chassis.drive_distance(-15,-110,12,12,1,25,500); //-12
+  
+
+  
+  //flick ball out
+  BackWingLeft.set(true);
+  BackWingRight.set(true);
+  chassis.left_swing_to_angle(-90,9,3,50,1000,.3, .001, 2, 15); //725ms
+  chassis.left_swing_to_angle(-75);
+  //chassis.right_swing_to_angle(145);
+  //chassis.DriveL.spin(reverse,12,volt);
+  //wait(0.2,sec);
+  //chassis.DriveL.stop(brakeType::brake);
+  wait(0.015, seconds);
+  //chassis.left_swing_to_angle(-152.5,12,3,250,1500,.3, .001, 2, 15); //-145
+  intake.spin(forward,12,volt);
+  BackWingLeft.set(false);
+  BackWingRight.set(true);
+  //chassis.drive_distance(-7,-152.5,12,12,2,25,1000);
+  chassis.drive_distance(-3);
+  
+  chassis.DriveR.spin(reverse,12,volt);
+  chassis.DriveL.spin(reverse,12,volt);
+  wait(.55, sec);
+  chassis.DriveR.stop();
+  chassis.DriveL.stop();
+  
+
+  BackWingRight.set(false);
+
+  chassis.turn_to_angle(-45);
+  chassis.drive_distance(30);
+  chassis.turn_to_angle(0);
+  chassis.drive_distance(30);
   }

@@ -678,16 +678,16 @@ void autonomous(void) {
   switch(current_auton_selection){  
     case 0:
       Offensive_5_Point_Rush();
-      //AWPOffensiveFarSide Offensive_5_Point_Rush
+      //offensive_5_point
       break;        
     case 1:         
-      Offensive6PointRush();
+      Offensive_AWP();
       break;
     case 2:
       Defensive_AWP();
       break;
     case 3:
-      Defensive_Rush();
+      Defensive_MatchLoad();
       break;
     case 4:
       Skills();

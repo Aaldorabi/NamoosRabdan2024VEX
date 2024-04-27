@@ -21,3 +21,5 @@ void AWPOffensiveFarSide();
 void DefensiveFarSide();
 void Defensive_AWP();
 void Offensive6PointRush();
+void Defensive_MatchLoad();
+void Offensive_AWP();
